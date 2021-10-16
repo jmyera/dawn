@@ -56,7 +56,7 @@
     "featured_products": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "Productos destacados",
         "collection": "all",
         "image_ratio": "square"
       }
