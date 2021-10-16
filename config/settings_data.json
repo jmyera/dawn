@@ -1,5 +1,77 @@
 {
-  "current": "Default",
+  "current": {
+    "colors_outline_button_labels": "#8bc34a",
+    "colors_accent_1": "#8bc34a",
+    "gradient_accent_1": "linear-gradient(#bef67a 0%, #8bc34a 100%)",
+    "colors_accent_2": "#ffb300",
+    "gradient_accent_2": "linear-gradient(#fff350 0%, #ffc107 100%)",
+    "colors_text": "#121212",
+    "colors_background_1": "#ffffff",
+    "colors_background_2": "#f3f3f3",
+    "type_header_font": "americana_n4",
+    "type_body_font": "poppins_n4",
+    "sale_badge_color_scheme": "accent-2",
+    "sold_out_badge_color_scheme": "background-1",
+    "accent_icons": "accent-2",
+    "predictive_search_show_vendor": true,
+    "currency_code_enabled": true,
+    "checkout_heading_font": "Lobster Two",
+    "checkout_body_font": "Lora",
+    "checkout_accent_color": "#8bc34a",
+    "checkout_button_color": "#8bc34a",
+    "checkout_error_color": "#f44336",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "color_scheme": "background-1",
+          "logo": "shopify:\/\/shop_images\/logo.png",
+          "logo_width": 50,
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "show_line_separator": true,
+          "enable_sticky_header": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Enlaces rápidos",
+              "menu": "footer"
+            }
+          },
+          "footer-1": {
+            "type": "text",
+            "settings": {
+              "heading": "Nuestra misión",
+              "subtext": "<p>Aportar remedios naturales a nuestros clientes.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "footer-1"
+        ],
+        "settings": {
+          "color_scheme": "background-2",
+          "newsletter_enable": true,
+          "newsletter_heading": "Suscríbete a nuestros boletines",
+          "show_social": true,
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "payment_enable": true
+        }
+      }
+    }
+  },
   "presets": {
     "Default": {
       "colors_solid_button_labels": "#FFFFFF",
@@ -24,7 +96,9 @@
           },
           "block_order": [
             "announcement-bar-0"
-          ]
+          ],
+          "settings": {
+          }
         }
       }
     },
@@ -41,21 +115,25 @@
       "sections": {
         "footer": {
           "type": "footer",
-          "settings": {
-            "color_scheme": "accent-1"
-          },
           "blocks": {
             "menu": {
-              "type": "link_list"
+              "type": "link_list",
+              "settings": {
+              }
             },
             "text": {
-              "type": "text"
+              "type": "text",
+              "settings": {
+              }
             }
           },
           "block_order": [
             "menu",
             "text"
-          ]
+          ],
+          "settings": {
+            "color_scheme": "accent-1"
+          }
         }
       }
     }
