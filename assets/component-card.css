@@ -164,7 +164,9 @@
   display: block;
   margin: 0;
   padding-right: 1.2rem;
+  font-family: var(--font-body-family);
   font-size: 1.2rem;
+  font-weight: var(--font-body-weight);
 }
 
 .card-information__wrapper {
