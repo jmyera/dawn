@@ -1492,6 +1492,7 @@ details[open] > .share-button__fallback {
   flex-grow: 1;
   text-align: left;
   padding: 1.5rem;
+  border-radius: 0.2rem;
 }
 
 .field__label,
