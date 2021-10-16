@@ -1173,6 +1173,14 @@ deferred-media {
 /* Button - default */
 
 .button,
+.button-label,
+.shopify-challenge__button,
+.share-button__button
+.customer button {
+  text-transform: uppercase;
+}
+
+.button,
 .shopify-challenge__button,
 .customer button {
   cursor: pointer;
@@ -1184,7 +1192,10 @@ deferred-media {
   padding: 0.9rem 3rem 1.1rem;
   text-decoration: none;
   border: 0.1rem solid transparent;
-  border-radius: 0;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.1rem;
+  border-bottom-left-radius: 0.1rem;
+  border-bottom-right-radius: 0.8rem;
   background-color: rgba(var(--color-button), var(--alpha-button-background));
   box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border));
   color: rgb(var(--color-button-text));
