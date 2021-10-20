@@ -2,6 +2,7 @@
   display: block;
   overflow: hidden;
   text-decoration: none;
+  border-radius: 1.2rem;
 }
 
 .card-information + .card {
