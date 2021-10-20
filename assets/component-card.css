@@ -76,6 +76,7 @@
 
 .card-colored.color-background-1 {
   background-color: rgba(var(--color-foreground), 0.04);
+  border-radius: 1.2rem;
 }
 
 .card--media .card__text-spacing {
