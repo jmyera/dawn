@@ -1191,7 +1191,7 @@ deferred-media {
   font: inherit;
   padding: 0.9rem 3rem 1.1rem;
   text-decoration: none;
-  border: 0.1rem solid transparent;
+  border: 0.2rem solid transparent;
   border-top-left-radius: 0.8rem;
   border-top-right-radius: 0.1rem;
   border-bottom-left-radius: 0.1rem;
