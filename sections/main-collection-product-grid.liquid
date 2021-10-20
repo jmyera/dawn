@@ -1,7 +1,3 @@
-{% style %}
-:root {
-  --color-base-background-2: {{ settings.colors_background_2.red }}, {{ settings.colors_background_2 }};
-{% endstyle %}
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
