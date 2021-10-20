@@ -2,7 +2,6 @@
   display: block;
   overflow: hidden;
   text-decoration: none;
-  border-radius: 1.2rem;
 }
 
 .card-information + .card {
@@ -62,6 +61,7 @@
 
 .card--light-border {
   border: 0.1rem solid rgba(var(--color-foreground), 0.04);
+  border-radius: 1.2rem;
 }
 
 .card--light-border:hover {
