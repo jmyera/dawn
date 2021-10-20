@@ -607,7 +607,7 @@ a.product__text {
 
 .product__media-list .deferred-media,
 .product__media-list .product__modal-opener {
-  background-color: rgba(#121212, 0.1);
+  background-color: #F3F3F3;
   /* border: 0.1rem solid rgba(var(--color-foreground), 0.04); */
   border-radius: 1.2rem;
 }
