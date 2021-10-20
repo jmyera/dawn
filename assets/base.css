@@ -1104,7 +1104,7 @@ summary::-webkit-details-marker {
 /* component-media */
 .media {
   display: block;
-  background-color: var(--color-background-2);
+  background-color: rgba(var(--color-foreground), 0.1);
   position: relative;
   overflow: hidden;
   border-radius: 1.2rem;
