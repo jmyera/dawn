@@ -1104,14 +1104,14 @@ summary::-webkit-details-marker {
 /* component-media */
 .media {
   display: block;
-  background-color: rgba(var(--color-foreground), 0.1);
+  background-color: var(--color-background-2);
   position: relative;
   overflow: hidden;
   border-radius: 1.2rem;
 }
 
 .media--transparent {
-  background-color: transparent;
+  /* background-color: transparent; */
 }
 
 .media > *:not(.zoom):not(.deferred-media__poster-button),
