@@ -18,7 +18,7 @@
         "20232a5b-fb1d-47df-bf99-6a3cc787a0da": {
           "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
           "settings": {
-            "stars_fill_color": "#000000",
+            "stars_fill_color": "#121212",
             "star_size": 15,
             "text_align": "flex-start",
             "product": "{{product}}",
@@ -64,21 +64,6 @@
           "settings": {
             "share_label": "Compartir"
           }
-        },
-        "bbe95b9c-56c3-4f46-9524-770cbadad986": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-            "stars_fill_color": "#000000",
-            "star_size": 15,
-            "text_align": "center",
-            "product": "{{product}}",
-            "stars_text_empty": "No reviews"
-          }
-        },
-        "63ce8c88-3ce5-44b4-9e2a-639d2b05d6e8": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-          }
         }
       },
       "block_order": [
@@ -91,9 +76,7 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share",
-        "bbe95b9c-56c3-4f46-9524-770cbadad986",
-        "63ce8c88-3ce5-44b4-9e2a-639d2b05d6e8"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -112,10 +95,27 @@
         "show_vendor": false,
         "show_rating": false
       }
+    },
+    "1634748305156a652a": {
+      "type": "apps",
+      "blocks": {
+        "190f81b4-d0b0-445a-a24d-7c8132c55b22": {
+          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "190f81b4-d0b0-445a-a24d-7c8132c55b22"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
-    "product-recommendations"
+    "product-recommendations",
+    "1634748305156a652a"
   ]
 }
