@@ -248,7 +248,7 @@
 
 .card__media-full-spacer {
   /* padding: 2rem; */
-  background-color: var(--color-base-background-2);
+  background-color: #EFEFEF;
 }
 
 .card-article-info {
