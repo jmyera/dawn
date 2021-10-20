@@ -32,13 +32,6 @@
             "stars_text_empty": "Escribe una opinión"
           }
         },
-        "subtitle": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -78,7 +71,6 @@
         "title",
         "14c52b56-ef5e-4313-a6db-73378e1be16a",
         "20232a5b-fb1d-47df-bf99-6a3cc787a0da",
-        "subtitle",
         "price",
         "variant_picker",
         "quantity_selector",
