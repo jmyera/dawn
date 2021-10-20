@@ -1197,7 +1197,7 @@ deferred-media {
   border-bottom-left-radius: 0.1rem;
   border-bottom-right-radius: 0.8rem;
   background-color: rgba(var(--color-button), var(--alpha-button-background));
-  box-shadow: 0 0 0 0.2rem rgba(var(--color-button), var(--alpha-button-border));
+  box-shadow: 0 0 0 0.16rem rgba(var(--color-button), var(--alpha-button-border));
   color: rgb(var(--color-button-text));
   min-width: 12rem;
   min-height: 4.5rem;
@@ -1207,19 +1207,19 @@ deferred-media {
 }
 
 .button:focus-visible {
-  box-shadow: 0 0 0 0.2rem rgba(var(--color-button), var(--alpha-button-border)),
-    0 0 0 0.4rem rgb(var(--color-background)),
-    0 0 0.6rem 0.5rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border)),
+    0 0 0 0.3rem rgb(var(--color-background)),
+    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .button:focus {
-  box-shadow: 0 0 0 0.2rem rgba(var(--color-button), var(--alpha-button-border)),
-    0 0 0 0.4rem rgb(var(--color-background)),
-    0 0 0.6rem 0.5rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border)),
+    0 0 0 0.3rem rgb(var(--color-background)),
+    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .button:focus:not(:focus-visible) {
-  box-shadow: 0 0 0 0.2rem rgba(var(--color-button), var(--alpha-button-border));
+  box-shadow: 0 0 0 0.1rem rgba(var(--color-button), var(--alpha-button-border));
 }
 
 .button::selection,
