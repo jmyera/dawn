@@ -203,7 +203,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input input[type='radio']:disabled + label {
-  border-color: rgba(var(--color-foreground), 0.1);
+  border-color: rgba(var(--color-foreground), 0.06);
   color: rgba(var(--color-foreground), 0.4);
   text-decoration: line-through;
 }
@@ -488,7 +488,7 @@ a.product__text {
 .product__media-icon {
   background-color: rgb(var(--color-background));
   border-radius: 50%;
-  border: 0.1rem solid rgba(var(--color-foreground), 0.1);
+  border: 0.1rem solid rgba(var(--color-foreground), 0.06);
   color: rgb(var(--color-foreground));
   display: flex;
   align-items: center;
@@ -512,7 +512,7 @@ a.product__text {
 }
 
 .product__modal-opener:hover .product__media-icon {
-  border: 0.1rem solid rgba(var(--color-foreground), 0.1);
+  border: 0.1rem solid rgba(var(--color-foreground), 0.06);
 }
 
 @media screen and (min-width: 750px) {
@@ -629,7 +629,7 @@ a.product__text {
 
 .product-media-modal__toggle {
   background-color: rgb(var(--color-background));
-  border: 0.1rem solid rgba(var(--color-foreground), 0.1);
+  border: 0.1rem solid rgba(var(--color-foreground), 0.06);
   border-radius: 50%;
   color: rgba(var(--color-foreground), 0.55);
   display: flex;
@@ -792,7 +792,7 @@ a.product__text {
 
 .product-popup-modal__toggle {
   background-color: rgb(var(--color-background));
-  border: 0.1rem solid rgba(var(--color-foreground), 0.1);
+  border: 0.1rem solid rgba(var(--color-foreground), 0.06);
   border-radius: 50%;
   color: rgba(var(--color-foreground), 0.55);
   display: flex;

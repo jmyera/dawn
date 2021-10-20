@@ -25,7 +25,7 @@
   border-radius: 50%;
   color: rgb(var(--color-foreground));
   background: rgb(var(--color-background));
-  border-color: rgba(var(--color-foreground), 0.1);
+  border-color: rgba(var(--color-foreground), 0.06);
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--duration-short) ease, color var(--duration-short) ease;
 }
