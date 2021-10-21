@@ -77,7 +77,7 @@
             "heading": "Ingredientes",
             "content": "<p>{{ product.metafields.info.ingredients | metafield_tag }}<\/p>",
             "page": "",
-            "icon": "check_mark"
+            "icon": "ingredients"
           }
         },
         "77a31036-3e56-4840-ba7d-1c0357a49add": {
