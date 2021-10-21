@@ -1,11 +1,5 @@
 {
   "sections": {
-    "16348221527441c69c": {
-      "type": "page",
-      "settings": {
-        "page": "soria-natural"
-      }
-    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -30,7 +24,6 @@
     }
   },
   "order": [
-    "16348221527441c69c",
     "banner",
     "product-grid"
   ]
