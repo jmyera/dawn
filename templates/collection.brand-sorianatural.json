@@ -6,6 +6,95 @@
         "page": "soria-natural"
       }
     },
+    "163482745557c7311b": {
+      "type": "collage",
+      "blocks": {
+        "f42e71f0-053a-4bb8-98d0-ed66c1d5101b": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        },
+        "163482745557c7311b-1": {
+          "type": "product",
+          "settings": {
+            "product": "sorianatural-composor-19-depulan-complex",
+            "second_image": false,
+            "image_padding": false,
+            "secondary_background": false
+          }
+        }
+      },
+      "block_order": [
+        "f42e71f0-053a-4bb8-98d0-ed66c1d5101b",
+        "163482745557c7311b-1"
+      ],
+      "settings": {
+        "heading": "Multimedia collage",
+        "desktop_layout": "left",
+        "mobile_layout": "column"
+      }
+    },
+    "1634827147425093d3": {
+      "type": "multicolumn",
+      "blocks": {
+        "1634827147425093d3-0": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        },
+        "1634827147425093d3-1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1634827147425093d3-0",
+        "1634827147425093d3-1"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false
+      }
+    },
+    "16348274256cd900d4": {
+      "type": "featured-product",
+      "blocks": {
+        "16348274256cd900d4-1": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "16348274256cd900d4-3": {
+          "type": "price",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "16348274256cd900d4-1",
+        "16348274256cd900d4-3"
+      ],
+      "settings": {
+        "product": "sorianatural-composor-23-hyssopus-complex",
+        "secondary_background": false,
+        "hide_variants": true,
+        "enable_video_looping": false
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -31,6 +120,9 @@
   },
   "order": [
     "16348221527441c69c",
+    "163482745557c7311b",
+    "1634827147425093d3",
+    "16348274256cd900d4",
     "banner",
     "product-grid"
   ]
