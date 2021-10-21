@@ -18,7 +18,7 @@
         "14c52b56-ef5e-4313-a6db-73378e1be16a": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.product.subtitle.value }}",
+            "text": "{{ product.metafields.info.subtitle.value }}",
             "text_style": "subtitle"
           }
         },
@@ -54,9 +54,33 @@
             "show_dynamic_checkout": true
           }
         },
+        "1ee482e2-b3bc-4ffb-97af-7eac7e5b3b90": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": ""
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
+          }
+        },
+        "a35277b4-a3d0-4cfc-884c-e934bd11c2e0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredientes",
+            "content": "<p>{{ product.metafields.info.ingredients | metafield_tag }}<\/p>",
+            "page": "",
+            "icon": "check_mark"
+          }
+        },
+        "77a31036-3e56-4840-ba7d-1c0357a49add": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Modo de empleo",
+            "content": "<p>{{ product.metafields.info.how_to_use | metafield_tag }}<\/p>",
+            "page": "",
+            "icon": "check_mark"
           }
         },
         "share": {
@@ -75,7 +99,10 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "1ee482e2-b3bc-4ffb-97af-7eac7e5b3b90",
         "description",
+        "a35277b4-a3d0-4cfc-884c-e934bd11c2e0",
+        "77a31036-3e56-4840-ba7d-1c0357a49add",
         "share"
       ],
       "settings": {
