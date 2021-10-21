@@ -5,50 +5,45 @@
       "settings": {
       }
     },
-    "1634801865224a9081": {
-      "type": "multicolumn",
+    "16348219217fd0a013": {
+      "type": "collection-list",
       "blocks": {
-        "1634801865224a9081-0": {
-          "type": "column",
+        "16348219217fd0a013-0": {
+          "type": "featured_collection",
           "settings": {
-            "title": "A-F",
-            "text": "<p><a href=\"\/pages\/a-vogel\" title=\"A. Vogel\">A. Vogel<\/a><\/p><p><a href=\"\/collections\/aml-sport\" title=\"AML Sport\">AML Sport<\/a><\/p><p><a href=\"\/collections\/ana-maria-lajusticia\" title=\"Ana María Lajusticia\">Ana María Lajusticia<\/a><\/p><p><a href=\"\/collections\/eladiet\" title=\"Eladiet\">Eladiet<\/a><\/p><p><a href=\"\/collections\/esi\" title=\"ESI\">ESI<\/a><\/p>"
+            "collection": ""
           }
         },
-        "1634801865224a9081-1": {
-          "type": "column",
+        "16348219217fd0a013-1": {
+          "type": "featured_collection",
           "settings": {
-            "title": "G-M",
-            "text": "<p><a href=\"\/collections\/kal\" title=\"KAL\">KAL<\/a><\/p><p><a href=\"\/collections\/neovital-healt\" title=\"Neovital Healt\">Neovital Healt<\/a><\/p>"
+            "collection": ""
           }
         },
-        "1634801865224a9081-2": {
-          "type": "column",
+        "16348219217fd0a013-2": {
+          "type": "featured_collection",
           "settings": {
-            "title": "N-Z",
-            "text": "<p><a href=\"\/collections\/salus\" title=\"Salus\">Salus<\/a><\/p><p><a href=\"\/collections\/solaray\" title=\"Solaray\">Solaray<\/a><\/p><p><a href=\"\/pages\/soria-natural\" title=\"Soria Natural\">Soria Natural<\/a><\/p>"
+            "collection": ""
           }
         }
       },
       "block_order": [
-        "1634801865224a9081-0",
-        "1634801865224a9081-1",
-        "1634801865224a9081-2"
+        "16348219217fd0a013-0",
+        "16348219217fd0a013-1",
+        "16348219217fd0a013-2"
       ],
       "settings": {
-        "title": "",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false
+        "title": "Collections",
+        "image_ratio": "square",
+        "color_scheme": "background-1",
+        "swipe_on_mobile": false,
+        "image_padding": false,
+        "show_view_all": false
       }
     }
   },
   "order": [
     "main",
-    "1634801865224a9081"
+    "16348219217fd0a013"
   ]
 }
