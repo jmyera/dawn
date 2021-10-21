@@ -6,6 +6,31 @@
         "page": "soria-natural"
       }
     },
+    "1634803355aec4e1a5": {
+      "type": "featured-product",
+      "blocks": {
+        "1634803355aec4e1a5-1": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "1634803355aec4e1a5-3": {
+          "type": "price",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "1634803355aec4e1a5-1",
+        "1634803355aec4e1a5-3"
+      ],
+      "settings": {
+        "product": "sorianatural-vitaminas-y-minerales-retard-vitamina-b6",
+        "secondary_background": false,
+        "hide_variants": true,
+        "enable_video_looping": false
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -31,6 +56,7 @@
   },
   "order": [
     "16348026285949674d",
+    "1634803355aec4e1a5",
     "banner",
     "product-grid"
   ]
