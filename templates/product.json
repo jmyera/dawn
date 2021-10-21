@@ -86,7 +86,7 @@
             "heading": "Modo de empleo",
             "content": "<p>{{ product.metafields.info.how_to_use | metafield_tag }}<\/p>",
             "page": "",
-            "icon": "check_mark"
+            "icon": "question_mark"
           }
         }
       },
