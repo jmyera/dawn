@@ -3,7 +3,7 @@
     "16348026285949674d": {
       "type": "page",
       "settings": {
-        "page": "soria-natural"
+        "page": "a-vogel"
       }
     },
     "1634803355aec4e1a5": {
@@ -52,12 +52,19 @@
         "enable_sorting": true,
         "collapse_on_larger_devices": false
       }
+    },
+    "163480406840b76dc2": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": ""
+      }
     }
   },
   "order": [
     "16348026285949674d",
     "1634803355aec4e1a5",
     "banner",
-    "product-grid"
+    "product-grid",
+    "163480406840b76dc2"
   ]
 }

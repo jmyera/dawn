@@ -12,7 +12,7 @@
           "type": "column",
           "settings": {
             "title": "A-F",
-            "text": "<p><a href=\"\/collections\/a-vogel\" title=\"A. Vogel\">A. Vogel<\/a><\/p><p><a href=\"\/collections\/aml-sport\" title=\"AML Sport\">AML Sport<\/a><\/p><p><a href=\"\/collections\/ana-maria-lajusticia\" title=\"Ana María Lajusticia\">Ana María Lajusticia<\/a><\/p><p><a href=\"\/collections\/eladiet\" title=\"Eladiet\">Eladiet<\/a><\/p><p><a href=\"\/collections\/esi\" title=\"ESI\">ESI<\/a><\/p>"
+            "text": "<p><a href=\"\/pages\/a-vogel\" title=\"A. Vogel\">A. Vogel<\/a><\/p><p><a href=\"\/collections\/aml-sport\" title=\"AML Sport\">AML Sport<\/a><\/p><p><a href=\"\/collections\/ana-maria-lajusticia\" title=\"Ana María Lajusticia\">Ana María Lajusticia<\/a><\/p><p><a href=\"\/collections\/eladiet\" title=\"Eladiet\">Eladiet<\/a><\/p><p><a href=\"\/collections\/esi\" title=\"ESI\">ESI<\/a><\/p>"
           }
         },
         "1634801865224a9081-1": {
@@ -26,7 +26,7 @@
           "type": "column",
           "settings": {
             "title": "N-Z",
-            "text": "<p><a href=\"\/collections\/salus\" title=\"Salus\">Salus<\/a><\/p><p><a href=\"\/collections\/solaray\" title=\"Solaray\">Solaray<\/a><\/p><p><a href=\"\/collections\/soria-natural\" title=\"Soria Natural\">Soria Natural<\/a><\/p>"
+            "text": "<p><a href=\"\/collections\/salus\" title=\"Salus\">Salus<\/a><\/p><p><a href=\"\/collections\/solaray\" title=\"Solaray\">Solaray<\/a><\/p><p><a href=\"\/pages\/soria-natural\" title=\"Soria Natural\">Soria Natural<\/a><\/p>"
           }
         }
       },
