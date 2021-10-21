@@ -1,5 +1,11 @@
 {
   "sections": {
+    "16348026285949674d": {
+      "type": "page",
+      "settings": {
+        "page": ""
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -17,13 +23,14 @@
         "show_image_outline": false,
         "show_vendor": false,
         "show_rating": false,
-        "enable_filtering": true,
+        "enable_filtering": false,
         "enable_sorting": true,
         "collapse_on_larger_devices": false
       }
     }
   },
   "order": [
+    "16348026285949674d",
     "banner",
     "product-grid"
   ]
