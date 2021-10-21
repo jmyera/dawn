@@ -54,6 +54,12 @@
             "show_dynamic_checkout": true
           }
         },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Compartir"
+          }
+        },
         "1ee482e2-b3bc-4ffb-97af-7eac7e5b3b90": {
           "type": "custom_liquid",
           "settings": {
@@ -82,12 +88,6 @@
             "page": "",
             "icon": "check_mark"
           }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Compartir"
-          }
         }
       },
       "block_order": [
@@ -99,11 +99,11 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "share",
         "1ee482e2-b3bc-4ffb-97af-7eac7e5b3b90",
         "description",
         "a35277b4-a3d0-4cfc-884c-e934bd11c2e0",
-        "77a31036-3e56-4840-ba7d-1c0357a49add",
-        "share"
+        "77a31036-3e56-4840-ba7d-1c0357a49add"
       ],
       "settings": {
         "enable_sticky_info": true,
