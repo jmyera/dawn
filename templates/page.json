@@ -5,50 +5,25 @@
       "settings": {
       }
     },
-    "1634801865224a9081": {
-      "type": "multicolumn",
-      "blocks": {
-        "1634801865224a9081-0": {
-          "type": "column",
-          "settings": {
-            "title": "A-F",
-            "text": "<p><a href=\"\/pages\/a-vogel\" title=\"A. Vogel\">A. Vogel<\/a><\/p><p><a href=\"\/collections\/aml-sport\" title=\"AML Sport\">AML Sport<\/a><\/p><p><a href=\"\/collections\/ana-maria-lajusticia\" title=\"Ana María Lajusticia\">Ana María Lajusticia<\/a><\/p><p><a href=\"\/collections\/eladiet\" title=\"Eladiet\">Eladiet<\/a><\/p><p><a href=\"\/collections\/esi\" title=\"ESI\">ESI<\/a><\/p>"
-          }
-        },
-        "1634801865224a9081-1": {
-          "type": "column",
-          "settings": {
-            "title": "G-M",
-            "text": "<p><a href=\"\/collections\/kal\" title=\"KAL\">KAL<\/a><\/p><p><a href=\"\/collections\/neovital-healt\" title=\"Neovital Healt\">Neovital Healt<\/a><\/p>"
-          }
-        },
-        "1634801865224a9081-2": {
-          "type": "column",
-          "settings": {
-            "title": "N-Z",
-            "text": "<p><a href=\"\/collections\/salus\" title=\"Salus\">Salus<\/a><\/p><p><a href=\"\/collections\/solaray\" title=\"Solaray\">Solaray<\/a><\/p><p><a href=\"\/pages\/soria-natural\" title=\"Soria Natural\">Soria Natural<\/a><\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "1634801865224a9081-0",
-        "1634801865224a9081-1",
-        "1634801865224a9081-2"
-      ],
+    "16348264759df76f11": {
+      "type": "featured-collection",
       "settings": {
         "title": "",
-        "image_width": "full",
+        "collection": "a-vogel",
+        "products_to_show": 12,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
         "image_ratio": "adapt",
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
       }
     }
   },
   "order": [
     "main",
-    "1634801865224a9081"
+    "16348264759df76f11"
   ]
 }
