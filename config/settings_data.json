@@ -12,7 +12,7 @@
     "type_body_font": "poppins_n4",
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "background-1",
-    "accent_icons": "accent-2",
+    "accent_icons": "text",
     "predictive_search_show_vendor": true,
     "currency_code_enabled": true,
     "checkout_heading_font": "Lobster Two",
