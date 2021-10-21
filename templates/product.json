@@ -77,7 +77,7 @@
             "heading": "Ingredientes",
             "content": "<p>{{ product.metafields.info.ingredients | metafield_tag }}<\/p>",
             "page": "",
-            "icon": "ingredients"
+            "icon": "check_mark"
           }
         },
         "77a31036-3e56-4840-ba7d-1c0357a49add": {
@@ -86,7 +86,7 @@
             "heading": "Modo de empleo",
             "content": "<p>{{ product.metafields.info.how_to_use | metafield_tag }}<\/p>",
             "page": "",
-            "icon": "question_mark"
+            "icon": "check_mark"
           }
         }
       },
