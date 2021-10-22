@@ -1043,9 +1043,6 @@
     "main-collection-product-grid": {
       "name": "Cuadrícula de productos",
       "settings": {
-        "show_title": {
-          "label": "Mostrar el título de la colección"
-        },
         "products_per_page": {
           "label": "Productos por página"
         },
