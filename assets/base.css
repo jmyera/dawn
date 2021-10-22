@@ -1111,6 +1111,7 @@ summary::-webkit-details-marker {
 
 .media--transparent {
   /* background-color: transparent; */
+  border-radius: 1.2rem;
 }
 
 .media > *:not(.zoom):not(.deferred-media__poster-button),
