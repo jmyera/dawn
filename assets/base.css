@@ -1107,7 +1107,6 @@ summary::-webkit-details-marker {
   background-color: rgba(var(--color-foreground), 0.06);
   position: relative;
   overflow: hidden;
-  border-radius: 1.2rem;
 }
 
 .media--transparent {
