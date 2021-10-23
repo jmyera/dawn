@@ -688,6 +688,9 @@
             "label": "Invertir"
           },
           "label": "Esquema de colores"
+        },
+        "transparent_header": {
+          "label": "Encabezado transparente"
         }
       }
     },
