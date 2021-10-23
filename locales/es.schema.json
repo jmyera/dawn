@@ -689,7 +689,7 @@
           },
           "label": "Esquema de colores"
         },
-        "transparent_header": {
+        "header_transparent": {
           "label": "Encabezado transparente"
         }
       }
