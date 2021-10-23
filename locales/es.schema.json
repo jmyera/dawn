@@ -687,6 +687,9 @@
           "options__5": {
             "label": "Invertir"
           },
+          "options__6": {
+            "label": "Transparente"
+          },
           "label": "Esquema de colores"
         },
         "header_transparent": {
