@@ -678,7 +678,7 @@
             "label": "Encabezado transparente"
           },
           "label": "Tipo de encabezado",
-          "info": "El encabezado por defecto siempre queda en la parte superior, el **encabezado fijo** se muestra en la pantalla mientras los clientes se desplazan hacia arriba y el encabezado transparente siempre se muestra en la pantalla."
+          "info": "El encabezado por defecto siempre queda en la parte superior, el encabezado fijo se muestra en la pantalla mientras los clientes se desplazan hacia arriba y el encabezado transparente siempre se muestra en la pantalla."
         },
         "color_scheme": {
           "options__1": {
