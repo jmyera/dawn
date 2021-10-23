@@ -30,6 +30,12 @@
   --gradient-background: var(--gradient-base-accent-2);
 }
 
+.color-transparent {
+  --color-foreground: transparent;
+  --color-background: transparent;
+  --gradient-background:  transparent;
+}
+
 .color-foreground-outline-button {
   --color-foreground: var(--color-base-outline-button-labels);
 }
@@ -70,11 +76,6 @@
 .color-accent-2 {
   --color-button: var(--color-foreground);
   --color-button-text: var(--color-background);
-}
-
-.color-transparent {
-  --color-background: transparent;
-  --gradient-background: transparent;
 }
 
 .button--secondary {
