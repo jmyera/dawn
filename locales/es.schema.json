@@ -667,7 +667,7 @@
         "show_line_separator": {
           "label": "Mostrar línea separadora"
         },
-        "type_header": {
+        "select_type_header": {
           "default_header": {
             "label": "Encabezado por defecto"
           },
