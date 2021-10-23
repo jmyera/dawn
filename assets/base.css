@@ -72,6 +72,10 @@
   --color-button-text: var(--color-background);
 }
 
+.color-transparent {
+  --color-background: transparent;
+}
+
 .button--secondary {
   --color-button: var(--color-base-outline-button-labels);
   --color-button-text: var(--color-base-outline-button-labels);
