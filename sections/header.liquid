@@ -356,7 +356,7 @@
               {%- if link.links != blank -%}
                 <details-disclosure>
                   <details>
-                    <summary class="header__menu-item list-menu__item link focus-inset">
+                    <summary {% if section.settings.type_header == "transparent-header" %}class="header-transparent__menu-item list-menu__item link focus-inset"{% else %}class="header__menu-item list-menu__item link focus-inset"{% endif %}>
                       <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                       {% render 'icon-caret' %}
                     </summary>
