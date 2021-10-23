@@ -1884,6 +1884,7 @@ input[type='checkbox'] {
 
 .shopify-section-header-transparent-background-show {
   background-color: rgba(0,0,0,0.8);
+  transform: translateY(100%);
 }
 
 #shopify-section-header-transparent.animate {
