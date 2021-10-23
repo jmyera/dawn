@@ -679,7 +679,8 @@
           "transparent_header": {
             "label": "Encabezado transparente",
             "info": "El encabezado es transparente y se muestra en la pantalla siempre."
-          }
+          },
+          "label": "Tipo de encabezado"
         },
         "color_scheme": {
           "options__1": {
