@@ -1901,9 +1901,9 @@ input[type='checkbox'] {
 }
 
 .header-transparent {
-  /* position: fixed;
+  position: sticky;
   top: 0;
-  width: 100%; */
+  width: 100%;
   background-color: transparent;
   -webkit-transition: background-color 0.15s ease-out;
   -moz-transition: background-color 0.15s ease-out;
