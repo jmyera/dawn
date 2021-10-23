@@ -384,9 +384,15 @@
                               <ul class="header__submenu list-menu motion-reduce">
                                 {%- for grandchildlink in childlink.links -%}
                                   <li>
+                                    {%- if section.settings.type_header == "transparent-header" -%}
+                                    <a href="{{ grandchildlink.url }}" class="header-transparent__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                      {{ grandchildlink.title | escape }}
+                                    </a>
+                                    {%- else -%}
                                     <a href="{{ grandchildlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
                                       {{ grandchildlink.title | escape }}
                                     </a>
+                                    {%- endif -%}
                                   </li>
                                 {%- endfor -%}
                               </ul>
