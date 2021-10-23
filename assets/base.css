@@ -1857,12 +1857,6 @@ input[type='checkbox'] {
   transform: translateY(-100%);
 }
 
-.shopify-section-header-transparent {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
 #shopify-section-header.animate {
   transition: transform 0.15s ease-out;
 }
@@ -1872,6 +1866,12 @@ input[type='checkbox'] {
   display: block;
   position: relative;
   background-color: rgb(var(--color-background));
+}
+
+.header-transparent {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .header-wrapper--border-bottom {
