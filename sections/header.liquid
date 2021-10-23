@@ -337,7 +337,11 @@
     {%- if request.page_type == 'index' -%}
       <h1 class="header__heading">
     {%- endif -%}
+      {%- if section.settings.type_header == "transparent-header" -%}
+        <a href="{{ routes.root_url }}" class="header-transparent__heading-link link link--text focus-inset">
+      {%- else -%}
         <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+      {%- endif -%}
           {%- if section.settings.logo != blank -%}
             {%- assign image_size = section.settings.logo_width | append: 'x' -%}
             <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
