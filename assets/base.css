@@ -1990,6 +1990,10 @@ input[type='checkbox'] {
   color: rgba(var(--color-foreground), 0.75);
 }
 
+.header-transparent.header__heading-link .h2 {
+  color: rgba(var(--color-background-1), 0.75);
+}
+
 .header__heading-logo {
   height: auto;
   width: 100%;
