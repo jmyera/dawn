@@ -669,19 +669,16 @@
         },
         "type_header": {
           "default_header": {
-            "label": "Encabezado por defecto",
-            "info": "El encabezado por defecto siempre queda en la parte superior."
+            "label": "Encabezado por defecto"
           },
           "sticky_header": {
-            "label": "Encabezado fijo",
-            "info": "El encabezado fijo se muestra en la pantalla mientras los clientes se desplazan hacia arriba."
+            "label": "Encabezado fijo"
           },
           "transparent_header": {
-            "label": "Encabezado transparente",
-            "info": "El encabezado transparente y se muestra en la pantalla siempre."
+            "label": "Encabezado transparente"
           },
           "label": "Tipo de encabezado",
-          "info": "Elija entre tres tipos de encabezados diferentes, el encabezado fijo, el transparente o por defecto."
+          "info": "El encabezado por defecto siempre queda en la parte superior, el encabezado fijo se muestra en la pantalla mientras los clientes se desplazan hacia arriba y el encabezado transparente siempre se muestra en la pantalla."
         },
         "color_scheme": {
           "options__1": {
