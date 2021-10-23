@@ -1872,6 +1872,7 @@ input[type='checkbox'] {
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: transparent;
 }
 
 .header-wrapper--border-bottom {
