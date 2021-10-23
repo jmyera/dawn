@@ -667,9 +667,19 @@
         "show_line_separator": {
           "label": "Mostrar línea separadora"
         },
-        "enable_sticky_header": {
-          "label": "Activar encabezado fijo",
-          "info": "El encabezado se muestra en la pantalla mientras los clientes se desplazan hacia arriba."
+        "type_header": {
+          "default_header": {
+            "label": "Encabezado por defecto",
+            "info": "El encabezado siempre queda en la parte superior."
+          },
+          "sticky_header": {
+            "label": "Encabezado fijo",
+            "info": "El encabezado se muestra en la pantalla mientras los clientes se desplazan hacia arriba."
+          },
+          "transparent_header": {
+            "label": "Encabezado transparente",
+            "info": "El encabezado es transparente y se muestra en la pantalla siempre."
+          }
         },
         "color_scheme": {
           "options__1": {
@@ -691,9 +701,6 @@
             "label": "Transparente"
           },
           "label": "Esquema de colores"
-        },
-        "enable_transparent_header": {
-          "label": "Encabezado transparente"
         }
       }
     },
