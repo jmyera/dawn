@@ -670,15 +670,15 @@
         "type_header": {
           "default_header": {
             "label": "Encabezado por defecto",
-            "info": "El encabezado siempre queda en la parte superior."
+            "info": "El encabezado por defecto siempre queda en la parte superior."
           },
           "sticky_header": {
             "label": "Encabezado fijo",
-            "info": "El encabezado se muestra en la pantalla mientras los clientes se desplazan hacia arriba."
+            "info": "El encabezado fijo se muestra en la pantalla mientras los clientes se desplazan hacia arriba."
           },
           "transparent_header": {
             "label": "Encabezado transparente",
-            "info": "El encabezado es transparente y se muestra en la pantalla siempre."
+            "info": "El encabezado transparente y se muestra en la pantalla siempre."
           },
           "label": "Tipo de encabezado",
           "info": "Elija entre tres tipos de encabezados diferentes, el encabezado fijo, el transparente o por defecto."
