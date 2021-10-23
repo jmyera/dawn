@@ -1877,7 +1877,7 @@ input[type='checkbox'] {
 
 /* section-header (transparent) */
 .shopify-section-header-transparent {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
 }
