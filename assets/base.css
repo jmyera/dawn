@@ -74,6 +74,7 @@
 
 .color-transparent {
   --color-background: transparent;
+  --gradient-background: transparent;
 }
 
 .button--secondary {
