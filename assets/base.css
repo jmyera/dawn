@@ -589,6 +589,14 @@ h6:empty {
   color: rgba(var(--color-foreground), 0.75);
 }
 
+.link--text--header-transparent {
+  color: rgb(255, 255, 255);
+}
+
+.link--text--header-transparent:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .link-with-icon {
   display: inline-flex;
   font-size: 1.4rem;
@@ -1990,8 +1998,12 @@ input[type='checkbox'] {
   color: rgba(var(--color-foreground), 0.75);
 }
 
+.header-transparent__heading-link:hover .h2 {
+  color: rgb(var(--color-foreground));
+}
+
 .header-transparent__heading-link .h2 {
-  color: rgba(var(--color-background-1), 0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .header__heading-logo {
@@ -2039,6 +2051,10 @@ input[type='checkbox'] {
 
 .header__icon {
   color: rgb(var(--color-foreground));
+}
+
+.header-transparent__icon {
+  color: rgb(255, 255, 255);
 }
 
 .header__icon span {
