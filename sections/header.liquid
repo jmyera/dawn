@@ -369,7 +369,7 @@
                 <details-disclosure>
                   <details>
                   {%- if section.settings.type_header == "transparent-header" -%}
-                    <summary class="header-transparent__menu-item list-menu__item link focus-inset">
+                    <summary class="header__menu-item header-transparent__menu-item list-menu__item link focus-inset">
                   {%- else -%}
                     <summary class="header__menu-item list-menu__item link focus-inset">
                   {%- endif -%}
@@ -381,7 +381,7 @@
                         <li>
                           {%- if childlink.links == blank -%}
                           {%- if section.settings.type_header == "transparent-header" -%}
-                            <a href="{{ childlink.url }}" class="header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                            <a href="{{ childlink.url }}" class="header__menu-item header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                           {%- else -%}
                             <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                           {%- endif -%}
@@ -417,9 +417,9 @@
                 </details-disclosure>
               {%- else -%}
                 {%- if section.settings.type_header == "transparent-header" -%}
-                <a href="{{ link.url }}" class="header-transparent__menu-item header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+                <a href="{{ link.url }}" class="header__menu-item header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset"{% if link.current %} aria-current="page"{% endif %}>
                 {%- else -%}
-                <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+                <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
                 {%- endif -%}
                   <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                 </a>
