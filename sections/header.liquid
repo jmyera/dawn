@@ -84,7 +84,11 @@
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="tablet">
         <details class="menu-drawer-container">
+          {%- if section.settings.type_header == "transparent-header" -%}
+          <summary class="header-transparent__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
+          {%- else -%}
           <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
+          {%- endif -%}          
             <span>
               {% render 'icon-hamburger' %}
               {% render 'icon-close' %}
@@ -254,7 +258,11 @@
     {%- if section.settings.logo_position == 'top-center' or section.settings.menu == blank -%}
       <details-modal class="header__search">
         <details>
+          {%- if section.settings.type_header == "transparent-header" -%}
+          <summary class="header-transparent__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+          {%- else -%}
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+          {%- endif -%}
             <span>
               <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
                 <use href="#icon-search">
@@ -421,7 +429,11 @@
     <div class="header__icons">
       <details-modal class="header__search">
         <details>
+          {%- if section.settings.type_header == "transparent-header" -%}
+          <summary class="header-transparent__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+          {%- else -%} 
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+          {%- endif -%} 
             <span>
               <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
                 <use href="#icon-search">
@@ -493,7 +505,11 @@
       </details-modal>
 
       {%- if shop.customer_accounts_enabled -%}
+        {%- if section.settings.type_header == "transparent-header" -%}
+        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header-transparent__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
+        {%- else -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
+        {%- endif -%}
           {% render 'icon-account' %}
           <span class="visually-hidden">
             {%- liquid
@@ -507,7 +523,11 @@
         </a>
       {%- endif -%}
 
+      {%- if section.settings.type_header == "transparent-header" -%}
+      <a href="{{ routes.cart_url }}" class="header-transparent__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+      {%- else -%}
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+      {%- endif -%}
         {%- liquid
           if cart == empty
             render 'icon-cart-empty'
