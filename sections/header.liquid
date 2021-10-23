@@ -338,7 +338,7 @@
       <h1 class="header__heading">
     {%- endif -%}
       {%- if section.settings.type_header == "transparent-header" -%}
-        <a href="{{ routes.root_url }}" class="header-transparent__heading-link link link--text focus-inset">
+        <a href="{{ routes.root_url }}" class="header-transparent__heading-link link link--text--header-transparent focus-inset">
       {%- else -%}
         <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
       {%- endif -%}
@@ -381,7 +381,7 @@
                         <li>
                           {%- if childlink.links == blank -%}
                           {%- if section.settings.type_header == "transparent-header" -%}
-                            <a href="{{ childlink.url }}" class="header-transparent__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                            <a href="{{ childlink.url }}" class="header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                           {%- else -%}
                             <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                           {%- endif -%}
@@ -397,7 +397,7 @@
                                 {%- for grandchildlink in childlink.links -%}
                                   <li>
                                     {%- if section.settings.type_header == "transparent-header" -%}
-                                    <a href="{{ grandchildlink.url }}" class="header-transparent__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                    <a href="{{ grandchildlink.url }}" class="header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
                                       {{ grandchildlink.title | escape }}
                                     </a>
                                     {%- else -%}
@@ -417,7 +417,7 @@
                 </details-disclosure>
               {%- else -%}
                 {%- if section.settings.type_header == "transparent-header" -%}
-                <a href="{{ link.url }}" class="header-transparent__menu-item header-transparent__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+                <a href="{{ link.url }}" class="header-transparent__menu-item header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset"{% if link.current %} aria-current="page"{% endif %}>
                 {%- else -%}
                 <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
                 {%- endif -%}
