@@ -79,7 +79,7 @@
     <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
   </symbol>
 </svg>
-<{{ section.settings.type_header }} class="{% if section.settings.type_header == "transparent-header" %}header-transparent{% else %}header-wrapper{% endif %} color-{% if section.settings.type_header == "transparent-header" %}transparent{% else %}{{ section.settings.color_scheme }}{% endif %} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
+<{{ section.settings.type_header }} id="header-transparent" class="{% if section.settings.type_header == "transparent-header" %}header-transparent{% else %}header-wrapper{% endif %} color-{% if section.settings.type_header == "transparent-header" %}transparent{% else %}{{ section.settings.color_scheme }}{% endif %} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   <header class="header header--{{ section.settings.logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="tablet">
@@ -649,7 +649,7 @@
   }
 
   connectedCallback() {
-    this.header = document.getElementByClass('header-transparent');
+    this.header = document.getElementById('header-transparent');
     this.headerBounds = {};
     this.currentScrollTop = 0;
     this.preventReveal = false;
