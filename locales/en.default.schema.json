@@ -814,7 +814,7 @@
           "label": "Enable sticky header",
           "info": "Header shows on the screen as customers scroll up."
         },
-        "header_transparent": {
+        "enable_transparent_header": {
           "label": "Enable transparent header"
         }
       }
