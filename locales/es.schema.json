@@ -669,16 +669,13 @@
         },
         "type_header": {
           "default_header": {
-            "label": "Encabezado por defecto",
-            "info": "El encabezado siempre queda en la parte superior."
+            "label": "Encabezado por defecto"
           },
           "sticky_header": {
-            "label": "Encabezado fijo",
-            "info": "El encabezado se muestra en la pantalla mientras los clientes se desplazan hacia arriba."
+            "label": "Encabezado fijo"
           },
           "transparent_header": {
-            "label": "Encabezado transparente",
-            "info": "El encabezado es transparente y se muestra en la pantalla siempre."
+            "label": "Encabezado transparente"
           },
           "label": "Tipo de encabezado"
         },
