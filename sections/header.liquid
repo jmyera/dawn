@@ -368,7 +368,11 @@
                       {%- for childlink in link.links -%}
                         <li>
                           {%- if childlink.links == blank -%}
+                          {%- if section.settings.type_header == "transparent-header" -%}
+                            <a href="{{ childlink.url }}" class="header-transparent__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                          {%- else -%}
                             <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                          {%- endif -%}
                               {{ childlink.title | escape }}
                             </a>
                           {%- else -%}
