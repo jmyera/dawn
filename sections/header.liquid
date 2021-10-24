@@ -565,7 +565,9 @@ connectedCallback() {
   this.header = document.getElementById('shopify-section-header');
   this.headerTransparent = document.getElementById('shopify-transparent-header');
   this.headerHeadingLink = document.getElementById('shopify-header-heading-link');
-  this.headerLink = document.getElementById('shopify-header-link');
+
+  this.headerClassTransparentMenuItem = document.getElementsByClassName('header-transparent__menu-item');
+  
   this.headerBounds = {};
   this.currentScrollTop = 0;
   this.preventReveal = false;
@@ -624,8 +626,13 @@ hide() {
   this.headerTransparent.classList.add('header-wrapper', 'color-background-1');
   this.headerHeadingLink.classList.remove('header-transparent__heading-link', 'link--text--header-transparent');
   this.headerHeadingLink.classList.add('header__heading-link', 'link--text');
-  this.headerLink.classList.remove('header__menu-item', 'header-transparent__menu-item', 'link--text--header-transparent');
-  this.headerLink.classList.add('header__menu-item', 'link--text');
+
+  var i;
+  for (i = 0; i < this.headerClassTransparentMenuItem.length; i++) {
+    this.headerClassTransparentMenuItem[i].classList.remove = 'header__menu-item', 'header-transparent__menu-item', 'link--text--header-transparent';
+    this.headerClassTransparentMenuItem[i].classList.add = 'header__menu-item', 'link--text';
+  }
+
   this.closeMenuDisclosure();
   this.closeSearchModal();
 }
@@ -637,8 +644,12 @@ reveal() {
   this.headerTransparent.classList.add('header-wrapper', 'color-background-1');
   this.headerHeadingLink.classList.remove('header__heading-link', 'link--text');
   this.headerHeadingLink.classList.add('header__heading-link', 'link--text');
-  this.headerLink.classList.remove('header__menu-item', 'link--text');
-  this.headerLink.classList.add('header__menu-item', 'link--text');
+
+  var i;
+  for (i = 0; i < this.headerClassTransparentMenuItem.length; i++) {
+    this.headerClassTransparentMenuItem[i].classList.remove = 'header__menu-item', 'link--text';
+    this.headerClassTransparentMenuItem[i].classList.add = 'header__menu-item', 'link--text';
+  }
 }
 
 reset() {
@@ -647,8 +658,12 @@ reset() {
   this.headerTransparent.classList.add('header-transparent', 'color-transparent');
   this.headerHeadingLink.classList.remove('header__heading-link', 'link--text');
   this.headerHeadingLink.classList.add('header-transparent__heading-link', 'link--text--header-transparent');
-  this.headerLink.classList.remove('header__menu-item', 'link--text');
-  this.headerLink.classList.add('header__menu-item', 'header-transparent__menu-item', 'link--text--header-transparent');
+
+  var i;
+  for (i = 0; i < this.headerClassTransparentMenuItem.length; i++) {
+    this.headerClassTransparentMenuItem[i].classList.remove = 'header__menu-item', 'link--text';
+    this.headerClassTransparentMenuItem[i].classList.add = 'header__menu-item', 'header-transparent__menu-item', 'link--text--header-transparent';
+  }
 }
 
 closeMenuDisclosure() {
