@@ -1874,7 +1874,7 @@ input[type='checkbox'] {
 }
 
 #shopify-header-custom-element .header-wrapper,
-#shopify-header-transparent-custom-element-on-scroll .header-transparent-wrapper {
+#shopify-header-custom-element-on-scroll .header-transparent-wrapper {
   color: rgb(var(--color-foreground));
 }
 

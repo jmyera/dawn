@@ -621,7 +621,7 @@ class TransparentHeader extends HTMLElement {
   
   hide() {
     this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
-    this.headerCustomElement.setAttribute('id', 'shopify-header-transparent-custom-element-on-scroll');
+    this.headerCustomElement.setAttribute('id', 'shopify-header-custom-element-on-scroll');
     this.headerHeading.setAttribute('id', 'shopify-header-transparent-heading-on-scroll');
     this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
     this.headerIcons.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
@@ -632,7 +632,7 @@ class TransparentHeader extends HTMLElement {
   reveal() {
     this.header.classList.add('shopify-section-header-sticky', 'animate');
     this.header.classList.remove('shopify-section-header-hidden');
-    this.headerCustomElement.setAttribute('id', 'shopify-header-transparent-custom-element-on-scroll');
+    this.headerCustomElement.setAttribute('id', 'shopify-header-custom-element-on-scroll');
     this.headerHeading.setAttribute('id', 'shopify-header-transparent-heading-on-scroll');
     this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
     this.headerIcons.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
