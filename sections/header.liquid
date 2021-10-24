@@ -361,7 +361,7 @@
     {%- endif -%}
 
     {%- if section.settings.menu != blank -%}
-      <nav class="header__inline-menu">
+      <nav id="shopify-header-nav" class="header__inline-menu">
         <ul class="list-menu list-menu--inline" role="list">
           {%- for link in section.settings.menu.links -%}
             <li>
@@ -381,7 +381,7 @@
                         <li>
                           {%- if childlink.links == blank -%}
                           {%- if section.settings.type_header == "transparent-header" -%}
-                            <a id="shopify-header-link" href="{{ childlink.url }}" class="header__menu-item header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                            <a href="{{ childlink.url }}" class="header__menu-item header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                           {%- else -%}
                             <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                           {%- endif -%}
@@ -565,9 +565,7 @@ connectedCallback() {
   this.header = document.getElementById('shopify-section-header');
   this.headerTransparent = document.getElementById('shopify-transparent-header');
   this.headerHeadingLink = document.getElementById('shopify-header-heading-link');
-
-  
-  
+  this.headerNav = document.getElementById('shopify-header-link');
   this.headerBounds = {};
   this.currentScrollTop = 0;
   this.preventReveal = false;
@@ -592,7 +590,7 @@ createObserver() {
     observer.disconnect();
   });
 
-  observer.observe(this.header, this.headerTransparent, this.headerHeadingLink, this.headerClassTransparentMenuItem);
+  observer.observe(this.header, this.headerTransparent, this.headerHeadingLink, this.headerNav);
 }
 
 onScroll() {
@@ -627,15 +625,7 @@ hide() {
   this.headerHeadingLink.classList.remove('header-transparent__heading-link', 'link--text--header-transparent');
   this.headerHeadingLink.classList.add('header__heading-link', 'link--text');
 
-  this.headerClassTransparentMenuItem.classList.remove('header-transparent__menu-item');
-
-  var i;
-  var headerClassTransparentMenuItem = document.getElementsByClassName('header-transparent__menu-item');
-  for (i = 0; i < headerClassTransparentMenuItem.length; i++) {
-    var one = headerClassTransparentMenuItem[i].classList.replace = 'header-transparent__menu-item', 'header__menu-item';
-    var two = headerClassTransparentMenuItem[i].classList.replace = 'link--text--header-transparent', 'link--text';
-  }
-
+  this.headerNav.classList.setAttribute('shopify-header-nav', 'shopify-header-transparent-nav-on-scroll');
   this.closeMenuDisclosure();
   this.closeSearchModal();
 }
@@ -656,12 +646,7 @@ reset() {
   this.headerHeadingLink.classList.remove('header__heading-link', 'link--text');
   this.headerHeadingLink.classList.add('header-transparent__heading-link', 'link--text--header-transparent');
 
-  var ii;
-  headerClassTransparentMenuItem = document.getElementsByClassName('header__menu-item');
-  for (ii = 0; ii < headerClassTransparentMenuItem.length; ii++) {
-    var tree = headerClassTransparentMenuItem[ii].classList.replace = 'header__menu-item', 'header-transparent__menu-item';
-    var four = headerClassTransparentMenuItem[ii].classList.replace = 'link--text', 'link--text--header-transparent';
-  }
+  this.headerNav.classList.setAttribute('shopify-header-transparent-nav-on-scroll', 'shopify-header-nav');
 }
 
 closeMenuDisclosure() {
@@ -675,7 +660,8 @@ closeSearchModal() {
 }
 }
 
-customElements.define('transparent-header', TransparentHeader);{% endjavascript %}
+customElements.define('transparent-header', TransparentHeader);
+{% endjavascript %}
 
 <script type="application/ld+json">
   {
