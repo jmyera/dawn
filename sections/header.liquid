@@ -630,10 +630,10 @@ hide() {
   this.headerClassTransparentMenuItem.classList.remove('header-transparent__menu-item');
 
   var i;
-  this.headerClassTransparentMenuItem = document.getElementsByClassName('header-transparent__menu-item');
-  for (i = 0; i < this.headerClassTransparentMenuItem.length; i++) {
-    this.headerClassTransparentMenuItem[i].classList.replace = 'header-transparent__menu-item', 'header__menu-item';
-    this.headerClassTransparentMenuItem[i].classList.replace = 'link--text--header-transparent', 'link--text';
+  var headerClassTransparentMenuItem = document.getElementsByClassName('header-transparent__menu-item');
+  for (i = 0; i < headerClassTransparentMenuItem.length; i++) {
+    var one = headerClassTransparentMenuItem[i].classList.replace = 'header-transparent__menu-item', 'header__menu-item';
+    var two = headerClassTransparentMenuItem[i].classList.replace = 'link--text--header-transparent', 'link--text';
   }
 
   this.closeMenuDisclosure();
@@ -657,10 +657,10 @@ reset() {
   this.headerHeadingLink.classList.add('header-transparent__heading-link', 'link--text--header-transparent');
 
   var ii;
-  this.headerClassTransparentMenuItem = document.getElementsByClassName('header__menu-item');
-  for (ii = 0; ii < this.headerClassTransparentMenuItem.length; ii++) {
-    this.headerClassTransparentMenuItem[ii].classList.replace = 'header__menu-item', 'header-transparent__menu-item';
-    this.headerClassTransparentMenuItem[ii].classList.replace = 'link--text', 'link--text--header-transparent';
+  headerClassTransparentMenuItem = document.getElementsByClassName('header__menu-item');
+  for (ii = 0; ii < headerClassTransparentMenuItem.length; ii++) {
+    var tree = headerClassTransparentMenuItem[ii].classList.replace = 'header__menu-item', 'header-transparent__menu-item';
+    var four = headerClassTransparentMenuItem[ii].classList.replace = 'link--text', 'link--text--header-transparent';
   }
 }
 
