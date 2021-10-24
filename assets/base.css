@@ -2004,12 +2004,12 @@ input[type='checkbox'] {
 }
 
 #shopify-header-heading .header__heading-link:hover .h2,
-#shopify-header-heading-on-scroll .header-transparent__heading-link:hover .h2 {
+#shopify-header-transparent-heading-on-scroll .header-transparent__heading-link:hover .h2 {
   color: rgb(var(--color-foreground));
 }
 
 #shopify-header-heading .header__heading-link .h2,
-#shopify-header-heading-on-scroll .header-transparent__heading-link .h2 {
+#shopify-header-transparent-heading-on-scroll .header-transparent__heading-link .h2 {
   color: rgba(var(--color-foreground), 0.75);
 }
 
