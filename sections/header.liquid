@@ -566,7 +566,7 @@ connectedCallback() {
   this.headerTransparent = document.getElementById('shopify-transparent-header');
   this.headerHeadingLink = document.getElementById('shopify-header-heading-link');
 
-  this.headerClassTransparentMenuItem = document.getElementsByClassName('header-transparent__menu-item');
+  
   
   this.headerBounds = {};
   this.currentScrollTop = 0;
@@ -630,6 +630,7 @@ hide() {
   this.headerClassTransparentMenuItem.classList.remove('header-transparent__menu-item');
 
   var i;
+  this.headerClassTransparentMenuItem = document.getElementsByClassName('header-transparent__menu-item');
   for (i = 0; i < this.headerClassTransparentMenuItem.length; i++) {
     this.headerClassTransparentMenuItem[i].classList.replace = 'header-transparent__menu-item', 'header__menu-item';
     this.headerClassTransparentMenuItem[i].classList.replace = 'link--text--header-transparent', 'link--text';
@@ -656,6 +657,7 @@ reset() {
   this.headerHeadingLink.classList.add('header-transparent__heading-link', 'link--text--header-transparent');
 
   var ii;
+  this.headerClassTransparentMenuItem = document.getElementsByClassName('header__menu-item');
   for (ii = 0; ii < this.headerClassTransparentMenuItem.length; ii++) {
     this.headerClassTransparentMenuItem[ii].classList.replace = 'header__menu-item', 'header-transparent__menu-item';
     this.headerClassTransparentMenuItem[ii].classList.replace = 'link--text', 'link--text--header-transparent';
