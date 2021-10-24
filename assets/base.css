@@ -589,6 +589,24 @@ h6:empty {
   color: rgba(var(--color-foreground), 0.75);
 }
 
+#shopify-header-nav .link--text,
+#shopify-header-transparent-nav-on-scroll .link--text--header-transparent {
+  color: rgb(var(--color-foreground));
+}
+
+#shopify-header-nav .link--text:hover,
+#shopify-header-transparent-nav-on-scroll .link--text--header-transparent:hover {
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+#shopify-header-nav .link--text--header-transparent{
+  color: rgb(255, 255, 255);
+}
+
+#shopify-header-nav .link--text--header-transparent:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .link-with-icon {
   display: inline-flex;
   font-size: 1.4rem;
