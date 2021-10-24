@@ -599,6 +599,8 @@ class TransparentHeader extends HTMLElement {
   
     observer.observe(this.header);
     observer.observe(this.headerTransparent);
+    observer.observe(this.headerHeadingLink);
+    observer.observe(this.headerLink);
   }
   
   onScroll() {
