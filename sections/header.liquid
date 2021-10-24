@@ -617,6 +617,8 @@
 
     hide() {
       this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
+      this.headerTransparent.classList.remove('header-transparent', 'color-transparent');
+      this.headerTransparent.classList.add('header', 'color-background-1');
       this.closeMenuDisclosure();
       this.closeSearchModal();
     }
