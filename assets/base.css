@@ -2289,19 +2289,21 @@ details[open] > .header__icon--menu .icon-hamburger {
   text-decoration: none;
 }
 
-#shopify-header-nav .header__menu-item {
+#shopify-header-nav .header__menu-item,
+#shopify-header-transparent-nav-on-scroll .header-transparent__menu-item {
   color: rgba(var(--color-foreground), 0.75);
 }
 
-#shopify-header-nav .header__menu-item:hover {
+#shopify-header-nav .header__menu-item:hover,
+#shopify-header-transparent-nav-on-scroll .header-transparent__menu-item:hover {
   color: rgb(var(--color-foreground));
 }
 
-#shopify-header-transparent-nav-on-scroll .header-transparent__menu-item {
+#shopify-header-nav .header-transparent__menu-item {
   color: rgba(255, 255, 255, 0.75);
 }
 
-#shopify-header-transparent-nav-on-scroll .header-transparent__menu-item:hover {
+#shopify-header-nav .header-transparent__menu-item:hover {
   color: rgb(255, 255, 255);
 }
 
