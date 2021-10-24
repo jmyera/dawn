@@ -2060,7 +2060,7 @@ input[type='checkbox'] {
 }
 
 #shopify-header-icons .header__icon,
-#shopify-header-icons-on-scroll .header-transparent__icon {
+#shopify-header-transparent-icons-on-scroll .header-transparent__icon {
   color: rgb(var(--color-foreground));
 }
 

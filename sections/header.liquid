@@ -430,7 +430,7 @@
       </nav>
     {%- endif -%}
 
-    <div class="header__icons">
+    <div id="shopify-header-icons" class="header__icons">
       <details-modal class="header__search">
         <details>
           {%- if section.settings.type_header == "transparent-header" -%}
@@ -566,6 +566,7 @@ connectedCallback() {
   this.headerTransparent = document.getElementById('shopify-transparent-header');
   this.headerHeadingLink = document.getElementById('shopify-header-heading-link');
   this.headerNav = document.getElementById('shopify-header-nav');
+  this.headerIcons = document.getElementById('shopify-header-icons');
   this.headerBounds = {};
   this.currentScrollTop = 0;
   this.preventReveal = false;
@@ -626,6 +627,7 @@ hide() {
   this.headerHeadingLink.classList.add('header__heading-link', 'link--text');
 
   this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
+  this.headerNav.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
   this.closeMenuDisclosure();
   this.closeSearchModal();
 }
@@ -637,6 +639,7 @@ reveal() {
   this.headerTransparent.classList.add('header-wrapper', 'color-background-1');
   
   this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
+  this.headerNav.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
 }
 
 reset() {
@@ -647,6 +650,7 @@ reset() {
   this.headerHeadingLink.classList.add('header-transparent__heading-link', 'link--text--header-transparent');
 
   this.headerNav.setAttribute('id', 'shopify-header-nav');
+  this.headerNav.setAttribute('id', 'shopify-header-icons');
 }
 
 closeMenuDisclosure() {
@@ -660,7 +664,8 @@ closeSearchModal() {
 }
 }
 
-customElements.define('transparent-header', TransparentHeader);{% endjavascript %}
+customElements.define('transparent-header', TransparentHeader);
+{% endjavascript %}
 
 <script type="application/ld+json">
   {
