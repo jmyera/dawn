@@ -1876,23 +1876,32 @@ input[type='checkbox'] {
 }
 
 /* section-header (transparent) */
-.shopify-section-header-transparent {
+.shopify-transparent-header-sticky {
+  position: sticky;
+  top: 0;
+}
+
+.shopify-transparent-header-hidden {
+  
+}
+
+/* .shopify-transparent-header {
   position: sticky;
   top: 0;
   width: 100%;
 }
 
-.shopify-section-header-transparent-background-show {
+.shopify-transparent-header-background-show {
   background-color: rgba(0,0,0,0.8);
   transform: translateY(100%);
 }
 
-#shopify-section-header-transparent.animate {
+#shopify-transparent-header.animate {
   -webkit-transition: background-color 0.15s ease-out;
   -moz-transition: background-color 0.15s ease-out;
   -o-transition: background-color 0.15s ease-out;
   transition: background-color 0.15s ease-out;
-}
+} */
 
 /* Main Header Layout */
 .header-wrapper {
@@ -2278,18 +2287,21 @@ details[open] > .header__icon--menu .icon-hamburger {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
+}
+
+#shopify-header-nav .header__menu-item {
   color: rgba(var(--color-foreground), 0.75);
 }
 
-.header__menu-item:hover {
+#shopify-header-nav .header__menu-item:hover {
   color: rgb(var(--color-foreground));
 }
 
-.header-transparent__menu-item {
+#shopify-header-transparent-nav-on-scroll .header-transparent__menu-item {
   color: rgba(255, 255, 255, 0.75);
 }
 
-.header-transparent__menu-item:hover {
+#shopify-header-transparent-nav-on-scroll .header-transparent__menu-item:hover {
   color: rgb(255, 255, 255);
 }
 
