@@ -707,7 +707,7 @@ onScroll() {
 }
 
 hide() {
-  this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-transparent');
+  this.headerSection.classList.add('shopify-section-header-hidden', 'shopify-section-header-transparent');
   this.headerCustomElement.classList.remove('header-transparent-wrapper', 'color-transparent');
   this.headerCustomElement.classList.add('header-wrapper', 'color-background-1');
   this.headerHeading.setAttribute('id', 'shopify-header-transparent-heading-on-scroll');
@@ -718,8 +718,8 @@ hide() {
 }
 
 reveal() {
-  this.header.classList.add('shopify-section-header-transparent', 'animate');
-  this.header.classList.remove('shopify-section-header-transparent-hidden');
+  this.headerSection.classList.add('shopify-section-header-transparent', 'animate');
+  this.headerSection.classList.remove('shopify-section-header-transparent-hidden');
   this.headerCustomElement.classList.remove('header-wrapper', 'color-background-1');
   this.headerCustomElement.classList.add('header-wrapper', 'color-background-1');
   this.headerHeading.setAttribute('id', 'shopify-header-transparent-heading-on-scroll');
@@ -728,8 +728,8 @@ reveal() {
 }
 
 reset() {
-  this.header.classList.remove('shopify-section-header-transparent-hidden', 'shopify-section-header-transparent', 'animate');
-  this.headerCustomElement.classList.remove('header-wrapper', 'color-background-1');
+  this.headerSection.classList.remove('shopify-section-header-transparent-hidden', 'shopify-section-header-transparent', 'animate');
+  this.headerSection.classList.remove('header-wrapper', 'color-background-1');
   this.headerCustomElement.classList.add('header-transparent-wrapper', 'color-transparent');
   this.headerHeading.setAttribute('id', 'shopify-header-heading');
   this.headerNav.setAttribute('id', 'shopify-header-nav');
