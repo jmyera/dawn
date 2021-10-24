@@ -556,6 +556,13 @@
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
 {% javascript %}
+
+try {
+document.registerElement('transparent-header');
+  } catch(e) {
+    console.log('Existe', e);
+  }
+
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
