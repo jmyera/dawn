@@ -617,8 +617,6 @@
 
     hide() {
       this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
-      this.headerTransparent.classList.remove('header-transparent', 'color-transparent');
-      this.headerTransparent.classList.add('header', 'color-background-1');
       this.closeMenuDisclosure();
       this.closeSearchModal();
     }
@@ -626,8 +624,6 @@
     reveal() {
       this.header.classList.add('shopify-section-header-sticky', 'animate');
       this.header.classList.remove('shopify-section-header-hidden');
-      this.headerTransparent.classList.remove('header', 'color-background-1');
-      this.headerTransparent.classList.add('header-transparent', 'color-transparent');
     }
 
     reset() {
@@ -711,6 +707,8 @@
   
     hide() {
       this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
+      this.headerTransparent.classList.remove('header-transparent', 'color-transparent');
+      this.headerTransparent.classList.add('header', 'color-background-1');
       this.closeMenuDisclosure();
       this.closeSearchModal();
     }
@@ -718,8 +716,8 @@
     reveal() {
       this.header.classList.add('shopify-section-header-sticky', 'animate');
       this.header.classList.remove('shopify-section-header-hidden');
-      this.headerTransparent.classList.add('shopify-section-header-sticky', 'animate');
-      this.headerTransparent.classList.remove('shopify-section-header-hidden');
+      this.headerTransparent.classList.remove('header', 'color-background-1', 'animate');
+      this.headerTransparent.classList.add('header-transparent', 'color-transparent');
     }
   
     reset() {
