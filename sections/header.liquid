@@ -79,7 +79,7 @@
     <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
   </symbol>
 </svg>
-<{{ section.settings.type_header }} id="shopify-section-header-transparent" class="{% if section.settings.type_header == "transparent-header" %}header-transparent{% else %}header-wrapper{% endif %} color-{% if section.settings.type_header == "transparent-header" %}transparent{% else %}{{ section.settings.color_scheme }}{% endif %} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
+<{{ section.settings.type_header }} id="shopify-transparent-header" class="{% if section.settings.type_header == "transparent-header" %}header-transparent{% else %}header-wrapper{% endif %} color-{% if section.settings.type_header == "transparent-header" %}transparent{% else %}{{ section.settings.color_scheme }}{% endif %} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   <header class="header header--{{ section.settings.logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="tablet">
@@ -338,7 +338,7 @@
       <h1 class="header__heading">
     {%- endif -%}
       {%- if section.settings.type_header == "transparent-header" -%}
-        <a href="{{ routes.root_url }}" class="header-transparent__heading-link link link--text--header-transparent focus-inset">
+        <a id="shopify-header-heading-link" href="{{ routes.root_url }}" class="header-transparent__heading-link link link--text--header-transparent focus-inset">
       {%- else -%}
         <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
       {%- endif -%}
@@ -381,7 +381,7 @@
                         <li>
                           {%- if childlink.links == blank -%}
                           {%- if section.settings.type_header == "transparent-header" -%}
-                            <a href="{{ childlink.url }}" class="header__menu-item header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                            <a id="shopify-header-link" href="{{ childlink.url }}" class="header__menu-item header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                           {%- else -%}
                             <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                           {%- endif -%}
@@ -417,7 +417,7 @@
                 </details-disclosure>
               {%- else -%}
                 {%- if section.settings.type_header == "transparent-header" -%}
-                <a href="{{ link.url }}" class="header__menu-item header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+                <a id="shopify-header-link" href="{{ link.url }}" class="header__menu-item header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset"{% if link.current %} aria-current="page"{% endif %}>
                 {%- else -%}
                 <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
                 {%- endif -%}
@@ -556,98 +556,115 @@
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
 {% javascript %}
+class TransparentHeader extends HTMLElement {
+  constructor() {
+    super();
+  }
   
+  connectedCallback() {
+    this.header = document.getElementById('shopify-section-header');
+    this.headerTransparent = document.getElementById('shopify-transparent-header');
+    this.headerHeadingLink = document.getElementById('shopify-header-heading-link');
+    this.headerLink = document.getElementById('shopify-header-link');
+    
+    this.headerClassTransparent = document.getElementsByClassName('header-transparent');
+    this.headerClassTransparentHeadingLink = document.getElementsByClassName('header-transparent__heading-link');
+    this.headerClassTransparentIcon = document.getElementsByClassName('header-transparent__icon');
+    this.headerClassTransparentMEnuItem = document.getElementsByClassName('header-transparent__menu-item');
+    this.headerClassColorTransparent = document.getElementsByClassName('color-transparent');
+    
+    this.headerBounds = {};
+    this.currentScrollTop = 0;
+    this.preventReveal = false;
   
-  class TransparentHeader extends HTMLElement {
-    constructor() {
-      super();
-    }
+    this.onScrollHandler = this.onScroll.bind(this);
+    this.hideHeaderOnScrollUp = () => this.preventReveal = true;
   
-    connectedCallback() {
-      this.header = document.getElementById('shopify-section-header');
-      this.headerTransparent = document.getElementById('shopify-section-header-transparent');
-      this.headerBounds = {};
-      this.currentScrollTop = 0;
-      this.preventReveal = false;
+    this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+    window.addEventListener('scroll', this.onScrollHandler, false);
   
-      this.onScrollHandler = this.onScroll.bind(this);
-      this.hideHeaderOnScrollUp = () => this.preventReveal = true;
+    this.createObserver();
+  }
   
-      this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-      window.addEventListener('scroll', this.onScrollHandler, false);
+  disconnectedCallback() {
+    this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+    window.removeEventListener('scroll', this.onScrollHandler);
+  }
   
-      this.createObserver();
-    }
+  createObserver() {
+    let observer = new IntersectionObserver((entries, observer) => {
+      this.headerBounds = entries[0].intersectionRect;
+      observer.disconnect();
+    });
   
-    disconnectedCallback() {
-      this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-      window.removeEventListener('scroll', this.onScrollHandler);
-    }
+    observer.observe(this.header);
+    observer.observe(this.headerTransparent);
+  }
   
-    createObserver() {
-      let observer = new IntersectionObserver((entries, observer) => {
-        this.headerBounds = entries[0].intersectionRect;
-        observer.disconnect();
-      });
+  onScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   
-      observer.observe(this.header);
-      observer.observe(this.headerTransparent);
-    }
+    if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+      requestAnimationFrame(this.hide.bind(this));
+    } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+      if (!this.preventReveal) {
+        requestAnimationFrame(this.reveal.bind(this));
+      } else {
+        window.clearTimeout(this.isScrolling);
   
-    onScroll() {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        this.isScrolling = setTimeout(() => {
+          this.preventReveal = false;
+        }, 66);
   
-      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
         requestAnimationFrame(this.hide.bind(this));
-      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-        if (!this.preventReveal) {
-          requestAnimationFrame(this.reveal.bind(this));
-        } else {
-          window.clearTimeout(this.isScrolling);
-  
-          this.isScrolling = setTimeout(() => {
-            this.preventReveal = false;
-          }, 66);
-  
-          requestAnimationFrame(this.hide.bind(this));
-        }
-      } else if (scrollTop <= this.headerBounds.top) {
-        requestAnimationFrame(this.reset.bind(this));
       }
-  
-  
-      this.currentScrollTop = scrollTop;
+    } else if (scrollTop <= this.headerBounds.top) {
+      requestAnimationFrame(this.reset.bind(this));
     }
   
-    hide() {
-      this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
-      this.headerTransparent.classList.remove('header-transparent', 'color-transparent');
-      this.headerTransparent.classList.add('header', 'color-background-1');
-      this.closeMenuDisclosure();
-      this.closeSearchModal();
-    }
   
-    reveal() {
-      this.header.classList.add('shopify-section-header-sticky', 'animate');
-      this.header.classList.remove('shopify-section-header-hidden');
-      this.headerTransparent.classList.remove('header', 'color-background-1', 'animate');
-      this.headerTransparent.classList.add('header-transparent', 'color-transparent');
-    }
+    this.currentScrollTop = scrollTop;
+  }
   
-    reset() {
-      this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-      this.headerTransparent.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-    }
+  hide() {
+    this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
+    this.headerTransparent.classList.remove('header-transparent', 'color-transparent');
+    this.headerTransparent.classList.add('header', 'color-background-1');
+    this.headerHeadingLink.classList.remove('header__heading-link', 'link--text--header');
+    this.headerHeadingLink.classList.add('header-transparent__heading-link', 'link--text--header-transparent');
+    this.headerLink.classList.remove('header__menu-item', 'link--text--header');
+    this.headerLink.classList.add('header-transparent__menu-item', 'link--text--header-transparent');
+    this.closeMenuDisclosure();
+    this.closeSearchModal();
+  }
   
-    closeMenuDisclosure() {
-      this.disclosures = this.disclosures || this.header.querySelectorAll('details-disclosure');
-      this.disclosures.forEach(disclosure => disclosure.close());
-    }
+  reveal() {
+    this.header.classList.add('shopify-section-header-sticky', 'animate');
+    this.header.classList.remove('shopify-section-header-hidden');
+    this.headerTransparent.classList.remove('header-transparent', 'color-transparent', 'animate');
+    this.headerTransparent.classList.add('header', 'color-background-1');
+    this.headerHeadingLink.classList.remove('header-transparent__heading-link', 'link--text--header-transparent');
+    this.headerHeadingLink.classList.add('header__heading-link', 'link--text--header');
+    this.headerLink.classList.remove('header-transparent__menu-item', 'link--text--header-transparent');
+    this.headerLink.classList.add('header__menu-item', 'link--text--header');
+  }
   
-    closeSearchModal() {
-      this.searchModal = this.searchModal || this.header.querySelector('details-modal');
-      this.searchModal.close(false);
-    }
+  reset() {
+    this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+    this.headerTransparent.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+    this.headerHeadingLink.classList.remove('header-transparent__heading-link', 'link--text--header-transparent');
+    this.headerLink.classList.remove('header-transparent__menu-item', 'link--text--header-transparent');
+  }
+  
+  closeMenuDisclosure() {
+    this.disclosures = this.disclosures || this.header.querySelectorAll('details-disclosure');
+    this.disclosures.forEach(disclosure => disclosure.close());
+  }
+  
+  closeSearchModal() {
+    this.searchModal = this.searchModal || this.header.querySelector('details-modal');
+    this.searchModal.close(false);
+  }
   }
   
   customElements.define('transparent-header', TransparentHeader);
