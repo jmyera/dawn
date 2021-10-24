@@ -620,8 +620,8 @@ onScroll() {
 
 hide() {
   this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
-  this.headerTransparent.classList.remove('header-transparent', 'color-transparent', 'gradient');
-  this.headerTransparent.classList.add('header-wrapper', 'color-background-1', 'gradient');
+  this.headerTransparent.classList.remove('header-transparent', 'color-transparent');
+  this.headerTransparent.classList.add('header-wrapper', 'color-background-1');
   this.headerHeadingLink.classList.remove('header-transparent__heading-link', 'link', 'link--text--header-transparent', 'focus-inset');
   this.headerHeadingLink.classList.add('header__heading-link', 'link', 'link--text', 'focus-inset');
   this.headerLink.classList.remove('header__menu-item', 'header-transparent__menu-item', 'list-menu__item', 'link', 'link--text--header-transparent', 'focus-inset');
@@ -633,8 +633,8 @@ hide() {
 reveal() {
   this.header.classList.add('shopify-section-header-sticky', 'animate');
   this.header.classList.remove('shopify-section-header-hidden');
-  this.headerTransparent.classList.remove('header-wrapper', 'color-background-1', 'gradient');
-  this.headerTransparent.classList.add('header-wrapper', 'color-background-1', 'gradient');
+  this.headerTransparent.classList.remove('header-wrapper', 'color-background-1');
+  this.headerTransparent.classList.add('header-wrapper', 'color-background-1');
   this.headerHeadingLink.classList.remove('header__heading-link', 'link', 'link--text', 'focus-inset');
   this.headerHeadingLink.classList.add('header__heading-link', 'link', 'link--text', 'focus-inset');
   this.headerLink.classList.remove('header__menu-item', 'header__menu-item', 'list-menu__item', 'link', 'link--text', 'focus-inset');
@@ -643,8 +643,8 @@ reveal() {
 
 reset() {
   this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-  this.headerTransparent.classList.remove('header-wrapper', 'color-background-1', 'gradient');
-  this.headerTransparent.classList.add('header-transparent', 'color-transparent', 'gradient');
+  this.headerTransparent.classList.remove('header-wrapper', 'color-background-1');
+  this.headerTransparent.classList.add('header-transparent', 'color-transparent');
   this.headerHeadingLink.classList.remove('header__heading-link', 'link', 'link--text', 'focus-inset');
   this.headerHeadingLink.classList.add('header-transparent__heading-link', 'link', 'link--text--header-transparent', 'focus-inset');
   this.headerLink.classList.remove('header__menu-item', 'header__menu-item', 'list-menu__item', 'link', 'link--text', 'focus-inset');
