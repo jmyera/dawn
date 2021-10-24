@@ -1905,10 +1905,6 @@ input[type='checkbox'] {
   transition: background-color 0.15s ease-out;
 }
 
-.header-transparent-wrapper:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
 .header-wrapper--border-bottom {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
