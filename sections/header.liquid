@@ -79,7 +79,7 @@
     <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
   </symbol>
 </svg>
-<{{ section.settings.type_header }} id="shopify-header" class="{% if section.settings.type_header == "transparent-header" %}header-transparent{% else %}header-wrapper{% endif %} color-{% if section.settings.type_header == "transparent-header" %}transparent{% else %}{{ section.settings.color_scheme }}{% endif %} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
+<{{ section.settings.type_header }} id="shopify-header-custom-element" class="{% if section.settings.type_header == "transparent-header" %}header-wrapper-transparent{% else %}header-wrapper{% endif %} color-{% if section.settings.type_header == "transparent-header" %}transparent{% else %}{{ section.settings.color_scheme }}{% endif %} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   <header class="header header--{{ section.settings.logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="tablet">
@@ -563,7 +563,7 @@ constructor() {
 
 connectedCallback() {
   this.header = document.getElementById('shopify-section-header');
-  this.headerTransparent = document.getElementById('shopify-header');
+  this.headerCustomElement = document.getElementById('shopify-header-custom-element');
   this.headerHeading = document.getElementById('shopify-header-heading');
   this.headerNav = document.getElementById('shopify-header-nav');
   this.headerIcons = document.getElementById('shopify-header-icons');
@@ -591,7 +591,7 @@ createObserver() {
     observer.disconnect();
   });
 
-  observer.observe(this.header, this.headerTransparent, this.headerHeading, this.headerNav, this.headerIcons);
+  observer.observe(this.header, this.headerCustomElement, this.headerHeading, this.headerNav, this.headerIcons);
 }
 
 onScroll() {
@@ -621,9 +621,7 @@ onScroll() {
 
 hide() {
   this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
-  this.headerTransparent.classList.remove('header-transparent', 'color-transparent');
-  this.headerTransparent.classList.add('header-wrapper', 'color-background-1');
-  
+  this.headerCustomElement.setAttribute('id', 'shopify-header-transparent-custom-element-on-scroll');
   this.headerHeading.setAttribute('id', 'shopify-header-transparent-heading-on-scroll');
   this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
   this.headerIcons.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
@@ -634,9 +632,7 @@ hide() {
 reveal() {
   this.header.classList.add('shopify-section-header-sticky', 'animate');
   this.header.classList.remove('shopify-section-header-hidden');
-  this.headerTransparent.classList.remove('header-wrapper', 'color-background-1');
-  this.headerTransparent.classList.add('header-wrapper', 'color-background-1');
-  
+  this.headerCustomElement.setAttribute('id', 'shopify-header-transparent-custom-element-on-scroll');
   this.headerHeading.setAttribute('id', 'shopify-header-transparent-heading-on-scroll');
   this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
   this.headerIcons.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
@@ -644,9 +640,7 @@ reveal() {
 
 reset() {
   this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-  this.headerTransparent.classList.remove('header-wrapper', 'color-background-1');
-  this.headerTransparent.classList.add('header-transparent', 'color-transparent');
-
+  this.headerCustomElement.setAttribute('id', 'shopify-header-custom-element');
   this.headerHeading.setAttribute('id', 'shopify-header-heading');
   this.headerNav.setAttribute('id', 'shopify-header-nav');
   this.headerIcons.setAttribute('id', 'shopify-header-icons');
