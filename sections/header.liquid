@@ -627,7 +627,7 @@ hide() {
   this.headerHeadingLink.classList.add('header__heading-link', 'link--text');
 
   this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
-  this.headerNav.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
+  this.headerIcons.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
   this.closeMenuDisclosure();
   this.closeSearchModal();
 }
@@ -639,7 +639,7 @@ reveal() {
   this.headerTransparent.classList.add('header-wrapper', 'color-background-1');
   
   this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
-  this.headerNav.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
+  this.headerIcons.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
 }
 
 reset() {
@@ -650,7 +650,7 @@ reset() {
   this.headerHeadingLink.classList.add('header-transparent__heading-link', 'link--text--header-transparent');
 
   this.headerNav.setAttribute('id', 'shopify-header-nav');
-  this.headerNav.setAttribute('id', 'shopify-header-icons');
+  this.headerIcons.setAttribute('id', 'shopify-header-icons');
 }
 
 closeMenuDisclosure() {
