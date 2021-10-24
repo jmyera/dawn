@@ -2059,14 +2059,15 @@ input[type='checkbox'] {
   justify-content: center;
 }
 
-.header__icon {
+#shopify-header-icons .header__icon,
+#shopify-header-icons-on-scroll .header-transparent__icon {
   color: rgb(var(--color-foreground));
 }
 
-.header-transparent__icon {
+#shopify-header-icons .header-transparent__icon {
   color: rgb(255, 255, 255);
 }
-
+  
 .header__icon span {
   height: 100%;
 }
