@@ -335,10 +335,10 @@
     {%- endif -%}
 
     {%- if request.page_type == 'index' -%}
-      <h1 class="header__heading">
+      <h1 id="shopify-header-heading class="header__heading">
     {%- endif -%}
       {%- if section.settings.type_header == "transparent-header" -%}
-        <a id="shopify-header-heading-link" href="{{ routes.root_url }}" class="header-transparent__heading-link link link--text--header-transparent focus-inset">
+        <a" href="{{ routes.root_url }}" class="header-transparent__heading-link link link--text--header-transparent focus-inset">
       {%- else -%}
         <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
       {%- endif -%}
@@ -564,7 +564,7 @@ constructor() {
 connectedCallback() {
   this.header = document.getElementById('shopify-section-header');
   this.headerTransparent = document.getElementById('shopify-transparent-header');
-  this.headerHeadingLink = document.getElementById('shopify-header-heading-link');
+  this.headerHeading = document.getElementById('shopify-header-heading');
   this.headerNav = document.getElementById('shopify-header-nav');
   this.headerIcons = document.getElementById('shopify-header-icons');
   this.headerBounds = {};
@@ -591,7 +591,7 @@ createObserver() {
     observer.disconnect();
   });
 
-  observer.observe(this.header, this.headerTransparent, this.headerHeadingLink, this.headerNav, this.headerIcons);
+  observer.observe(this.header, this.headerTransparent, this.headerHeading, this.headerNav, this.headerIcons);
 }
 
 onScroll() {
@@ -623,9 +623,8 @@ hide() {
   this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
   this.headerTransparent.classList.remove('header-transparent', 'color-transparent');
   this.headerTransparent.classList.add('header-wrapper', 'color-background-1');
-  this.headerHeadingLink.classList.remove('header-transparent__heading-link', 'link--text--header-transparent');
-  this.headerHeadingLink.classList.add('header__heading-link', 'link--text');
-
+  
+  this.headerHeading.setAttribute('id', 'shopify-header-heading-on-scroll');
   this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
   this.headerIcons.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
   this.closeMenuDisclosure();
@@ -638,6 +637,7 @@ reveal() {
   this.headerTransparent.classList.remove('header-wrapper', 'color-background-1');
   this.headerTransparent.classList.add('header-wrapper', 'color-background-1');
   
+  this.headerHeading.setAttribute('id', 'shopify-header-heading-on-scroll');
   this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
   this.headerIcons.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
 }
@@ -646,9 +646,8 @@ reset() {
   this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
   this.headerTransparent.classList.remove('header-wrapper', 'color-background-1');
   this.headerTransparent.classList.add('header-transparent', 'color-transparent');
-  this.headerHeadingLink.classList.remove('header__heading-link', 'link--text');
-  this.headerHeadingLink.classList.add('header-transparent__heading-link', 'link--text--header-transparent');
 
+  this.headerHeading.setAttribute('id', 'shopify-header-heading');
   this.headerNav.setAttribute('id', 'shopify-header-nav');
   this.headerIcons.setAttribute('id', 'shopify-header-icons');
 }
