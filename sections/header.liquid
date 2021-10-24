@@ -397,7 +397,7 @@
                                 {%- for grandchildlink in childlink.links -%}
                                   <li>
                                     {%- if section.settings.type_header == "transparent-header" -%}
-                                    <a href="{{ grandchildlink.url }}" class="header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                    <a id="shopify-header-link" href="{{ grandchildlink.url }}" class="header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
                                       {{ grandchildlink.title | escape }}
                                     </a>
                                     {%- else -%}
