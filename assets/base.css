@@ -1871,14 +1871,10 @@ input[type='checkbox'] {
 .header-wrapper {
   display: block;
   position: relative;
+  background-color: rgb(var(--color-background));
 }
 
-#shopify-header-custom-element .header-wrapper,
-#shopify-header-custom-element-on-scroll .header-transparent-wrapper {
-  color: rgb(var(--color-foreground));
-}
-
-#shopify-header-custom-element .header-transparent-wrapper {
+.header-transparent-wrapper {
   position: fixed;
   top: 0;
   width: 100%;
@@ -1889,11 +1885,9 @@ input[type='checkbox'] {
   transition: background-color 0.15s ease-out;
 }
 
-/* 
-.header-wrapper-transparent:hover {
+.header-transparent-wrapper:hover {
   background-color: rgba(0,0,0,0.8);
-} 
-*/
+}
 
 .header-wrapper--border-bottom {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);

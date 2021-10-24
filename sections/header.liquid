@@ -564,7 +564,7 @@ class TransparentHeader extends HTMLElement {
   connectedCallback() {
     this.header = document.getElementById('shopify-section-header');
     this.headerCustomElement = document.getElementById('shopify-header-custom-element');
-    this.headerHeading = document.getElementById('shopify-header-heading');
+    this.headerHeadingLink = document.getElementById('shopify-header-heading-link');
     this.headerNav = document.getElementById('shopify-header-nav');
     this.headerIcons = document.getElementById('shopify-header-icons');
     this.headerBounds = {};
@@ -591,7 +591,7 @@ class TransparentHeader extends HTMLElement {
       observer.disconnect();
     });
   
-    observer.observe(this.header, this.headerCustomElement, this.headerHeading, this.headerNav, this.headerIcons);
+    observer.observe(this.header, this.headerCustomElement, this.headerHeadingLink, this.headerNav, this.headerIcons);
   }
   
   onScroll() {
@@ -621,7 +621,8 @@ class TransparentHeader extends HTMLElement {
   
   hide() {
     this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
-    this.headerCustomElement.setAttribute('id', 'shopify-header-custom-element-on-scroll');
+    this.headerCustomElement.classList.remove('header-transparent', 'color-transparent');
+    this.headerCustomElement.classList.add('header-transparent-wrapper', 'color-background-1');
     this.headerHeading.setAttribute('id', 'shopify-header-transparent-heading-on-scroll');
     this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
     this.headerIcons.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
@@ -632,7 +633,8 @@ class TransparentHeader extends HTMLElement {
   reveal() {
     this.header.classList.add('shopify-section-header-sticky', 'animate');
     this.header.classList.remove('shopify-section-header-hidden');
-    this.headerCustomElement.setAttribute('id', 'shopify-header-custom-element-on-scroll');
+    this.headerCustomElement.classList.remove('header-transparent-wrapper', 'color-background-1');
+    this.headerCustomElement.classList.add('header-transparent-wrapper', 'color-background-1');
     this.headerHeading.setAttribute('id', 'shopify-header-transparent-heading-on-scroll');
     this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
     this.headerIcons.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
@@ -640,7 +642,8 @@ class TransparentHeader extends HTMLElement {
   
   reset() {
     this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-    this.headerCustomElement.setAttribute('id', 'shopify-header-custom-element');
+    this.headerCustomElement.classList.remove('header-wrapper', 'color-background-1');
+    this.headerCustomElement.classList.add('header-transparent-wrapper', 'color-transparent');
     this.headerHeading.setAttribute('id', 'shopify-header-heading');
     this.headerNav.setAttribute('id', 'shopify-header-nav');
     this.headerIcons.setAttribute('id', 'shopify-header-icons');
@@ -655,10 +658,9 @@ class TransparentHeader extends HTMLElement {
     this.searchModal = this.searchModal || this.header.querySelector('details-modal');
     this.searchModal.close(false);
   }
-}
-
-customElements.define('transparent-header', TransparentHeader);
-
+  }
+  
+  customElements.define('transparent-header', TransparentHeader);
 {% endjavascript %}
 
 <script type="application/ld+json">
