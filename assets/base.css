@@ -1883,15 +1883,8 @@ input[type='checkbox'] {
   top: 0;
   width: 100%;
   background-color: transparent;
-  -webkit-transition: background-color 0.15s ease-out;
-  -moz-transition: background-color 0.15s ease-out;
-  -o-transition: background-color 0.15s ease-out;
   transition: background-color 0.15s ease-out;
 }
-
-/* .header-wrapper-transparent:hover {
-  background-color: rgba(0,0,0,0.8);
-} */
 
 .header-wrapper--border-bottom {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
