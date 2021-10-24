@@ -644,96 +644,100 @@
   customElements.define('sticky-header', StickyHeader);
 
 
-  class TransparentHeader extends HTMLElement {
-    constructor() {
-      super();
+class TransparentHeader extends HTMLElement {
+constructor() {
+  super();
+}
+
+connectedCallback() {
+  this.headerSection = document.getElementById('shopify-section-header');
+  this.headerCustomElement = document.getElementById('shopify-header-custom-element');
+  this.headerHeading = document.getElementById('shopify-header-heading');
+  this.headerNav = document.getElementById('shopify-header-nav');
+  this.headerIcons = document.getElementById('shopify-header-icons');
+  this.headerBounds = {};
+  this.currentScrollTop = 0;
+  this.preventReveal = false;
+
+  this.onScrollHandler = this.onScroll.bind(this);
+  this.hideHeaderOnScrollUp = () => this.preventReveal = true;
+
+  this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+  window.addEventListener('scroll', this.onScrollHandler, false);
+
+  this.createObserver();
+}
+
+disconnectedCallback() {
+  this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+  window.removeEventListener('scroll', this.onScrollHandler);
+}
+
+createObserver() {
+  let observer = new IntersectionObserver((entries, observer) => {
+    this.headerBounds = entries[0].intersectionRect;
+    observer.disconnect();
+  });
+
+  observer.observe(this.headerSection, this.headerCustomElement, this.headerHeading, this.headerNav, this.headerIcons);
+}
+
+onScroll() {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+    requestAnimationFrame(this.hide.bind(this));
+  } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+    if (!this.preventReveal) {
+      requestAnimationFrame(this.reveal.bind(this));
+    } else {
+      window.clearTimeout(this.isScrolling);
+
+      this.isScrolling = setTimeout(() => {
+        this.preventReveal = false;
+      }, 66);
+
+      requestAnimationFrame(this.hide.bind(this));
     }
-    
-    connectedCallback() {
-      this.headerCustomElement = document.getElementById('shopify-header-custom-element');
-      this.headerHeading = document.getElementById('shopify-header-heading');
-      this.headerNav = document.getElementById('shopify-header-nav');
-      this.headerIcons = document.getElementById('shopify-header-icons');
-      this.headerBounds = {};
-      this.currentScrollTop = 0;
-      this.preventReveal = false;
-    
-      this.onScrollHandler = this.onScroll.bind(this);
-      this.hideHeaderOnScrollUp = () => this.preventReveal = true;
-    
-      this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-      window.addEventListener('scroll', this.onScrollHandler, false);
-    
-      this.createObserver();
-    }
-    
-    disconnectedCallback() {
-      this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-      window.removeEventListener('scroll', this.onScrollHandler);
-    }
-    
-    createObserver() {
-      let observer = new IntersectionObserver((entries, observer) => {
-        this.headerBounds = entries[0].intersectionRect;
-        observer.disconnect();
-      });
-    
-      observer.observe(this.headerCustomElement, this.headerHeading, this.headerNav, this.headerIcons);
-    }
-    
-    onScroll() {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-        requestAnimationFrame(this.hide.bind(this));
-      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-        if (!this.preventReveal) {
-          requestAnimationFrame(this.reveal.bind(this));
-        } else {
-          window.clearTimeout(this.isScrolling);
-    
-          this.isScrolling = setTimeout(() => {
-            this.preventReveal = false;
-          }, 66);
-    
-          requestAnimationFrame(this.hide.bind(this));
-        }
-      } else if (scrollTop <= this.headerBounds.top) {
-        requestAnimationFrame(this.reset.bind(this));
-      }
-    
-      this.currentScrollTop = scrollTop;
-    }
-    
-    hide() {
-      this.headerCustomElement.classList.remove('header-transparent-wrapper', 'color-transparent');
-      this.headerCustomElement.classList.add('header-wrapper', 'color-background-1');
-      this.headerHeading.setAttribute('id', 'shopify-header-transparent-heading-on-scroll');
-      this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
-      this.headerIcons.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
-      this.closeMenuDisclosure();
-      this.closeSearchModal();
-    }
-    
-    reveal() {
-      this.header.classList.remove('shopify-section-header-hidden');
-      this.headerCustomElement.classList.remove('header-wrapper', 'color-background-1');
-      this.headerCustomElement.classList.add('header-wrapper', 'color-background-1');
-      this.headerHeading.setAttribute('id', 'shopify-header-transparent-heading-on-scroll');
-      this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
-      this.headerIcons.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
-    }
-    
-    reset() {
-      this.headerCustomElement.classList.remove('header-wrapper', 'color-background-1');
-      this.headerCustomElement.classList.add('header-transparent-wrapper', 'color-transparent');
-      this.headerHeading.setAttribute('id', 'shopify-header-heading');
-      this.headerNav.setAttribute('id', 'shopify-header-nav');
-      this.headerIcons.setAttribute('id', 'shopify-header-icons');
-    }
+  } else if (scrollTop <= this.headerBounds.top) {
+    requestAnimationFrame(this.reset.bind(this));
   }
-  
-  customElements.define('transparent-header', TransparentHeader);
+
+  this.currentScrollTop = scrollTop;
+}
+
+hide() {
+  this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-transparent');
+  this.headerCustomElement.classList.remove('header-transparent-wrapper', 'color-transparent');
+  this.headerCustomElement.classList.add('header-wrapper', 'color-background-1');
+  this.headerHeading.setAttribute('id', 'shopify-header-transparent-heading-on-scroll');
+  this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
+  this.headerIcons.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
+  this.closeMenuDisclosure();
+  this.closeSearchModal();
+}
+
+reveal() {
+  this.header.classList.add('shopify-section-header-transparent', 'animate');
+  this.header.classList.remove('shopify-section-header-transparent-hidden');
+  this.headerCustomElement.classList.remove('header-wrapper', 'color-background-1');
+  this.headerCustomElement.classList.add('header-wrapper', 'color-background-1');
+  this.headerHeading.setAttribute('id', 'shopify-header-transparent-heading-on-scroll');
+  this.headerNav.setAttribute('id', 'shopify-header-transparent-nav-on-scroll');
+  this.headerIcons.setAttribute('id', 'shopify-header-transparent-icons-on-scroll');
+}
+
+reset() {
+  this.header.classList.remove('shopify-section-header-transparent-hidden', 'shopify-section-header-transparent', 'animate');
+  this.headerCustomElement.classList.remove('header-wrapper', 'color-background-1');
+  this.headerCustomElement.classList.add('header-transparent-wrapper', 'color-transparent');
+  this.headerHeading.setAttribute('id', 'shopify-header-heading');
+  this.headerNav.setAttribute('id', 'shopify-header-nav');
+  this.headerIcons.setAttribute('id', 'shopify-header-icons');
+}
+}
+
+customElements.define('transparent-header', TransparentHeader);
 {% endjavascript %}
 
 
