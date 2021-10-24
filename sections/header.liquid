@@ -656,12 +656,12 @@
     function scrollFunction() {
       if (document.body.scrollTop > 66 || document.documentElement.scrollTop > 66) {      
         document.getElementById('shopify-section-header-transparent');
-        document.getElementById('shopify-section-header-transparent').classList.remove('header-transparent');
-        document.getElementById('shopify-section-header-transparent').classList.add('header');
+        html.classList.remove('header-transparent');
+       html.classList.add('header');
       } else {     
         document.getElementById('shopify-section-header-transparent');
-        document.getElementById('shopify-section-header-transparent').classList.remove('header');
-        document.getElementById('shopify-section-header-transparent').classList.add('header-transparent');
+        html.classList.remove('header');
+        html.classList.add('header-transparent');
       }
     }
   }
