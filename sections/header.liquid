@@ -557,118 +557,105 @@
 
 {% javascript %}
 class TransparentHeader extends HTMLElement {
-  constructor() {
-    super();
-  }
-  
-  connectedCallback() {
-    this.header = document.getElementById('shopify-section-header');
-    this.headerTransparent = document.getElementById('shopify-transparent-header');
-    this.headerHeadingLink = document.getElementById('shopify-header-heading-link');
-    this.headerLink = document.getElementById('shopify-header-link');
-    
-    this.headerClassTransparent = document.getElementsByClassName('header-transparent');
-    this.headerClassTransparentHeadingLink = document.getElementsByClassName('header-transparent__heading-link');
-    this.headerClassTransparentIcon = document.getElementsByClassName('header-transparent__icon');
-    this.headerClassTransparentMEnuItem = document.getElementsByClassName('header-transparent__menu-item');
-    this.headerClassColorTransparent = document.getElementsByClassName('color-transparent');
-    
-    this.headerBounds = {};
-    this.currentScrollTop = 0;
-    this.preventReveal = false;
-  
-    this.onScrollHandler = this.onScroll.bind(this);
-    this.hideHeaderOnScrollUp = () => this.preventReveal = true;
-  
-    this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-    window.addEventListener('scroll', this.onScrollHandler, false);
-  
-    this.createObserver();
-  }
-  
-  disconnectedCallback() {
-    this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-    window.removeEventListener('scroll', this.onScrollHandler);
-  }
-  
-  createObserver() {
-    let observer = new IntersectionObserver((entries, observer) => {
-      this.headerBounds = entries[0].intersectionRect;
-      observer.disconnect();
-    });
-  
-    observer.observe(this.header);
-    observer.observe(this.headerTransparent);
-    observer.observe(this.headerHeadingLink);
-    observer.observe(this.headerLink);
-  }
-  
-  onScroll() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-    if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-      requestAnimationFrame(this.hide.bind(this));
-    } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-      if (!this.preventReveal) {
-        requestAnimationFrame(this.reveal.bind(this));
-      } else {
-        window.clearTimeout(this.isScrolling);
-  
-        this.isScrolling = setTimeout(() => {
-          this.preventReveal = false;
-        }, 66);
-  
-        requestAnimationFrame(this.hide.bind(this));
-      }
-    } else if (scrollTop <= this.headerBounds.top) {
-      requestAnimationFrame(this.reset.bind(this));
-    }
-  
-  
-    this.currentScrollTop = scrollTop;
-  }
-  
-  hide() {
-    this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
-    this.headerTransparent.classList.remove('header-transparent', 'color-transparent');
-    this.headerTransparent.classList.add('header', 'color-background-1');
-    this.headerHeadingLink.classList.remove('header__heading-link', 'link--text--header');
-    this.headerHeadingLink.classList.add('header-transparent__heading-link', 'link--text--header-transparent');
-    this.headerLink.classList.remove('header__menu-item', 'link--text--header');
-    this.headerLink.classList.add('header-transparent__menu-item', 'link--text--header-transparent');
-    this.closeMenuDisclosure();
-    this.closeSearchModal();
-  }
-  
-  reveal() {
-    this.header.classList.add('shopify-section-header-sticky', 'animate');
-    this.header.classList.remove('shopify-section-header-hidden');
-    this.headerTransparent.classList.remove('header-transparent', 'color-transparent', 'animate');
-    this.headerTransparent.classList.add('header', 'color-background-1');
-    this.headerHeadingLink.classList.remove('header-transparent__heading-link', 'link--text--header-transparent');
-    this.headerHeadingLink.classList.add('header__heading-link', 'link--text--header');
-    this.headerLink.classList.remove('header-transparent__menu-item', 'link--text--header-transparent');
-    this.headerLink.classList.add('header__menu-item', 'link--text--header');
-  }
-  
-  reset() {
-    this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-    this.headerTransparent.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-    this.headerHeadingLink.classList.remove('header-transparent__heading-link', 'link--text--header-transparent');
-    this.headerLink.classList.remove('header-transparent__menu-item', 'link--text--header-transparent');
-  }
-  
-  closeMenuDisclosure() {
-    this.disclosures = this.disclosures || this.header.querySelectorAll('details-disclosure');
-    this.disclosures.forEach(disclosure => disclosure.close());
-  }
-  
-  closeSearchModal() {
-    this.searchModal = this.searchModal || this.header.querySelector('details-modal');
-    this.searchModal.close(false);
-  }
+constructor() {
+  super();
 }
-  
+
+connectedCallback() {
+  this.header = document.getElementById('shopify-section-header');
+  this.headerTransparent = document.getElementById('shopify-transparent-header');
+  this.headerHeadingLink = document.getElementById('shopify-header-heading-link');
+  this.headerLink = document.getElementById('shopify-header-link');
+  this.headerBounds = {};
+  this.currentScrollTop = 0;
+  this.preventReveal = false;
+
+  this.onScrollHandler = this.onScroll.bind(this);
+  this.hideHeaderOnScrollUp = () => this.preventReveal = true;
+
+  this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+  window.addEventListener('scroll', this.onScrollHandler, false);
+
+  this.createObserver();
+}
+
+disconnectedCallback() {
+  this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+  window.removeEventListener('scroll', this.onScrollHandler);
+}
+
+createObserver() {
+  let observer = new IntersectionObserver((entries, observer) => {
+    this.headerBounds = entries[0].intersectionRect;
+    observer.disconnect();
+  });
+
+  observer.observe(this.header);
+  observer.observe(this.headerTransparent);
+  observer.observe(this.headerHeadingLink);
+  observer.observe(this.headerLink);
+}
+
+onScroll() {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+    requestAnimationFrame(this.hide.bind(this));
+  } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+    if (!this.preventReveal) {
+      requestAnimationFrame(this.reveal.bind(this));
+    } else {
+      window.clearTimeout(this.isScrolling);
+
+      this.isScrolling = setTimeout(() => {
+        this.preventReveal = false;
+      }, 66);
+
+      requestAnimationFrame(this.hide.bind(this));
+    }
+  } else if (scrollTop <= this.headerBounds.top) {
+    requestAnimationFrame(this.reset.bind(this));
+  }
+
+
+  this.currentScrollTop = scrollTop;
+}
+
+hide() {
+  this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
+  this.closeMenuDisclosure();
+  this.closeSearchModal();
+}
+
+reveal() {
+  this.header.classList.add('shopify-section-header-sticky', 'animate');
+  this.header.classList.remove('shopify-section-header-hidden');
+  this.headerTransparent.classList.remove('header-transparent', 'color-transparent');
+  this.headerTransparent.classList.add('header', 'color-background-1');
+  this.headerHeadingLink.classList.remove('header-transparent__heading-link', 'link--text--header-transparent');
+  this.headerHeadingLink.classList.add('header__heading-link', 'link--text--header');
+  this.headerLink.classList.remove('header-transparent__menu-item', 'link--text--header-transparent');
+  this.headerLink.classList.add('header__menu-item', 'link--text--header');
+}
+
+reset() {
+  this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+  this.headerTransparent.classList.remove('header-transparent', 'color-transparent');
+  this.headerHeadingLink.classList.remove('header-transparent__heading-link', 'link--text--header-transparent');
+  this.headerLink.classList.remove('header-transparent__menu-item', 'link--text--header-transparent');
+}
+
+closeMenuDisclosure() {
+  this.disclosures = this.disclosures || this.header.querySelectorAll('details-disclosure');
+  this.disclosures.forEach(disclosure => disclosure.close());
+}
+
+closeSearchModal() {
+  this.searchModal = this.searchModal || this.header.querySelector('details-modal');
+  this.searchModal.close(false);
+}
+}
+
 customElements.define('transparent-header', TransparentHeader);
 {% endjavascript %}
 
