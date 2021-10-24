@@ -640,7 +640,6 @@ closeSearchModal() {
   this.searchModal.close(false);
 }
 }
-
 customElements.define('sticky-header', StickyHeader);
 
 class TransparentHeader extends HTMLElement {
@@ -649,7 +648,6 @@ constructor() {
 }
 
 connectedCallback() {
-  this.header = document.getElementById('shopify-section-header');
   this.headerCustomElement = document.getElementById('shopify-header-custom-element');
   this.headerHeading = document.getElementById('shopify-header-heading');
   this.headerNav = document.getElementById('shopify-header-nav');
@@ -678,7 +676,7 @@ createObserver() {
     observer.disconnect();
   });
 
-  observer.observe(this.header, this.headerCustomElement, this.headerHeading, this.headerNav, this.headerIcons);
+  observer.observe(this.headerCustomElement, this.headerHeading, this.headerNav, this.headerIcons);
 }
 
 onScroll() {
@@ -702,12 +700,10 @@ onScroll() {
     requestAnimationFrame(this.reset.bind(this));
   }
 
-
   this.currentScrollTop = scrollTop;
 }
 
 hide() {
-  this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
   this.headerCustomElement.classList.remove('header-transparent-wrapper', 'color-transparent');
   this.headerCustomElement.classList.add('header-wrapper', 'color-background-1');
   this.headerHeading.setAttribute('id', 'shopify-header-transparent-heading-on-scroll');
@@ -718,7 +714,6 @@ hide() {
 }
 
 reveal() {
-  this.header.classList.add('shopify-section-header-sticky', 'animate');
   this.header.classList.remove('shopify-section-header-hidden');
   this.headerCustomElement.classList.remove('header-wrapper', 'color-background-1');
   this.headerCustomElement.classList.add('header-wrapper', 'color-background-1');
@@ -728,25 +723,13 @@ reveal() {
 }
 
 reset() {
-  this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
   this.headerCustomElement.classList.remove('header-wrapper', 'color-background-1');
   this.headerCustomElement.classList.add('header-transparent-wrapper', 'color-transparent');
   this.headerHeading.setAttribute('id', 'shopify-header-heading');
   this.headerNav.setAttribute('id', 'shopify-header-nav');
   this.headerIcons.setAttribute('id', 'shopify-header-icons');
 }
-
-closeMenuDisclosure() {
-  this.disclosures = this.disclosures || this.header.querySelectorAll('details-disclosure');
-  this.disclosures.forEach(disclosure => disclosure.close());
 }
-
-closeSearchModal() {
-  this.searchModal = this.searchModal || this.header.querySelector('details-modal');
-  this.searchModal.close(false);
-}
-}
-
 customElements.define('transparent-header', TransparentHeader);
 {% endjavascript %}
 
