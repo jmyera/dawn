@@ -592,7 +592,7 @@ createObserver() {
     observer.disconnect();
   });
 
-  observer.observe(this.header, this.headerTransparent, this.headerHeadingLink, this.headerLink);
+  observer.observe(this.header, this.headerTransparent, this.headerHeadingLink, this.headerClassTransparentMenuItem);
 }
 
 onScroll() {
@@ -629,8 +629,8 @@ hide() {
 
   var i;
   for (i = 0; i < this.headerClassTransparentMenuItem.length; i++) {
-    this.headerClassTransparentMenuItem[i].classList.remove = 'header__menu-item', 'header-transparent__menu-item', 'link--text--header-transparent';
-    this.headerClassTransparentMenuItem[i].classList.add = 'header__menu-item', 'link--text';
+    this.headerClassTransparentMenuItem[i].classList.replace = 'header-transparent__menu-item', 'header__menu-item';
+    this.headerClassTransparentMenuItem[i].classList.replace = 'link--text--header-transparent', 'link--text';
   }
 
   this.closeMenuDisclosure();
@@ -644,12 +644,6 @@ reveal() {
   this.headerTransparent.classList.add('header-wrapper', 'color-background-1');
   this.headerHeadingLink.classList.remove('header__heading-link', 'link--text');
   this.headerHeadingLink.classList.add('header__heading-link', 'link--text');
-
-  var ii;
-  for (ii = 0; i < this.headerClassTransparentMenuItem.length; ii++) {
-    this.headerClassTransparentMenuItem[ii].classList.remove = 'header__menu-item', 'link--text';
-    this.headerClassTransparentMenuItem[ii].classList.add = 'header__menu-item', 'link--text';
-  }
 }
 
 reset() {
@@ -659,10 +653,10 @@ reset() {
   this.headerHeadingLink.classList.remove('header__heading-link', 'link--text');
   this.headerHeadingLink.classList.add('header-transparent__heading-link', 'link--text--header-transparent');
 
-  var iii;
-  for (iii = 0; i < this.headerClassTransparentMenuItem.length; iii++) {
-    this.headerClassTransparentMenuItem[iii].classList.remove = 'header__menu-item', 'link--text';
-    this.headerClassTransparentMenuItem[iii].classList.add = 'header__menu-item', 'header-transparent__menu-item', 'link--text--header-transparent';
+  var ii;
+  for (ii = 0; ii < this.headerClassTransparentMenuItem.length; ii++) {
+    this.headerClassTransparentMenuItem[ii].classList.replace = 'header__menu-item', 'header-transparent__menu-item';
+    this.headerClassTransparentMenuItem[ii].classList.replace = 'link--text', 'link--text--header-transparent';
   }
 }
 
@@ -677,7 +671,8 @@ closeSearchModal() {
 }
 }
 
-customElements.define('transparent-header', TransparentHeader);{% endjavascript %}
+customElements.define('transparent-header', TransparentHeader);
+{% endjavascript %}
 
 <script type="application/ld+json">
   {
