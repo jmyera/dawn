@@ -590,10 +590,7 @@ createObserver() {
     observer.disconnect();
   });
 
-  observer.observe(this.header);
-  observer.observe(this.headerTransparent);
-  observer.observe(this.headerHeadingLink);
-  observer.observe(this.headerLink);
+  observer.observe(this.header, this.headerTransparent, this.headerHeadingLink, this.headerLink);
 }
 
 onScroll() {
