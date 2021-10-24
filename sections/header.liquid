@@ -644,19 +644,25 @@
   customElements.define('sticky-header', StickyHeader);
   
   
-  window.onscroll = function() {scrollFunction()};
-   
-  function scrollFunction() {
-    if (document.body.scrollTop > 66 || document.documentElement.scrollTop > 66) {      
-      document.getElementById('shopify-section-header-transparent');
-      transparent-header.classList.remove('header-transparent');
-      transparent-header.classList.add('header');
-    } else {     
-      document.getElementById('shopify-section-header-transparent');
-      transparent-header.classList.remove('header');
-      transparent-header.classList.add('header-transparent');
+  class TransparentHeader extends HTMLElement {
+  
+    window.onscroll = function() {scrollFunction()};
+       
+    function scrollFunction() {
+      if (document.body.scrollTop > 66 || document.documentElement.scrollTop > 66) {      
+        document.getElementById('shopify-section-header-transparent');
+        transparent-header.classList.remove('header-transparent');
+        transparent-header.classList.add('header');
+      } else {     
+        document.getElementById('shopify-section-header-transparent');
+        transparent-header.classList.remove('header');
+        transparent-header.classList.add('header-transparent');
+      }
     }
   }
+  
+  customElements.define('transparent-header', TransparentHeader);
+  
 {% endjavascript %}
 
 <script type="application/ld+json">
