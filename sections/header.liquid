@@ -590,10 +590,7 @@ createObserver() {
     observer.disconnect();
   });
 
-  observer.observe(this.header);
-  observer.observe(this.headerTransparent);
-  observer.observe(this.headerHeadingLink);
-  observer.observe(this.headerLink);
+  observer.observe(this.header, this.headerTransparent, this.headerHeadingLink, this.headerLink);
 }
 
 onScroll() {
@@ -640,6 +637,7 @@ reveal() {
 
 reset() {
   this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+  this.headerTransparent.classList.remove('color-transparent');
   this.headerTransparent.classList.add('header-transparent', 'color-transparent');
   this.headerHeadingLink.classList.add('header-transparent__heading-link', 'link--text--header-transparent');
   this.headerLink.classList.add('header-transparent__menu-item', 'link--text--header-transparent');
