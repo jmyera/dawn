@@ -417,7 +417,7 @@
                 </details-disclosure>
               {%- else -%}
                 {%- if section.settings.type_header == "transparent-header" -%}
-                <a id="shopify-header-link" href="{{ link.url }}" class="header__menu-item header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+                <a href="{{ link.url }}" class="header__menu-item header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset"{% if link.current %} aria-current="page"{% endif %}>
                 {%- else -%}
                 <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
                 {%- endif -%}
