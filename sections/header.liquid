@@ -651,12 +651,12 @@
     function scrollFunction() {
       if (document.body.scrollTop > 66 || document.documentElement.scrollTop > 66) {      
         document.getElementById('shopify-section-header-transparent');
-        transparent-header.classList.remove('header-transparent');
-        transparent-header.classList.add('header');
+        TransparentHeader.classList.remove('header-transparent');
+        TransparentHeader.classList.add('header');
       } else {     
         document.getElementById('shopify-section-header-transparent');
-        transparent-header.classList.remove('header');
-        transparent-header.classList.add('header-transparent');
+        TransparentHeader.classList.remove('header');
+        TransparentHeader.classList.add('header-transparent');
       }
     }
   }
