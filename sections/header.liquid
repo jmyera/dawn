@@ -627,8 +627,7 @@ hide() {
   this.headerHeadingLink.classList.remove('header-transparent__heading-link', 'link--text--header-transparent');
   this.headerHeadingLink.classList.add('header__heading-link', 'link--text');
 
-  this.headerClassTransparentMenuItem[i].classList.replace = 'header-transparent__menu-item', 'header__menu-item';
-  this.headerClassTransparentMenuItem[i].classList.replace = 'link--text--header-transparent', 'link--text';
+  this.headerClassTransparentMenuItem.classList.remove('header-transparent__menu-item');
 
   var i;
   for (i = 0; i < this.headerClassTransparentMenuItem.length; i++) {
