@@ -594,7 +594,6 @@ createObserver() {
   observer.observe(this.headerTransparent);
   observer.observe(this.headerHeadingLink);
   observer.observe(this.headerLink);
-
 }
 
 onScroll() {
@@ -626,8 +625,8 @@ hide() {
   this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
   this.headerTransparent.classList.remove('header-transparent', 'color-transparent', 'gradient');
   this.headerTransparent.classList.add('header', 'color-background-1', 'gradient');
-  this.headerHeadingLink.classList.remove('header-transparent__heading-link' 'link', 'link--text--header-transparent', 'focus-inset');
-  this.headerHeadingLink.classList.add('header__heading-link' 'link', 'link--text--header', 'focus-inset');
+  this.headerHeadingLink.classList.remove('header-transparent__heading-link', 'link', 'link--text--header-transparent', 'focus-inset');
+  this.headerHeadingLink.classList.add('header__heading-link', 'link', 'link--text--header', 'focus-inset');
   this.headerLink.classList.remove('header__menu-item', 'header-transparent__menu-item', 'list-menu__item', 'link', 'link--text--header-transparent', 'focus-inset');
   this.headerLink.classList.add('header__menu-item', 'header__menu-item', 'list-menu__item', 'link', 'link--text--header', 'focus-inset');
   this.closeMenuDisclosure();
@@ -639,8 +638,8 @@ reveal() {
   this.header.classList.remove('shopify-section-header-hidden');
   this.headerTransparent.classList.remove('header', 'color-background-1', 'gradient');
   this.headerTransparent.classList.add('header', 'color-background-1', 'gradient');
-  this.headerHeadingLink.classList.remove('header__heading-link' 'link', 'link--text--header', 'focus-inset');
-  this.headerHeadingLink.classList.add('header__heading-link' 'link', 'link--text--header', 'focus-inset');
+  this.headerHeadingLink.classList.remove('header__heading-link', 'link', 'link--text--header', 'focus-inset');
+  this.headerHeadingLink.classList.add('header__heading-link', 'link', 'link--text--header', 'focus-inset');
   this.headerLink.classList.remove('header__menu-item', 'header__menu-item', 'list-menu__item', 'link', 'link--text--header', 'focus-inset');
   this.headerLink.classList.add('header__menu-item', 'header__menu-item', 'list-menu__item', 'link', 'link--text--header', 'focus-inset');
 }
@@ -649,8 +648,8 @@ reset() {
   this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
   this.headerTransparent.classList.remove('header', 'color-background-1', 'gradient');
   this.headerTransparent.classList.add('header-transparent', 'color-transparent', 'gradient');
-  this.headerHeadingLink.classList.remove('header__heading-link' 'link', 'link--text--header', 'focus-inset');
-  this.headerHeadingLink.classList.add('header-transparent__heading-link' 'link', 'link--text--header-transparent', 'focus-inset');
+  this.headerHeadingLink.classList.remove('header__heading-link', 'link', 'link--text--header', 'focus-inset');
+  this.headerHeadingLink.classList.add('header-transparent__heading-link', 'link', 'link--text--header-transparent', 'focus-inset');
   this.headerLink.classList.remove('header__menu-item', 'header__menu-item', 'list-menu__item', 'link', 'link--text--header', 'focus-inset');
   this.headerLink.classList.add('header__menu-item', 'header-transparent__menu-item', 'list-menu__item', 'link', 'link--text--header-transparent', 'focus-inset');
 }
@@ -666,7 +665,8 @@ closeSearchModal() {
 }
 }
 
-customElements.define('transparent-header', TransparentHeader);{% endjavascript %}
+customElements.define('transparent-header', TransparentHeader);
+{% endjavascript %}
 
 <script type="application/ld+json">
   {
