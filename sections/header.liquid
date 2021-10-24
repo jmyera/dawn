@@ -642,32 +642,6 @@
   }
 
   customElements.define('sticky-header', StickyHeader);
-  
-  
-  class TransparentHeader extends HTMLElement {
-  constructor() {
-    super();
-  }
-    
-    window.onscroll = function() {
-      scrollFunction()
-    };
-       
-    function scrollFunction() {
-      if (document.body.scrollTop > 66 || document.documentElement.scrollTop > 66) {      
-        document.getElementById('shopify-section-header-transparent');
-        html.classList.remove('header-transparent');
-        html.classList.add('header');
-      } else {     
-        document.getElementById('shopify-section-header-transparent');
-        html.classList.remove('header');
-        html.classList.add('header-transparent');
-      }
-    }
-  }
-  
-  customElements.define('transparent-header', TransparentHeader);
-  
 {% endjavascript %}
 
 <script type="application/ld+json">
