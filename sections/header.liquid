@@ -622,10 +622,10 @@ hide() {
   this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
   this.headerTransparent.classList.remove('header-transparent', 'color-transparent');
   this.headerTransparent.classList.add('header-wrapper', 'color-background-1');
-  this.headerHeadingLink.classList.remove('header-transparent__heading-link', 'link', 'link--text--header-transparent', 'focus-inset');
-  this.headerHeadingLink.classList.add('header__heading-link', 'link', 'link--text', 'focus-inset');
-  this.headerLink.classList.remove('header__menu-item', 'header-transparent__menu-item', 'list-menu__item', 'link', 'link--text--header-transparent', 'focus-inset');
-  this.headerLink.classList.add('header__menu-item', 'header__menu-item', 'list-menu__item', 'link', 'link--text', 'focus-inset');
+  this.headerHeadingLink.classList.remove('header-transparent__heading-link', 'link--text--header-transparent');
+  this.headerHeadingLink.classList.add('header__heading-link', 'link--text');
+  this.headerLink.classList.remove('header__menu-item', 'header-transparent__menu-item', 'link--text--header-transparent');
+  this.headerLink.classList.add('header__menu-item', 'link--text');
   this.closeMenuDisclosure();
   this.closeSearchModal();
 }
@@ -635,20 +635,20 @@ reveal() {
   this.header.classList.remove('shopify-section-header-hidden');
   this.headerTransparent.classList.remove('header-wrapper', 'color-background-1');
   this.headerTransparent.classList.add('header-wrapper', 'color-background-1');
-  this.headerHeadingLink.classList.remove('header__heading-link', 'link', 'link--text', 'focus-inset');
-  this.headerHeadingLink.classList.add('header__heading-link', 'link', 'link--text', 'focus-inset');
-  this.headerLink.classList.remove('header__menu-item', 'header__menu-item', 'list-menu__item', 'link', 'link--text', 'focus-inset');
-  this.headerLink.classList.add('header__menu-item', 'header__menu-item', 'list-menu__item', 'link', 'link--text', 'focus-inset');
+  this.headerHeadingLink.classList.remove('header__heading-link', 'link--text');
+  this.headerHeadingLink.classList.add('header__heading-link', 'link--text');
+  this.headerLink.classList.remove('header__menu-item', 'link--text');
+  this.headerLink.classList.add('header__menu-item', 'link--text');
 }
 
 reset() {
   this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
   this.headerTransparent.classList.remove('header-wrapper', 'color-background-1');
   this.headerTransparent.classList.add('header-transparent', 'color-transparent');
-  this.headerHeadingLink.classList.remove('header__heading-link', 'link', 'link--text', 'focus-inset');
-  this.headerHeadingLink.classList.add('header-transparent__heading-link', 'link', 'link--text--header-transparent', 'focus-inset');
-  this.headerLink.classList.remove('header__menu-item', 'header__menu-item', 'list-menu__item', 'link', 'link--text', 'focus-inset');
-  this.headerLink.classList.add('header__menu-item', 'header-transparent__menu-item', 'list-menu__item', 'link', 'link--text--header-transparent', 'focus-inset');
+  this.headerHeadingLink.classList.remove('header__heading-link', 'link--text');
+  this.headerHeadingLink.classList.add('header-transparent__heading-link', 'link--text--header-transparent');
+  this.headerLink.classList.remove('header__menu-item', 'link--text');
+  this.headerLink.classList.add('header__menu-item', 'header-transparent__menu-item', 'link--text--header-transparent');
 }
 
 closeMenuDisclosure() {
@@ -662,8 +662,7 @@ closeSearchModal() {
 }
 }
 
-customElements.define('transparent-header', TransparentHeader);
-{% endjavascript %}
+customElements.define('transparent-header', TransparentHeader);{% endjavascript %}
 
 <script type="application/ld+json">
   {
