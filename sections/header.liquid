@@ -556,7 +556,10 @@
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
 {% javascript %}
-console.log('this.header', this.header);
+  console.log('this.header', this.header);
+
+  var type_header = {{ section.settings.type_header.value | json }};
+  console.log('type_header', type_header);
 if ( this.header == 'transparent-header' ) {
 
   class TransparentHeader extends HTMLElement {
