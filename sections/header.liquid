@@ -557,7 +557,7 @@
 
 {% javascript %}
   console.log("Hello world!");
-  var x = '{{section.settings.type_header | value}}';
+  var x = {{section.settings.type_header | value}};
   console.log(x);
   class StickyHeader extends HTMLElement {
     constructor() {
