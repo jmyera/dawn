@@ -1895,8 +1895,8 @@ input[type='checkbox'] {
 
 .shopify-section-header-transparent-hidden {
   opacity: 0;
-  transform: translateY(-100%) 1.3s;
   transition: opacity 1.3s;
+  transform: translateY(-100%) 1.3s;
 }
 
 #shopify-section-header.animate-opacity {
