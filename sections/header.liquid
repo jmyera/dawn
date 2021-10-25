@@ -555,10 +555,10 @@
 
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
-{% assign typeHeader = section.settings.type_header %}
+{% assign typeHeader = 3 %}
                                          
 {% javascript %}                                         
-var testval= '{{typeHeader }}';
+var testval= '{{typeHeader}}';
 console.log(testval);
 console.log("X");
                                          
