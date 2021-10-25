@@ -556,10 +556,8 @@
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
 {% javascript %}
-  var type_header = {{ config.settings_data.current.sections.header.settings.type_header | json }};
-  console.log('type_header');
-  console.log('this.header', this.header);
-  console.log('Hola');
+  var type_header = '{{ config.settings_data.current.sections.header.settings.type_header | json }}';
+  console.log('type_header', type_header);
 
   if ( this.header == 'transparent-header' ) {
 
