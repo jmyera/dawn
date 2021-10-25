@@ -558,7 +558,7 @@
 {% javascript %}
   console.log('this.header', this.header);
 
-  var type_header = {{ section.settings.type_header | json }};
+  var type_header = {{ section.settings.type_header.value.first | json }};
   console.log('type_header', type_header);
 if ( this.header == 'transparent-header' ) {
 
