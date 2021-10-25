@@ -552,15 +552,15 @@
     </div>
   </header>
 </{{ section.settings.type_header }}>
-                                         
-var typeHeader = '{{ section.settings.type_header }}';
 
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
-{% javascript %}
-  console.log("Hello world!");
-
-  console.log({{typeHeader}});
+{% assign typeHeader = section.settings.type_header %}
+                                         
+{% javascript %}                                         
+var testval= '{{typeHeader}}';
+console.log(testval);
+                                         
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
