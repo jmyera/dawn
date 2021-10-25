@@ -1901,7 +1901,7 @@ input[type='checkbox'] {
 
 #shopify-section-header.animate-opacity {
   opacity: 1;
-  transition: transform 1.3s ease-out;
+  transition: transform 0.15s ease-out;
 }
 
 /* Main Header Layout */
