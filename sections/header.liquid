@@ -554,8 +554,10 @@
 </{{ section.settings.type_header }}>
 
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
-                                         
+
+<script>
 var type_header = {{ config.settings_data.current.sections.header.settings.type_header | json }};
+</script>
 
 {% javascript %}
   
