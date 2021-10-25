@@ -556,7 +556,7 @@
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
 {% javascript %}
-  var type_header = {{ section.settings.type_header.value | json }};
+  var type_header = {{ config.settings_data.current.sections.header.settings.type_header | json }};
   console.log('type_header', type_header);
   console.log('this.header', this.header);
   console.log('Hola');
