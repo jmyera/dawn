@@ -555,16 +555,7 @@
 
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
-<script>
-  const section = {
-    settings: {{ section.settings.type_header.first | json }},
-    id: {{ section.id | json }}
-  }
-  alert('Confirmation:', section.id, section.settings.type_header.first);
-</script>
-
 {% javascript %}
-console.log('THE SECTION ID IS {{section.id}}');
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
@@ -801,3 +792,11 @@ console.log('THE SECTION ID IS {{section.id}}');
   ]
 }
 {% endschema %}
+
+<script>
+  const section = {
+    settings: {{ section.settings.type_header | json }},
+    id: {{ section.id | json }}
+  }
+  alert('Confirmation:', section.id, section.settings.type_header);
+</script>
