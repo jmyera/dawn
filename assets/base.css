@@ -1895,8 +1895,9 @@ input[type='checkbox'] {
 #shopify-section-header.animate .color-transparent-on-dark .header-wrapper {
   visibility: visible;
   opacity: 1;
-  transition: visibility 0.15s, opacity 0.15s linear;
-  background: var(--color-background) !important;
+  background: var(--color-background);
+  transition: all 0.15s linear;
+  
   /* transition: transform 0.15s ease-out; */
 }
 
