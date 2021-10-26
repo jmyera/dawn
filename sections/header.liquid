@@ -555,6 +555,14 @@
 
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
+<script>
+const section = {
+  settings: {{ section.settings.type_header | json }},
+  id: {{ section.id | json }}
+}
+alert('Confirmation:', section.id, section.settings);
+</script>
+
 {% javascript %}
   class StickyHeader extends HTMLElement {
     constructor() {
@@ -563,7 +571,6 @@
 
     connectedCallback() {
       this.header = document.getElementById('shopify-section-header');
-      this.headerType = 'section.settings.type_header';
       this.headerBounds = {};
       this.currentScrollTop = 0;
       this.preventReveal = false;
@@ -589,11 +596,6 @@
       });
 
       observer.observe(this.header);
-    }
-    
-    const section = {
-      settings: {{ section.settings | json }},
-      id: {{ section.id | json }}
     }
 
     onScroll() {
@@ -648,9 +650,6 @@
   }
 
   customElements.define('sticky-header', StickyHeader);
-  
-  alert('this.headerType');
-  alert('Confirmation:', section.id, section.settings);
 {% endjavascript %}
 
 <script type="application/ld+json">
