@@ -1889,10 +1889,6 @@ input[type='checkbox'] {
   background-color: transparent !important;
 }
 
-.header-wrapper--transparent-on-dark {
-  color: rgb(var(--color-background));
-}
-
 .shopify-section-header-hidden .header-wrapper--transparent-on-light,
 .shopify-section-header-hidden .header-wrapper--transparent-on-dark, {
   transform: translateY(-100%);
@@ -1910,7 +1906,7 @@ input[type='checkbox'] {
 
 #shopify-section-header.animate .header-wrapper--transparent-on-dark .header__menu-item,
 #shopify-section-header.animate .header-wrapper--transparent-on-dark .header__icon  {
-  color: rgb(var(--color-background));
+  color: rgba(255, 255, 255) !important;
 }
 
 .header-wrapper--border-bottom {
