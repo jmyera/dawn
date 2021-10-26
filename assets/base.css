@@ -30,10 +30,16 @@
   --gradient-background: var(--gradient-base-accent-2);
 }
 
-.color-transparent {
-  --color-foreground: transparent;
+.color-transparent-on-light {
+  --color-foreground: var(--color-base-text);
   --color-background: transparent;
-  --gradient-background:  transparent;
+  --gradient-background: transparent;
+}
+
+.color-transparent-on-dark {
+  --color-foreground: var(--color-base-background-1);
+  --color-background: transparent;
+  --gradient-background: transparent;
 }
 
 .color-foreground-outline-button {
@@ -1911,7 +1917,7 @@ input[type='checkbox'] {
   background-color: rgb(var(--color-background));
 }
 
-.header-transparent-wrapper {
+.header-wrapper-transparent {
   position: fixed;
   top: 0;
   width: 100%;
