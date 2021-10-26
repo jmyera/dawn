@@ -556,14 +556,6 @@
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
 {% javascript %}
-
-const section = {
-settings: {{ section.settings | json }},
-id: {{ section.id | json }}
-}
-
-alert('Confirmation:', section.id, section.settings);
-
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
@@ -597,6 +589,11 @@ alert('Confirmation:', section.id, section.settings);
       });
 
       observer.observe(this.header);
+    }
+    
+    const section = {
+      settings: {{ section.settings | json }},
+      id: {{ section.id | json }}
     }
 
     onScroll() {
@@ -651,7 +648,9 @@ alert('Confirmation:', section.id, section.settings);
   }
 
   customElements.define('sticky-header', StickyHeader);
+  
   alert('this.headerType');
+  alert('Confirmation:', section.id, section.settings);
 {% endjavascript %}
 
 <script type="application/ld+json">
