@@ -1897,6 +1897,11 @@ input[type='checkbox'] {
   /* transition: visibility 0.15s, opacity 0.15s linear; */
 }
 
+#shopify-section-header .header-wrapper--transparent-on-dark .header__menu-item,
+#shopify-section-header .header-wrapper--transparent-on-dark .header__icon  {
+  color: rgba(255, 255, 255) !important;
+}
+
 #shopify-section-header.animate .header-wrapper--transparent-on-light,
 #shopify-section-header.animate .header-wrapper--transparent-on-dark {
   visibility: visible;
