@@ -32,14 +32,14 @@
 
 .color-transparent-on-light {
   --color-foreground: var(--color-base-text);
-  --color-background: transparent;
-  --gradient-background: transparent;
+  --color-background: var(--color-base-background-1);
+  --gradient-background: var(--gradient-base-background-1);
 }
 
 .color-transparent-on-dark {
-  --color-foreground: var(--color-base-background-1);
-  --color-background: transparent;
-  --gradient-background: transparent;
+  --color-foreground: var(--color-base-text);
+  --color-background: var(--color-base-background-1);
+  --gradient-background: var(--gradient-base-background-1);
 }
 
 .color-foreground-outline-button {
@@ -1886,6 +1886,7 @@ input[type='checkbox'] {
   top: 0;
   left: 0;
   width: 100%;
+  background-color: transparent;
 }
 
 .shopify-section-header-hidden .header-wrapper--transparent-on-light,
@@ -1900,7 +1901,6 @@ input[type='checkbox'] {
 #shopify-section-header.animate .header-wrapper--transparent-on-dark {
   visibility: visible;
   opacity: 1;
-  background-color: rgb(255, 255, 255);
   transition: all 0.15s linear;
 }
 
