@@ -1910,7 +1910,7 @@ input[type='checkbox'] {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
 
-header-drawer {
+.color-transparent-on-dark header-drawer {
   background-color: rgb(255, 255, 255);
 }
 
