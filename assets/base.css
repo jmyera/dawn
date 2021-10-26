@@ -1880,18 +1880,14 @@ input[type='checkbox'] {
   background-color: rgb(var(--color-background));
 }
 
-/* .header-wrapper--transparent {
+.header-wrapper--transparent {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-} */
+}
 
 .shopify-section-header-hidden .header-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.15s, opacity 0.15s linear;
