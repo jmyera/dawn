@@ -79,16 +79,12 @@
     <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
   </symbol>
 </svg>
-<{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="{% if section.settings.enable_transparent_header %}header-transparent-wrapper{% else %}header-wrapper{% endif %} color-{% if section.settings.enable_transparent_header %}transparent{% else %}{{ section.settings.color_scheme }}{% endif %} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
+<{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   <header class="header header--{{ section.settings.logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="tablet">
         <details class="menu-drawer-container">
-          {%- if section.settings.enable_transparent_header -%}
-          <summary class="header__icon header-transparent__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
-          {%- else -%}
           <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
-          {%- endif -%}          
             <span>
               {% render 'icon-hamburger' %}
               {% render 'icon-close' %}
@@ -258,11 +254,7 @@
     {%- if section.settings.logo_position == 'top-center' or section.settings.menu == blank -%}
       <details-modal class="header__search">
         <details>
-          {%- if section.settings.enable_transparent_header -%}
-          <summary class="header__icon header-transparent__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
-          {%- else -%}
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
-          {%- endif -%}
             <span>
               <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
                 <use href="#icon-search">
@@ -335,13 +327,9 @@
     {%- endif -%}
 
     {%- if request.page_type == 'index' -%}
-      <h1 id="shopify-header-heading" class="header__heading">
+      <h1 class="header__heading">
     {%- endif -%}
-      {%- if section.settings.enable_transparent_header -%}
-        <a" href="{{ routes.root_url }}" class="header-transparent__heading-link link link--text--header-transparent focus-inset">
-      {%- else -%}
         <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-      {%- endif -%}
           {%- if section.settings.logo != blank -%}
             {%- assign image_size = section.settings.logo_width | append: 'x' -%}
             <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
@@ -361,18 +349,14 @@
     {%- endif -%}
 
     {%- if section.settings.menu != blank -%}
-      <nav id="shopify-header-nav" class="header__inline-menu">
+      <nav class="header__inline-menu">
         <ul class="list-menu list-menu--inline" role="list">
           {%- for link in section.settings.menu.links -%}
             <li>
               {%- if link.links != blank -%}
                 <details-disclosure>
                   <details>
-                  {%- if section.settings.enable_transparent_header -%}
-                    <summary class="header__menu-item header-transparent__menu-item list-menu__item link focus-inset">
-                  {%- else -%}
                     <summary class="header__menu-item list-menu__item link focus-inset">
-                  {%- endif -%}
                       <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                       {% render 'icon-caret' %}
                     </summary>
@@ -380,11 +364,7 @@
                       {%- for childlink in link.links -%}
                         <li>
                           {%- if childlink.links == blank -%}
-                          {%- if section.settings.enable_transparent_header -%}
-                            <a href="{{ childlink.url }}" class="header__menu-item header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                          {%- else -%}
                             <a href="{{ childlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                          {%- endif -%}
                               {{ childlink.title | escape }}
                             </a>
                           {%- else -%}
@@ -396,15 +376,9 @@
                               <ul class="header__submenu list-menu motion-reduce">
                                 {%- for grandchildlink in childlink.links -%}
                                   <li>
-                                    {%- if section.settings.enable_transparent_header -%}
-                                    <a href="{{ grandchildlink.url }}" class="header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                      {{ grandchildlink.title | escape }}
-                                    </a>
-                                    {%- else -%}
                                     <a href="{{ grandchildlink.url }}" class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
                                       {{ grandchildlink.title | escape }}
                                     </a>
-                                    {%- endif -%}
                                   </li>
                                 {%- endfor -%}
                               </ul>
@@ -416,11 +390,7 @@
                   </details>
                 </details-disclosure>
               {%- else -%}
-                {%- if section.settings.enable_transparent_header -%}
-                <a href="{{ link.url }}" class="header__menu-item header-transparent__menu-item list-menu__item link link--text--header-transparent focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                {%- else -%}
-                <a href="{{ link.url }}" class="header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                {%- endif -%}
+                <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
                   <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                 </a>
               {%- endif -%}
@@ -430,14 +400,10 @@
       </nav>
     {%- endif -%}
 
-    <div id="shopify-header-icons" class="header__icons">
+    <div class="header__icons">
       <details-modal class="header__search">
         <details>
-          {%- if section.settings.enable_transparent_header -%}
-          <summary class="header__icon header-transparent__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
-          {%- else -%} 
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
-          {%- endif -%} 
             <span>
               <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
                 <use href="#icon-search">
@@ -509,11 +475,7 @@
       </details-modal>
 
       {%- if shop.customer_accounts_enabled -%}
-        {%- if section.settings.enable_transparent_header -%}
-        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header-transparent__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
-        {%- else -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
-        {%- endif -%}
           {% render 'icon-account' %}
           <span class="visually-hidden">
             {%- liquid
@@ -527,11 +489,7 @@
         </a>
       {%- endif -%}
 
-      {%- if section.settings.enable_transparent_header -%}
-      <a href="{{ routes.cart_url }}" class="header__icon header-transparent__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-      {%- else -%}
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-      {%- endif -%}
         {%- liquid
           if cart == empty
             render 'icon-cart-empty'
@@ -551,7 +509,7 @@
       </a>
     </div>
   </header>
-</{{ section.settings.enable_transparent_header }}>
+</{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
@@ -712,6 +670,14 @@
         {
           "value": "inverse",
           "label": "t:sections.header.settings.color_scheme.options__5.label"
+        },
+        {
+          "value": "transparent-on-light",
+          "label": "t:sections.header.settings.color_scheme.options__6.label"
+        },
+        {
+          "value": "transparent-on-dark",
+          "label": "t:sections.header.settings.color_scheme.options__7.label"
         }
       ],
       "default": "background-1",
@@ -770,13 +736,6 @@
       "default": true,
       "label": "t:sections.header.settings.enable_sticky_header.label",
       "info": "t:sections.header.settings.enable_sticky_header.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_transparent_header",
-      "default": false,
-      "label": "t:sections.header.settings.enable_transparent_header.label",
-      "info": "t:sections.header.settings.enable_transparent_header.info"
     }
   ]
 }

@@ -671,10 +671,6 @@
           "label": "Activar encabezado fijo",
           "info": "El encabezado se muestra en la pantalla mientras los clientes se desplazan hacia arriba."
         },
-        "enable_transparent_header": {
-          "label": "Activar encabezado transparente",
-          "info": "El encabezado se muestra sin fondo."
-        },
         "color_scheme": {
           "options__1": {
             "label": "Resaltado 1"
@@ -690,6 +686,12 @@
           },
           "options__5": {
             "label": "Invertir"
+          },
+          "options__6": {
+            "label": "Transparente sobre claro"
+          },
+          "options__7": {
+            "label": "Transparente sobre oscuro"
           },
           "label": "Esquema de colores"
         }
