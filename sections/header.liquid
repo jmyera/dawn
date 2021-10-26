@@ -556,6 +556,14 @@
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
 {% javascript %}
+
+const section = {
+settings: {{ section.settings | json }},
+id: {{ section.id | json }}
+}
+
+console.log('Confirmation:', section.id, section.settings);
+
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
