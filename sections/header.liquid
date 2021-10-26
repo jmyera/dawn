@@ -563,7 +563,7 @@
 
     connectedCallback() {
       this.header = document.getElementById('shopify-section-header');
-      this.headerType = '{{ type_header | json }}';
+      this.headerType = '{{ section.settings.type_header | json }}';
       this.headerBounds = {};
       this.currentScrollTop = 0;
       this.preventReveal = false;
