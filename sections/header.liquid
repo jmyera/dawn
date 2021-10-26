@@ -560,7 +560,7 @@ const section = {
   settings: {{ section.settings.type_header | json }},
   id: {{ section.id | json }}
 }
-alert('Confirmation:', section.id, section.settings);
+alert('Confirmation:', section.id, section.settings.type_header);
 </script>
 
 {% javascript %}
