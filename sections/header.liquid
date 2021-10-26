@@ -795,8 +795,8 @@
 
 <script>
   const section = {
-    settings: '{{ section.settings | json }}',
-    id: '{{ section.id | json }}'
+    settings: {{ section.settings.type_header | json }},
+    id: {{ section.id | json }}
   }
-  alert('Confirmación:', section.id, section.settings);
+  alert('Confirmación:', section.id, section.settings.type_header);
 </script>
