@@ -1892,13 +1892,16 @@ input[type='checkbox'] {
   transition: visibility 0.15s, opacity 0.15s linear;
 }
 
-#shopify-section-header.animate .color-transparent-on-dark .header-wrapper {
+#shopify-section-header.animate .header-wrapper {
   visibility: visible;
   opacity: 1;
   background: var(--color-background);
   transition: all 0.15s linear;
-  
-  /* transition: transform 0.15s ease-out; */
+}
+
+#shopify-section-header.animate .gradient {
+  background: var(--color-background);
+  transition: background 0.15s linear;
 }
 
 #shopify-section-header.animate .color-transparent-on-dark .header__menu-item {
