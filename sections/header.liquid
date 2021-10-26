@@ -556,14 +556,15 @@
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
 <script>
-const section = {
-  settings: {{ section.settings.type_header.value | json }},
-  id: {{ section.id | json }}
-}
-alert('Confirmation:', section.id, section.settings.type_header.value);
+  const section = {
+    settings: {{ section.settings.type_header.value | json }},
+    id: {{ section.id | json }}
+  }
+  alert('Confirmation:', section.id, section.settings.type_header.value);
 </script>
 
 {% javascript %}
+console.log('THE SECTION ID IS {{section.id}}');
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
