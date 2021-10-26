@@ -1906,7 +1906,7 @@ input[type='checkbox'] {
 
 #shopify-section-header.animate .header-wrapper--transparent-on-dark .header__menu-item,
 #shopify-section-header.animate .header-wrapper--transparent-on-dark .header__icon  {
-  background-color: rgb(var(--color-background));
+  background-color: rgb(255, 255, 255);
 }
 
 .header-wrapper--border-bottom {
