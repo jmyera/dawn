@@ -1897,15 +1897,15 @@ input[type='checkbox'] {
   background-color: rgb(var(--color-background));
 }
 
-.header-wrapper-transparent {
+.header-wrapper--transparent {
   position: fixed;
-  top: 0;
+  /* top: 0;
   width: 100%;
   background-color: transparent;
   -webkit-transition: background-color 0.15s ease-out;
   -moz-transition: background-color 0.15s ease-out;
   -o-transition: background-color 0.15s ease-out;
-  transition: background-color 0.15s ease-out;
+  transition: background-color 0.15s ease-out; */
 }
 
 .header-wrapper--border-bottom {
