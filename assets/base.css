@@ -1903,7 +1903,7 @@ input[type='checkbox'] {
 
 #shopify-section-header.animate .color-transparent-on-dark .header__menu-item,
 #shopify-section-header.animate .color-transparent-on-dark .header__icon  {
-  color: var(--color-base-text) !important;
+  color: var(--color-base-text);
 }
 
 .header-wrapper--border-bottom {
