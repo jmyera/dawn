@@ -1887,13 +1887,14 @@ input[type='checkbox'] {
   width: 100%;
 }
 
-.shopify-section-header-hidden .header-wrapper {
+.shopify-section-header-hidden .header-wrapper--transparent {
+  position: relative;
   visibility: hidden;
   opacity: 0;
   /* transition: visibility 0.15s, opacity 0.15s linear; */
 }
 
-#shopify-section-header.animate .header-wrapper {
+#shopify-section-header.animate .header-wrapper--transparent {
   visibility: visible;
   opacity: 1;
   background: rgb(255, 255, 255);
