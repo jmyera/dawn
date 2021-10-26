@@ -1898,7 +1898,7 @@ input[type='checkbox'] {
 }
 
 .header-wrapper--transparent {
-  position: sticky;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
