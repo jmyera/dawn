@@ -1897,7 +1897,7 @@ input[type='checkbox'] {
   opacity: 1;
   transition: visibility 0.15s, opacity 0.15s linear;
   color: var(--color-base-text) !important;
-  background: var(--color-base-background-1) !important;
+  background: var(--color-background) !important;
   /* transition: transform 0.15s ease-out; */
 }
 
