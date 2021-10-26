@@ -687,13 +687,16 @@
           "options__5": {
             "label": "Invertir"
           },
-          "options__6": {
+          "label": "Esquema de colores"
+        },
+        "transparent_header": {
+          "transparent_on_light": {
             "label": "Transparente sobre claro"
           },
-          "options__7": {
+          "transparent_on_dark": {
             "label": "Transparente sobre oscuro"
           },
-          "label": "Esquema de colores"
+          "label": "Encabezado transparente para fondos claros o oscuros."
         }
       }
     },
