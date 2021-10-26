@@ -1899,13 +1899,17 @@ input[type='checkbox'] {
   transition: all 0.15s linear;
 }
 
-#shopify-section-header.animate .gradient {
+/* #shopify-section-header.animate .gradient {
   background: rgb(255, 255, 255);
   transition: background 0.15s linear;
-}
+} */
 
 #shopify-section-header.animate .color-transparent-on-dark .header__menu-item {
   color: var(--color-base-text) !important;
+}
+
+#shopify-section-header.animate .color-transparent-on-dark .header__icon {
+  background: var(--color-base-text) !important;
 }
 
 .header-wrapper--border-bottom {
