@@ -664,7 +664,7 @@
 
     customElements.define('transparent-header', TransparentHeader);
   </script>
-{%- else -%}
+{%- else section.settings.type_header == 'sticky-header' -%}
   <script>
     class StickyHeader extends HTMLElement {
       constructor() {
