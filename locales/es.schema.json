@@ -690,6 +690,9 @@
           "label": "Esquema de colores"
         },
         "transparent_header": {
+          "transparent_none": {
+            "label": "No aplicar transparencia"
+          },
           "transparent_on_light": {
             "label": "Transparente sobre claro"
           },
