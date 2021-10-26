@@ -1888,7 +1888,7 @@ input[type='checkbox'] {
 }
 
 .shopify-section-header-hidden .header-wrapper--transparent {
-  position: relative;
+  transform: translateY(-100%);
   visibility: hidden;
   opacity: 0;
   /* transition: visibility 0.15s, opacity 0.15s linear; */
