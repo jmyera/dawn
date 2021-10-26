@@ -1908,6 +1908,7 @@ input[type='checkbox'] {
   opacity: 1;
   transition: all 0.15s linear;
   background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
 }
 
 .header-wrapper--border-bottom {
