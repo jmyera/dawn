@@ -1880,8 +1880,8 @@ input[type='checkbox'] {
   background-color: rgb(var(--color-background));
 }
 
-.header-wrapper--transparent-on-light,
-.header-wrapper--transparent-on-dark {
+.transparent-on-light,
+.transparent-on-dark {
   display: block;
   position: absolute;
   top: 0;
@@ -1890,31 +1890,31 @@ input[type='checkbox'] {
   background-color: transparent;
 }
 
-.header-wrapper--transparent-on-light.gradient,
-.header-wrapper--transparent-on-dark.gradient {
+.transparent-on-light.gradient,
+.transparent-on-dark.gradient {
   background-color: transparent;
 }
 
-#shopify-section-header.shopify-section-header-hidden .header-wrapper--transparent-on-light,
-#shopify-section-header.shopify-section-header-hidden .header-wrapper--transparent-on-dark, {
+.shopify-section-header-hidden .transparent-on-light,
+.shopify-section-header-hidden .transparent-on-dark, {
   transform: translateY(-100%);
   visibility: hidden;
   opacity: 0;
   /* transition: visibility 0.15s, opacity 0.15s linear; */
 }
 
-#shopify-section-header .header-wrapper--transparent-on-dark .header__menu-item,
-#shopify-section-header .header-wrapper--transparent-on-dark .header__icon  {
-  color: rgb(var(--color-background));
-}
-
-#shopify-section-header.animate .header-wrapper--transparent-on-light,
-#shopify-section-header.animate .header-wrapper--transparent-on-dark {
+#shopify-section-header.animate .transparent-on-light,
+#shopify-section-header.animate .transparent-on-dark {
   visibility: visible;
   opacity: 1;
   transition: all 0.15s linear;
-  background-color: rgb(var(--color-background));
   color: rgb(var(--color-foreground));
+  background-color: rgb(var(--color-background));
+}
+
+#shopify-section-header .transparent-on-dark .header__menu-item,
+#shopify-section-header .transparent-on-dark .header__icon  {
+  color: rgb(var(--color-background));
 }
 
 /* ------------------------- */
