@@ -1,3 +1,169 @@
+/* Color custom properties */
+
+:root,
+.color-background-1 {
+  --color-foreground: var(--color-base-text);
+  --color-background: var(--color-base-background-1);
+  --gradient-background: var(--gradient-base-background-1);
+}
+
+.color-background-2 {
+  --color-background: var(--color-base-background-2);
+  --gradient-background: var(--gradient-base-background-2);
+}
+
+.color-inverse {
+  --color-foreground: var(--color-base-background-1);
+  --color-background: var(--color-base-text);
+  --gradient-background: rgb(var(--color-base-text));
+}
+
+.color-accent-1 {
+  --color-foreground: var(--color-base-solid-button-labels);
+  --color-background: var(--color-base-accent-1);
+  --gradient-background: var(--gradient-base-accent-1);
+}
+
+.color-accent-2 {
+  --color-foreground: var(--color-base-solid-button-labels);
+  --color-background: var(--color-base-accent-2);
+  --gradient-background: var(--gradient-base-accent-2);
+}
+
+.color-transparent-on-light {
+  --color-foreground: var(--color-base-text);
+  --color-background: var(--color-base-background-1);
+  --gradient-background: var(--gradient-base-background-1);
+}
+
+.color-transparent-on-dark {
+  --color-foreground: var(--color-base-text);
+  --color-background: var(--color-base-background-1);
+  --gradient-background: var(--gradient-base-background-1);
+}
+
+.color-foreground-outline-button {
+  --color-foreground: var(--color-base-outline-button-labels);
+}
+
+.color-foreground-accent-1 {
+  --color-foreground: var(--color-base-accent-1);
+}
+
+.color-foreground-accent-2 {
+  --color-foreground: var(--color-base-accent-2);
+}
+
+:root,
+.color-background-1 {
+  --color-link: var(--color-base-outline-button-labels);
+  --alpha-link: 0.85;
+}
+
+.color-background-2,
+.color-inverse,
+.color-accent-1,
+.color-accent-2 {
+  --color-link: var(--color-foreground);
+  --alpha-link: 0.7;
+}
+
+:root,
+.color-background-1 {
+  --color-button: var(--color-base-accent-1);
+  --color-button-text: var(--color-base-solid-button-labels);
+  --alpha-button-background: 1;
+  --alpha-button-border: 1;
+}
+
+.color-background-2,
+.color-inverse,
+.color-accent-1,
+.color-accent-2 {
+  --color-button: var(--color-foreground);
+  --color-button-text: var(--color-background);
+}
+
+.button--secondary {
+  --color-button: var(--color-base-outline-button-labels);
+  --color-button-text: var(--color-base-outline-button-labels);
+  --alpha-button-background: 0;
+}
+
+.color-background-2 .button--secondary,
+.color-inverse .button--secondary,
+.color-accent-1 .button--secondary,
+.color-accent-2 .button--secondary {
+  --color-button: var(--color-foreground);
+  --color-button-text: var(--color-foreground);
+}
+
+.button--tertiary {
+  --color-button: var(--color-base-outline-button-labels);
+  --color-button-text: var(--color-base-outline-button-labels);
+  --alpha-button-background: 0;
+  --alpha-button-border: 0.2;
+}
+
+.color-background-2 .button--tertiary,
+.color-inverse .button--tertiary,
+.color-accent-1 .button--tertiary,
+.color-accent-2 .button--tertiary {
+  --color-button: var(--color-foreground);
+  --color-button-text: var(--color-foreground);
+}
+
+:root,
+.color-background-1 {
+  --color-badge-background: var(--color-background);
+  --color-badge-border: var(--color-foreground);
+  --alpha-badge-border: 0.1;
+}
+
+.color-background-2,
+.color-inverse,
+.color-accent-1,
+.color-accent-2 {
+  --color-badge-background: var(--color-background);
+  --color-badge-border: var(--color-background);
+  --alpha-badge-border: 1;
+}
+
+:root,
+.color-background-1,
+.color-background-2 {
+  --color-card-hover: var(--color-base-text);
+}
+
+.color-inverse {
+  --color-card-hover: var(--color-base-background-1);
+}
+
+.color-accent-1,
+.color-accent-2 {
+  --color-card-hover: var(--color-base-solid-button-labels);
+}
+
+:root,
+.color-icon-text {
+  --color-icon: rgb(var(--color-base-text));
+}
+
+.color-icon-accent-1 {
+  --color-icon: rgb(var(--color-base-accent-1));
+}
+
+.color-icon-accent-2 {
+  --color-icon: rgb(var(--color-base-accent-2));
+}
+
+.color-icon-outline-button {
+  --color-icon: rgb(var(--color-base-outline-button-labels));
+}
+
+
+/* Box Shadow custom properties */
+
 :root,
 .box-shadow-00 {
   box-shadow: 
@@ -198,167 +364,48 @@
 }
 
 
-/* Color custom properties */
+/* Box Shadow custom properties */
 
-:root,
-.color-background-1 {
-  --color-foreground: var(--color-base-text);
-  --color-background: var(--color-base-background-1);
-  --gradient-background: var(--gradient-base-background-1);
+.border-radius-leaf-md-left {
+  border-top-left-radius: var(--border-radius-leaf-md-small);
+  border-top-right-radius: var(--border-radius-leaf-md-big);
+  border-bottom-left-radius: var(--border-radius-leaf-md-big);
+  border-bottom-right-radius: var(--border-radius-leaf-md-small);
 }
 
-.color-background-2 {
-  --color-background: var(--color-base-background-2);
-  --gradient-background: var(--gradient-base-background-2);
+.border-radius-leaf-right {
+  border-top-left-radius: var(--border-radius-leaf-md-big);
+  border-top-right-radius: var(--border-radius-leaf-md-small);
+  border-bottom-left-radius: var(--border-radius-leaf-md-small);
+  border-bottom-right-radius: var(--border-radius-leaf-md-big);
 }
 
-.color-inverse {
-  --color-foreground: var(--color-base-background-1);
-  --color-background: var(--color-base-text);
-  --gradient-background: rgb(var(--color-base-text));
+.border-radius-leaf-md-left {
+  border-top-left-radius: var(--border-radius-leaf-lg-small);
+  border-top-right-radius: var(--border-radius-leaf-lg-big);
+  border-bottom-left-radius: var(--border-radius-leaf-lg-big);
+  border-bottom-right-radius: var(--border-radius-leaf-lg-small);
 }
 
-.color-accent-1 {
-  --color-foreground: var(--color-base-solid-button-labels);
-  --color-background: var(--color-base-accent-1);
-  --gradient-background: var(--gradient-base-accent-1);
+.border-radius-leaf-md-right {
+  border-top-left-radius: var(--border-radius-leaf-lg-big);
+  border-top-right-radius: var(--border-radius-leaf-lg-small);
+  border-bottom-left-radius: var(--border-radius-leaf-lg-small);
+  border-bottom-right-radius: var(--border-radius-leaf-lg-big);
 }
 
-.color-accent-2 {
-  --color-foreground: var(--color-base-solid-button-labels);
-  --color-background: var(--color-base-accent-2);
-  --gradient-background: var(--gradient-base-accent-2);
+.border-radius-leaf-lg-right {
+  border-top-left-radius: var(--border-radius-leaf-sm-big);
+  border-top-right-radius: var(--border-radius-leaf-sm-small);
+  border-bottom-left-radius: var(--border-radius-leaf-sm-small);
+  border-bottom-right-radius: var(--border-radius-leaf-sm-big);
 }
 
-.color-transparent-on-light {
-  --color-foreground: var(--color-base-text);
-  --color-background: var(--color-base-background-1);
-  --gradient-background: var(--gradient-base-background-1);
-}
-
-.color-transparent-on-dark {
-  --color-foreground: var(--color-base-text);
-  --color-background: var(--color-base-background-1);
-  --gradient-background: var(--gradient-base-background-1);
-}
-
-.color-foreground-outline-button {
-  --color-foreground: var(--color-base-outline-button-labels);
-}
-
-.color-foreground-accent-1 {
-  --color-foreground: var(--color-base-accent-1);
-}
-
-.color-foreground-accent-2 {
-  --color-foreground: var(--color-base-accent-2);
-}
-
-:root,
-.color-background-1 {
-  --color-link: var(--color-base-outline-button-labels);
-  --alpha-link: 0.85;
-}
-
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-  --color-link: var(--color-foreground);
-  --alpha-link: 0.7;
-}
-
-:root,
-.color-background-1 {
-  --color-button: var(--color-base-accent-1);
-  --color-button-text: var(--color-base-solid-button-labels);
-  --alpha-button-background: 1;
-  --alpha-button-border: 1;
-}
-
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-  --color-button: var(--color-foreground);
-  --color-button-text: var(--color-background);
-}
-
-.button--secondary {
-  --color-button: var(--color-base-outline-button-labels);
-  --color-button-text: var(--color-base-outline-button-labels);
-  --alpha-button-background: 0;
-}
-
-.color-background-2 .button--secondary,
-.color-inverse .button--secondary,
-.color-accent-1 .button--secondary,
-.color-accent-2 .button--secondary {
-  --color-button: var(--color-foreground);
-  --color-button-text: var(--color-foreground);
-}
-
-.button--tertiary {
-  --color-button: var(--color-base-outline-button-labels);
-  --color-button-text: var(--color-base-outline-button-labels);
-  --alpha-button-background: 0;
-  --alpha-button-border: 0.2;
-}
-
-.color-background-2 .button--tertiary,
-.color-inverse .button--tertiary,
-.color-accent-1 .button--tertiary,
-.color-accent-2 .button--tertiary {
-  --color-button: var(--color-foreground);
-  --color-button-text: var(--color-foreground);
-}
-
-:root,
-.color-background-1 {
-  --color-badge-background: var(--color-background);
-  --color-badge-border: var(--color-foreground);
-  --alpha-badge-border: 0.1;
-}
-
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-  --color-badge-background: var(--color-background);
-  --color-badge-border: var(--color-background);
-  --alpha-badge-border: 1;
-}
-
-:root,
-.color-background-1,
-.color-background-2 {
-  --color-card-hover: var(--color-base-text);
-}
-
-.color-inverse {
-  --color-card-hover: var(--color-base-background-1);
-}
-
-.color-accent-1,
-.color-accent-2 {
-  --color-card-hover: var(--color-base-solid-button-labels);
-}
-
-:root,
-.color-icon-text {
-  --color-icon: rgb(var(--color-base-text));
-}
-
-.color-icon-accent-1 {
-  --color-icon: rgb(var(--color-base-accent-1));
-}
-
-.color-icon-accent-2 {
-  --color-icon: rgb(var(--color-base-accent-2));
-}
-
-.color-icon-outline-button {
-  --color-icon: rgb(var(--color-base-outline-button-labels));
+.border-radius-leaf-lg-left {
+  border-top-left-radius: var(--border-radius-leaf-sm-small);
+  border-top-right-radius: var(--border-radius-leaf-sm-big);
+  border-bottom-left-radius: var(--border-radius-leaf-sm-big);
+  border-bottom-right-radius: var(--border-radius-leaf-sm-small);
 }
 
 /* base */
@@ -2112,6 +2159,8 @@ input[type='checkbox'] {
   border-top-right-radius: 1.6rem;
   border-bottom-left-radius: 1.6rem;
   border-bottom-right-radius: 0.2rem;
+  
+  box-shadow: 
 }
 
 #shopify-section-header > sticky-header > header > nav > ul > li > details-disclosure > details > ul > li > a.list-menu__item {

@@ -56,7 +56,7 @@
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
 
-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-heading-family: "Yeseva One";
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
 
@@ -79,13 +79,13 @@
 
         --page-width: {{ settings.page_width | divided_by: 10 }}rem;
         --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
-    
-        --border-radius-sl: 0.2rem;
-        --border-radius-sb: 1.2rem;
-        --border-radius-ml: 0.4rem;
-        --border-radius-mb: 1.6rem;
-        --border-radius-ll: 0.6rem;  
-        --border-radius-lb: 2rem;
+        
+        --border-radius-leaf-sm-small: 0.2rem;
+        --border-radius-leaf-sm-big: 0.6rem;
+        --border-radius-leaf-md-small: 0.2rem;
+        --border-radius-leaf-md-big: 0.8rem;
+        --border-radius-leaf-lg-small: 0.2rem;  
+        --border-radius-leaf-lg-big: 1.6rem;
 
         --box-shadow-a-color: rgba(0, 0, 0, 0.14);
         --box-shadow-b-color: rgba(0, 0, 0, 0.12);
@@ -225,7 +225,6 @@
         --box-shadow-24-c-offset-y: 11rem;
         --box-shadow-24-c-blur: 15rem;
         --box-shadow-24-c-spread: -9rem;
-
       }
 
       *,
