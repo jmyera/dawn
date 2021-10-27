@@ -1901,6 +1901,12 @@ input[type='checkbox'] {
   color: rgba(var(--color-background), 0.75);
 }
 
+.transparent-header-on-dark .header__menu-item:hover,
+.transparent-header-on-dark .header__active-menu-item:hover,
+.transparent-header-on-dark .header__icon:hover  {
+  color: rgba(var(--color-background), 0.75);
+}
+
 #shopify-section-header > sticky-header > header > nav > ul > li > details-disclosure > details > ul {
   border-top-left-radius: 0.2rem;
   border-top-right-radius: 1.6rem;
