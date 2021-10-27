@@ -1882,7 +1882,7 @@ input[type='checkbox'] {
 
 .transparent-header-on-light,
 .transparent-header-on-dark {
-  display: block;
+  /* display: block; */
   position: absolute;
   top: 0;
   left: 0;
