@@ -1890,8 +1890,8 @@ input[type='checkbox'] {
   background-color: transparent;
 }
 
-.transparent-on-light.gradient,
-.transparent-on-dark.gradient {
+.transparent-on-light .gradient,
+.transparent-on-dark .gradient {
   background-color: transparent;
 }
 
