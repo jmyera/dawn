@@ -1917,8 +1917,8 @@ input[type='checkbox'] {
   color: rgb(var(--color-foreground));
 }
 
-#shopify-section-header .transparent-header-on-dark .header__menu-item,
-#shopify-section-header .transparent-header-on-dark .header__icon  {
+.transparent-header-on-dark .header__menu-item,
+.transparent-header-on-dark .header__icon  {
   color: rgb(var(--color-background));
 }
 
