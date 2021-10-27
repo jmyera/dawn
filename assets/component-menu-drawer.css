@@ -1,3 +1,9 @@
+#menu-drawer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .header__icon--menu {
   position: initial;
 }
@@ -87,7 +93,10 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__navigation {
-  padding: 5.6rem 0;
+  padding-bottom: 5.6rem;
+  padding-top: 14.1rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .menu-drawer__inner-submenu {
