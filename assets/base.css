@@ -1914,7 +1914,7 @@ input[type='checkbox'] {
 
 #shopify-section-header.animate .transparent-header-on-light .header__menu-item,
 #shopify-section-header.animate .transparent-header-on-dark .header__icon {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 0.75) !important;
 }
 
 .transparent-header-on-dark .header__menu-item,
