@@ -1912,6 +1912,11 @@ input[type='checkbox'] {
   background-color: rgb(var(--color-background));
 }
 
+#shopify-section-header.animate .transparent-header-on-light .header__menu-item,
+#shopify-section-header.animate .transparent-header-on-dark .header__icon {
+  color: rgb(var(--color-foreground));
+}
+
 #shopify-section-header .transparent-header-on-dark .header__menu-item,
 #shopify-section-header .transparent-header-on-dark .header__icon  {
   color: rgb(var(--color-background));
