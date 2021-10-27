@@ -1913,13 +1913,13 @@ input[type='checkbox'] {
   visibility: visible;
   opacity: 1;
   transition: all 0.15s linear;
-  color: rgba(var(--color-foreground), 0.75) !important;
+  color: rgb(0, 0, 0, 0.75) !important;
   background-color: rgb(var(--color-background));
 }
 
 #shopify-section-header.animate .transparent-header-on-light .header__menu-item,
 #shopify-section-header.animate .transparent-header-on-dark .header__icon {
-  color: rgba(var(--color-foreground), 0.75) !important;
+  color: rgb(0, 0, 0, 0.75) !important;
 }
 
 
