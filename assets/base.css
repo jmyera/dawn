@@ -1890,8 +1890,8 @@ input[type='checkbox'] {
   background-color: transparent;
 }
 
-#shopify-section-header .transparent-on-light.gradient,
-#shopify-section-header .transparent-on-dark.gradient {
+#shopify-section-header .transparent-on-light .gradient,
+#shopify-section-header .transparent-on-dark .gradient {
   background-color: transparent;
 }
 
