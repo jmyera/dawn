@@ -1919,7 +1919,7 @@ input[type='checkbox'] {
 
 #shopify-section-header.animate .transparent-header-on-light .header__menu-item,
 #shopify-section-header.animate .transparent-header-on-dark .header__icon {
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--color-foreground)) !important;
 }
 
 
