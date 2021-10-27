@@ -30,7 +30,7 @@
         "type": "header",
         "settings": {
           "color_scheme": "background-1",
-          "transparent_header": "transparent-header-on-dark",
+          "transparent_header": "",
           "logo": "shopify:\/\/shop_images\/logo.png",
           "logo_width": 50,
           "logo_position": "middle-left",
