@@ -1917,8 +1917,8 @@ input[type='checkbox'] {
   background-color: rgb(var(--color-background));
 }
 
-.animate .transparent-header-on-light .header__menu-item,
-.animate .transparent-header-on-dark .header__icon {
+.animate > .transparent-header-on-light > .header__menu-item,
+.animate > .transparent-header-on-dark > .header__icon {
   color: rgb(0, 0, 0, 0.75) !important;
 }
 
