@@ -1897,10 +1897,10 @@ input[type='checkbox'] {
 
 .shopify-section-header-hidden .transparent-header-on-light,
 .shopify-section-header-hidden .transparent-header-on-dark {
-  transform: translateY(-100%) !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  transition: visibility 0.15s, opacity 0.15s linear !important;
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+  /* transition: visibility 0.15s, opacity 0.15s linear; */
 }
 
 #shopify-section-header.animate .transparent-header-on-light,
