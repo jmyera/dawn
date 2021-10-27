@@ -1902,10 +1902,10 @@ input[type='checkbox'] {
 }
 
 #shopify-section-header > sticky-header > header > nav > ul > li > details-disclosure > details > ul {
-  border-top-left-radius: 0.8rem;
+  border-top-left-radius: 1.2rem;
   border-top-right-radius: 0.1rem;
   border-bottom-left-radius: 0.1rem;
-  border-bottom-right-radius: 0.8rem;
+  border-bottom-right-radius: 1.2rem;
 }
 
 #shopify-section-header > sticky-header > header > nav > ul > li > details-disclosure > details > ul > li > a.list-menu__item {
