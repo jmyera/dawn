@@ -1890,8 +1890,8 @@ input[type='checkbox'] {
   background-color: transparent;
 }
 
-.header-wrapper--transparent-on-light .gradient,
-.header-wrapper--transparent-on-dark .gradient {
+.header-wrapper--transparent-on-light.gradient,
+.header-wrapper--transparent-on-dark.gradient {
   background-color: transparent;
 }
 
