@@ -1908,19 +1908,23 @@ input[type='checkbox'] {
   /* transition: visibility 0.15s, opacity 0.15s linear; */
 }
 
-.animate .transparent-header-on-light,
-.animate .transparent-header-on-dark {
+#shopify-section-header.animate .transparent-header-on-light,
+#shopify-section-header.animate .transparent-header-on-dark {
   visibility: visible;
   opacity: 1;
   transition: all 0.15s linear;
-  color: rgb(0, 0, 0, 0.75) !important;
+  color: rgba(var(--color-foreground), 0.75);
   background-color: rgb(var(--color-background));
 }
 
-#shopify-section-header.animate > sticky-header > header > nav > ul > li > a.header__menu-item,
-#shopify-section-header.animate > sticky-header > header > nav > ul > li > a.header__icon {
-  color: rgb(0, 0, 0, 0.75) !important;
+#shopify-section-header.animate .transparent-header-on-dark .header__icon {
+  color: rgba(var(--color-foreground), 0.75);
 }
+
+#shopify-section-header.animate > sticky-header > header > nav > ul > li > a.header__menu-item {
+  color: rgba(var(--color-foreground), 0.75);
+}
+
 
 
 
