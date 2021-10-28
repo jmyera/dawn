@@ -613,11 +613,6 @@
       this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
       this.closeMenuDisclosure();
       this.closeSearchModal();
-      if (imageBrightness > 127.5) {
-        this.header.classList.add('dark');
-      } else {
-        this.header.classList.add('light');
-      }
     }
 
     reveal() {
@@ -633,9 +628,9 @@
     reset() {
       this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
       if (imageBrightness > 127.5) {
-        this.header.classList.add('dark');
+        this.header.classList.remove('dark');
       } else {
-        this.header.classList.add('light');
+        this.header.classList.remove('light');
       }
     }
 
