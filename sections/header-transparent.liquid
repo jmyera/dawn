@@ -547,17 +547,9 @@
     }
   };
   
-  var imageBanner = document.getElementById('banner-media').src;
-  
-  console.log(imageBanner);
-  
-
-  
-  getBrightness(imageBanner,
-    (b) => console.log(b));
+  var imageBanner = document.getElementById('banner-media').src;  
+  var imageBrightness = getBrightness(imageBanner, (b) => (b));
     
-    console.log(getBrightness);
-  
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
@@ -621,7 +613,7 @@
       this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
       this.closeMenuDisclosure();
       this.closeSearchModal();
-      if (brightness > 127.5) {
+      if (imageBrightness > 127.5) {
         this.header.classList.add('dark');
       } else {
         this.header.classList.add('light');
