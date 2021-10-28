@@ -618,7 +618,7 @@
     reveal() {
       this.header.classList.add('shopify-section-header-sticky', 'animate');
       this.header.classList.remove('shopify-section-header-hidden');
-      if (imageBrightness > 127.5) {
+      if (imageBrightness > '127.5') {
         this.header.classList.add('dark');
       } else {
         this.header.classList.add('light');
@@ -627,7 +627,7 @@
 
     reset() {
       this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-      if (imageBrightness > 127.5) {
+      if (imageBrightness > '127.5') {
         this.header.classList.remove('dark');
       } else {
         this.header.classList.remove('light');
