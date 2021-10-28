@@ -517,7 +517,7 @@
 {% javascript %}
   function getImageLightness(imageSrc,callback) {
     var img = document.createElement('img');
-    img.src = imageSrc;
+    img.src = document.getElementById('banner-media').src;
     img.style.display = 'none';
     document.body.appendChild(img);
     
