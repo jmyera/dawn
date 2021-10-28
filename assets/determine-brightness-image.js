@@ -36,3 +36,5 @@ console.log(imageBanner);
 
 getBrightness(imageBanner, 
     (b)=>console.log(b));
+    
+    {% assign image_brightness = getBrightness(imageBanner) %}
