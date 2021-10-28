@@ -25,3 +25,19 @@
 .header-wrapper--border-bottom {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
+
+.header__menu-item {
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+.header__menu-item:hover {
+  color: rgb(var(--color-foreground));
+}
+
+.header__active-menu-item {
+  color: rgb(var(--color-foreground));
+}
+
+.header__icon {
+  color: rgb(var(--color-foreground));
+}
