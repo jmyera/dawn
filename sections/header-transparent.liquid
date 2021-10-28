@@ -517,7 +517,7 @@
 {% javascript %}
   function getImageLightness(imageSrc,callback) {
     var img = document.createElement('img');
-    img.src = document.getElementById('banner-media').src;
+    img.src = imageSrc;
     img.style.display = 'none';
     document.body.appendChild(img);
     
@@ -555,9 +555,10 @@
   getImageLightness(imageBanner,function(brightness){
     console.log(brightness);
   });
-
   
-  console.log(image.brightness);
+  var imageBrightness = getBrightness();
+  
+  console.log(imageBrightness);
     
   class StickyHeader extends HTMLElement {
     constructor() {
@@ -627,10 +628,20 @@
     reveal() {
       this.header.classList.add('shopify-section-header-sticky', 'animate');
       this.header.classList.remove('shopify-section-header-hidden');
+      if (imageBrightness > '127.5') {
+        this.header.classList.add('dark');
+      } else {
+        this.header.classList.add('light');
+      }
     }
 
     reset() {
       this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+      if (imageBrightness > '127.5') {
+        this.header.classList.remove('dark');
+      } else {
+        this.header.classList.remove('light');
+      }
     }
 
     closeMenuDisclosure() {
