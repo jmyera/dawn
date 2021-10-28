@@ -6,35 +6,35 @@ function getBrightness(imageSrc, callback) {
   document.body.appendChild(img);
   let colorSum = 0;
 
-    img.onload = function() {
-      const canvas = document.createElement('canvas');
-      canvas.width = this.width;
-      canvas.height = this.height;
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(this, 0, 0);
+  img.onload = function() {
+    const canvas = document.createElement('canvas');
+    canvas.width = this.width;
+    canvas.height = this.height;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(this, 0, 0);
 
-      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-      const data = imageData.data;
-      let r, g, b, avg;
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const data = imageData.data;
+    let r, g, b, avg;
 
-      for(let x=0, len=data.length; x<len; x+=4) {
-        r = data[x];
-        g = data[x+1];
-        b = data[x+2];
-        avg = Math.floor((r+g+b) / 3);
-        colorSum += avg;
-      }
-
-      const brightness = Math.floor(colorSum / (this.width * this.height));
-      callback(brightness);
+    for (let x = 0, len = data.length; x < len; x += 4) {
+      r = data[x];
+      g = data[x + 1];
+      b = data[x + 2];
+      avg = Math.floor((r + g + b) / 3);
+      colorSum += avg;
     }
+
+    const brightness = Math.floor(colorSum / (this.width * this.height));
+    callback(brightness);
+  }
 };
 
 var imageBanner = document.getElementById('banner-media').src;
 
 // console.log(imageBanner);
 
-getBrightness(imageBanner, (b));
+getBrightness(imageBanner, (b) => console.log(b));
 
 // var imageBrightness = getBrightness(x);
 // console.log(imageBrightness);
@@ -45,3 +45,16 @@ getBrightness(imageBanner, (b));
 //     console.log('false');
 //   }
 // }
+
+function saludar(nombre) {
+  alert('Hola ' + nombre);
+}
+
+function procesarEntradaUsuario(callback) {
+  var nombre = prompt('Por favor ingresa tu nombre.');
+  callback(nombre);
+}
+
+procesarEntradaUsuario(saludar);
+
+console.log(nombre);
