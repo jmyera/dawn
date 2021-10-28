@@ -716,9 +716,6 @@
         "menu": {
           "label": "Menú"
         },
-        "show_line_separator": {
-          "label": "Mostrar línea separadora"
-        },
         "enable_sticky_header": {
           "label": "Activar encabezado fijo",
           "info": "El encabezado se muestra en la pantalla mientras los clientes se desplazan hacia arriba."
