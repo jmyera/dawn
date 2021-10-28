@@ -16,6 +16,25 @@
   transition: transform 0.15s ease-out;
 }
 
+/* Main Header Layout */
+.header-wrapper {
+  display: block;
+  position: relative;
+  background-color: transparent;
+}
+
+.header-wrapper--border-bottom {
+  border-bottom: none;
+}
+
+
+
+
+
+
+
+
+
 .transparent-header-on-light,
 .transparent-header-on-dark {
   /* display: block; */
