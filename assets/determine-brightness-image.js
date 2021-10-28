@@ -1,5 +1,5 @@
 var imageBanner = document.getElementById('banner-media').src;
-var callback = 0;
+var callback = callback(getBrightness);
 
 function getBrightness(imageSrc, callback) {
   const img = document.createElement('img');
