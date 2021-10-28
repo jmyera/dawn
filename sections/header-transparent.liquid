@@ -584,19 +584,19 @@
     reveal() {
       this.header.classList.add('shopify-section-header-sticky', 'animate');
       this.header.classList.remove('shopify-section-header-hidden');
-      if (imageBrightness > '127.5') {
-        this.header.classList.add('dark');
+      if (imageBrightness < '127.5') {
+        this.header.classList.add('header-transparent-light');
       } else {
-        this.header.classList.add('light');
-      }
+        this.header.classList.add('header-transparent-dark');
+      };
     }
 
     reset() {
       this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-      if (imageBrightness > '127.5') {
-        this.header.classList.remove('dark');
+      if (imageBrightness < '127.5') {
+        this.header.classList.remove('header-transparent-light');
       } else {
-        this.header.classList.remove('light');
+        this.header.classList.remove('header-transparent-dark');
       }
     }
 
