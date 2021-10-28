@@ -32,16 +32,16 @@ function getBrightness(imageSrc, callback) {
 
 var imageBanner = document.getElementById('banner-media').src;
 
-console.log(imageBanner);
+// console.log(imageBanner);
 
-getBrightness(imageBanner, (b)=>console.log(b));
+getBrightness(imageBanner, (b));
 
-var imageBrightness = getBrightness(x);
-console.log(imageBrightness);
-
-if (imageBrightness > 127.5) {
-    console.log('true');
-  } else {
-    console.log('false');
-  }
-}
+// var imageBrightness = getBrightness(x);
+// console.log(imageBrightness);
+// 
+// if (imageBrightness > 127.5) {
+//     console.log('true');
+//   } else {
+//     console.log('false');
+//   }
+// }
