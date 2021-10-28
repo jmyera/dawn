@@ -36,6 +36,10 @@ var imageBanner = document.getElementById('banner-media').src;
 
 getBrightness(imageBanner, (b) => console.log(b));
 
+var i = getBrightness(callback);
+
+console.log(i);
+
 // var imageBrightness = getBrightness(x);
 // console.log(imageBrightness);
 // 
@@ -46,15 +50,4 @@ getBrightness(imageBanner, (b) => console.log(b));
 //   }
 // }
 
-function saludar(nombre) {
-  alert('Hola ' + nombre);
-}
 
-function procesarEntradaUsuario(callback) {
-  var nombre = prompt('Por favor ingresa tu nombre.');
-  callback(nombre);
-}
-
-procesarEntradaUsuario(saludar);
-
-console.log(nombre);
