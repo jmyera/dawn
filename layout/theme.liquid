@@ -324,8 +324,5 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    {% if template == 'index' or template == 'collection.brand-amlsport' or template == 'collection.brand-anamarialajusticia.json' or template == 'collection.brand-avoguel' or template == 'collection.brand-eladiet' or template == 'collection.brand-esi' or template == 'collection.brand-kal' or template == 'collection.brand-neovitalhealt' or template == 'collection.brand-salus' or template == 'collection.brand-solaray' or template == 'collection.brand-sorianatural' %}
-    <script src="{{ 'determine-brightness-image.js' | asset_url }}"></script>
-    {% endif %}
   </body>
 </html>
