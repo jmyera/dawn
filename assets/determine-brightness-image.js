@@ -36,5 +36,3 @@ console.log(imageBanner);
 
 getBrightness(imageBanner, 
     (b)=>console.log(b));
-    
- {% assign hugo = 42 %}
