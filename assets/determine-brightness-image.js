@@ -37,7 +37,7 @@ var imageBanner = document.getElementById('banner-media').src;
 getBrightness(imageBanner, (b) => console.log(b));
 
 
-console.log(brightness);
+console.log(callback(brightness));
 
 // var imageBrightness = getBrightness(x);
 // console.log(imageBrightness);
