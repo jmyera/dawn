@@ -516,6 +516,8 @@
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
 {% javascript %}
+  var image_brightness = getBrightness;
+        
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
