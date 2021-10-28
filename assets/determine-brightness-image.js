@@ -32,5 +32,5 @@ function getBrightness(imageSrc, callback) {
   }
 };
 
-var image_brightness = getBrightness;
+const image_brightness = getBrightness;
 var imageBanner = document.getElementById('banner-media').src;
