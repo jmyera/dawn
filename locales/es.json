@@ -216,6 +216,14 @@
         "other": "{{ count }} artículos"
       }
     },
+    "header-transparent": {
+      "announcement": "Anuncio",
+      "menu": "Menú",
+      "cart_count": {
+        "one": "{{ count }} artículo",
+        "other": "{{ count }} artículos"
+      }
+    },
     "cart": {
       "title": "Tu carrito",
       "caption": "Artículos en el carrito",
