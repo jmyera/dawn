@@ -18,8 +18,10 @@
 
 /* Main Header Layout */
 .header-wrapper {
-  display: block;
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: transparent;
 }
 
