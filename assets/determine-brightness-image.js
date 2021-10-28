@@ -36,7 +36,7 @@ function getBrightness(imageSrc, callback) {
 getBrightness(imageBanner, (b) => console.log(b));
 
 
-console.log(callback);
+// console.log(callback);
 
 // var imageBrightness = getBrightness(x);
 // console.log(imageBrightness);
