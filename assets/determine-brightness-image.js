@@ -38,3 +38,10 @@ getBrightness(imageBanner, (b)=>console.log(b));
 
 var imageBrightness = getBrightness(x);
 console.log(imageBrightness);
+
+if (imageBrightness > 127.5) {
+    console.log('true');
+  } else {
+    console.log('false');
+  }
+}
