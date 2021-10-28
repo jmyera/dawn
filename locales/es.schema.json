@@ -691,6 +691,58 @@
         }
       }
     },
+    "header-transparent": {
+      "name": "Encabezado",
+      "settings": {
+        "logo": {
+          "label": "Imagen del logo"
+        },
+        "logo_width": {
+          "unit": "px",
+          "label": "Ancho del logo personalizado"
+        },
+        "logo_position": {
+          "label": "Posición de logo en pantallas grandes",
+          "options__1": {
+            "label": "Centrado a la izquierda"
+          },
+          "options__2": {
+            "label": "Arriba a la izquierda"
+          },
+          "options__3": {
+            "label": "Superior centrada"
+          }
+        },
+        "menu": {
+          "label": "Menú"
+        },
+        "show_line_separator": {
+          "label": "Mostrar línea separadora"
+        },
+        "enable_sticky_header": {
+          "label": "Activar encabezado fijo",
+          "info": "El encabezado se muestra en la pantalla mientras los clientes se desplazan hacia arriba."
+        },
+        "color_scheme": {
+          "options__1": {
+            "label": "Resaltado 1"
+          },
+          "options__2": {
+            "label": "Resaltado 2"
+          },
+          "options__3": {
+            "label": "Fondo 1"
+          },
+          "options__4": {
+            "label": "Fondo 2"
+          },
+          "options__5": {
+            "label": "Invertir"
+          },
+          "label": "Esquema de colores"
+        }
+      }
+    },
     "image-banner": {
       "name": "Banner de imagen",
       "settings": {
