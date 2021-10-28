@@ -515,21 +515,21 @@
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
 {% javascript %}
-var imageBanner = document.getElementById('banner-media').src;
+var imageBanner = document.getElementById("banner-media").src;
 
 function getBrightness(imageSrc, callback) {
-  const img = document.createElement('img');
+  const img = document.createElement("img");
   img.src = imageSrc;
-  img.crossOrigin = 'anonymous';
-  img.style.display = 'none';
+  img.crossOrigin = "anonymous";
+  img.style.display = "none";
   document.body.appendChild(img);
   let colorSum = 0;
 
   img.onload = function () {
-    const canvas = document.createElement('canvas');
+    const canvas = document.createElement("canvas");
     canvas.width = this.width;
     canvas.height = this.height;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     ctx.drawImage(this, 0, 0);
 
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -550,7 +550,7 @@ function getBrightness(imageSrc, callback) {
 }
 
 var image_brightness = getBrightness;
-var imageBanner = document.getElementById('banner-media').src;
+var imageBanner = document.getElementById("banner-media").src;
 
 class StickyHeader extends HTMLElement {
   constructor() {
@@ -558,7 +558,7 @@ class StickyHeader extends HTMLElement {
   }
 
   connectedCallback() {
-    this.header = document.getElementById('shopify-section-header-transparent');
+    this.header = document.getElementById("shopify-section-header-transparent");
     this.headerBounds = {};
     this.currentScrollTop = 0;
     this.preventReveal = false;
@@ -566,15 +566,15 @@ class StickyHeader extends HTMLElement {
     this.onScrollHandler = this.onScroll.bind(this);
     this.hideHeaderOnScrollUp = () => (this.preventReveal = true);
 
-    this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-    window.addEventListener('scroll', this.onScrollHandler, false);
+    this.addEventListener("preventHeaderReveal", this.hideHeaderOnScrollUp);
+    window.addEventListener("scroll", this.onScrollHandler, false);
 
     this.createObserver();
   }
 
   disconnectedCallback() {
-    this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-    window.removeEventListener('scroll', this.onScrollHandler);
+    this.removeEventListener("preventHeaderReveal", this.hideHeaderOnScrollUp);
+    window.removeEventListener("scroll", this.onScrollHandler);
   }
 
   createObserver() {
@@ -618,51 +618,53 @@ class StickyHeader extends HTMLElement {
 
   hide() {
     this.header.classList.add(
-      'shopify-section-header-hidden',
-      'shopify-section-header-sticky'
+      "shopify-section-header-hidden",
+      "shopify-section-header-sticky"
     );
     this.closeMenuDisclosure();
     this.closeSearchModal();
   }
 
   reveal() {
-    this.header.classList.add('shopify-section-header-sticky', 'animate');
-    this.header.classList.remove('shopify-section-header-hidden');
-    if (image_brightness < '127.5') {
-      this.header.classList.add('header-transparent-light');
+    this.header.classList.add("shopify-section-header-sticky", "animate");
+    this.header.classList.remove("shopify-section-header-hidden");
+    if (image_brightness < "127.5") {
+      this.header.classList.add("header-transparent-light");
     } else {
-      this.header.classList.add('header-transparent-dark');
+      this.header.classList.add("header-transparent-dark");
     }
   }
 
   reset() {
     this.header.classList.remove(
-      'shopify-section-header-hidden',
-      'shopify-section-header-sticky',
-      'animate'
+      "shopify-section-header-hidden",
+      "shopify-section-header-sticky",
+      "animate"
     );
-    if (image_brightness < '127.5') {
-      this.header.classList.remove('header-transparent-light');
+    if (image_brightness < "127.5") {
+      this.header.classList.remove("header-transparent-light");
     } else {
-      this.header.classList.remove('header-transparent-dark');
+      this.header.classList.remove("header-transparent-dark");
     }
   }
 
   closeMenuDisclosure() {
     this.disclosures =
-      this.disclosures || this.header.querySelectorAll('details-disclosure');
+      this.disclosures || this.header.querySelectorAll("details-disclosure");
     this.disclosures.forEach((disclosure) => disclosure.close());
   }
 
   closeSearchModal() {
     this.searchModal =
-      this.searchModal || this.header.querySelector('details-modal');
+      this.searchModal || this.header.querySelector("details-modal");
     this.searchModal.close(false);
   }
 }
 
-customElements.define('sticky-header', StickyHeader);
-console.log("Value:" + image_brightness);
+customElements.define("sticky-header", StickyHeader);
+        
+console.log("Valor:" + image_brightness)
+
 {% endjavascript %}
 
 <script type="application/ld+json">
