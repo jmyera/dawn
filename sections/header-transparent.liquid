@@ -628,7 +628,7 @@ class StickyHeader extends HTMLElement {
   reveal() {
     this.header.classList.add('shopify-section-header-sticky', 'animate');
     this.header.classList.remove('shopify-section-header-hidden');
-    if (imageBrightness < '127.5') {
+    if (image_brightness < '127.5') {
       this.header.classList.add('header-transparent-light');
     } else {
       this.header.classList.add('header-transparent-dark');
@@ -641,7 +641,7 @@ class StickyHeader extends HTMLElement {
       'shopify-section-header-sticky',
       'animate'
     );
-    if (imageBrightness < '127.5') {
+    if (image_brightness < '127.5') {
       this.header.classList.remove('header-transparent-light');
     } else {
       this.header.classList.remove('header-transparent-dark');
