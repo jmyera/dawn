@@ -34,8 +34,8 @@ function getBrightness(imageSrc, callback) {
 };
 
 console.log(image_brightness);
-console.log(imageBanner);
-getBrightness(imageBanner, (b)=>console.log(b));
+console.log(image_banner);
+getBrightness(image_banner, (b)=>console.log(b));
 
 // if ( image_brightness > '127.5' ) {
 //   console.log('true');
