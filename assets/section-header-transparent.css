@@ -19,7 +19,7 @@
 /* Main Header Layout */
 .header-wrapper {
   display: block;
-  position: relative;
+  position: absolute;
   background-color: transparent;
 }
 
