@@ -1,3 +1,21 @@
+/* section-header */
+#shopify-section-header-transparent {
+  z-index: 3;
+}
+
+.shopify-section-header-sticky {
+  position: sticky;
+  top: 0;
+}
+
+.shopify-section-header-hidden {
+  transform: translateY(-100%);
+}
+
+#shopify-section-header-transparent.animate {
+  transition: transform 0.15s ease-out;
+}
+
 .transparent-header-on-light,
 .transparent-header-on-dark {
   /* display: block; */
@@ -25,7 +43,7 @@
   color: rgba(var(--color-background), 0.75);
 }
 
-#shopify-section-header > sticky-header > header > nav > ul > li > details-disclosure > details > ul {
+#shopify-section-header-transparent > sticky-header > header > nav > ul > li > details-disclosure > details > ul {
   border-top-left-radius: 0.2rem;
   border-top-right-radius: 1.6rem;
   border-bottom-left-radius: 1.6rem;
@@ -34,7 +52,7 @@
   box-shadow: 
 }
 
-#shopify-section-header > sticky-header > header > nav > ul > li > details-disclosure > details > ul > li > a.list-menu__item {
+#shopify-section-header-transparent > sticky-header > header > nav > ul > li > details-disclosure > details > ul > li > a.list-menu__item {
   color: rgba(var(--color-foreground), 0.75);
 }
 
@@ -46,8 +64,8 @@
   /* transition: visibility 0.15s, opacity 0.15s linear; */
 }
 
-#shopify-section-header.animate .transparent-header-on-light,
-#shopify-section-header.animate .transparent-header-on-dark {
+#shopify-section-header-transparent.animate .transparent-header-on-light,
+#shopify-section-header-transparent.animate .transparent-header-on-dark {
   visibility: visible;
   opacity: 1;
   transition: all 0.15s linear;
@@ -55,12 +73,12 @@
   background-color: rgb(var(--color-background));
 }
 
-#shopify-section-header.animate .transparent-header-on-dark .header__icon {
+#shopify-section-header-transparent.animate .transparent-header-on-dark .header__icon {
   color: rgba(var(--color-foreground), 0.75);
 }
 
-#shopify-section-header.animate > sticky-header > header > nav > ul > li > a.header__menu-item,
-#shopify-section-header.animate > sticky-header > header > nav > ul > li > a.header__active-menu-item {
+#shopify-section-header-transparent.animate > sticky-header > header > nav > ul > li > a.header__menu-item,
+#shopify-section-header-transparent.animate > sticky-header > header > nav > ul > li > a.header__active-menu-item {
   color: rgba(var(--color-foreground), 0.75);
 }
 
