@@ -33,7 +33,7 @@ function getBrightness(imageSrc, callback) {
   }
 };
 
-getBrightness(imageBanner, (b) => console.log(b));
+var getBrightness(imageBanner, (b) => console.log(b));
 
 
 // console.log(callback);
