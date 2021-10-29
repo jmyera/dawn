@@ -49,7 +49,7 @@
         width="{{ section.settings.image.width }}"
         height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio }}"
         {% if section.settings.image_2 != blank %}class="banner__media-image-half"{% endif %}
-        longdesc="<script>getBrightness(imageBanner, function (brightness));</script>"
+        longdesc=<script>getBrightness(imageBanner, function (brightness));</script>
       >
     </div>
   {%- elsif section.settings.image_2 == blank -%}
