@@ -582,14 +582,14 @@
     }
 
     reveal() {
-      this.header.classList.add('shopify-section-header-sticky', 'animate');
-      this.header.classList.remove('shopify-section-header-hidden');
       getBrightness(imageBanner, function (brightness) {
         if (brightness < mediumBrightnessValue) {
-          this.header.classList.add('header-transparent-dark');
+          this.header.classList.add('header-transparent-dark', 'shopify-section-header-sticky', 'animate');
+          this.header.classList.remove('shopify-section-header-hidden');
           console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
         } else {
-          this.header.classList.add('header-transparent-light');
+          this.header.classList.add('header-transparent-light', 'shopify-section-header-sticky', 'animate');
+          this.header.classList.remove('shopify-section-header-hidden');
           console.log(brightness + ' es más grande que ' + mediumBrightnessValue);
         }
       });
