@@ -628,6 +628,7 @@
       this.header.classList.add('shopify-section-header-sticky', 'animate');
       this.header.classList.remove('shopify-section-header-hidden');
       getBrightness(imageBanner, function (brightness) {
+        this.header = document.getElementById('shopify-section-header-transparent');
         if (brightness < mediumBrightnessValue) {
           this.header.classList.add('header-transparent-dark');
           console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
@@ -641,6 +642,7 @@
     reset() {
       this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
       getBrightness(imageBanner, function (brightness) {
+        this.header = document.getElementById('shopify-section-header-transparent');
         if (brightness < mediumBrightnessValue) {
           this.header.classList.remove('header-transparent-dark');
           console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
