@@ -1,19 +1,19 @@
-var image_banner = document.getElementById('banner-media').src;
-var image_brightness = getBrightness;
+var imageBanner = document.getElementById('banner-media').src;
+const mediumBrightnessValue = 127.5;
 
 function getBrightness(imageSrc, callback) {
-  const img = document.createElement('img');
+  const img = document.createElement("img");
   img.src = imageSrc;
-  img.crossOrigin = 'anonymous';
-  img.style.display = 'none';
+  img.crossOrigin = "anonymous";
+  img.style.display = "none";
   document.body.appendChild(img);
   let colorSum = 0;
 
-  img.onload = function() {
-    const canvas = document.createElement('canvas');
+  img.onload = function () {
+    const canvas = document.createElement("canvas");
     canvas.width = this.width;
     canvas.height = this.height;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     ctx.drawImage(this, 0, 0);
 
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -27,58 +27,58 @@ function getBrightness(imageSrc, callback) {
       avg = Math.floor((r + g + b) / 3);
       colorSum += avg;
     }
-
     const brightness = Math.floor(colorSum / (this.width * this.height));
     callback(brightness);
-  }
-};
+  };
+}
+// getBrightness(imageBanner, (b) => console.log(b));
+// getBrightness(imageBanner,function(brightness){
+//    console.log(brightness);
+// });
 
-console.log(image_brightness);
-console.log(image_banner);
-getBrightness(image_banner, (b)=>console.log(b));
-
-// if ( image_brightness > '127.5' ) {
-//   console.log('true');
-// } else {
-//   console.log('false');
-// };
-
+// getBrightness(imageBanner, function (brightness) {
+//   if (brightness < mediumBrightnessValue) {
+//     console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
+//   } else {
+//     console.log(brightness + ' es más grande que ' + mediumBrightnessValue);
+//   }
+// });
 
 // function getImageLightness(imageSrc,callback) {
 //   var img = document.createElement("img");
 //   img.src = imageSrc;
 //   img.style.display = "none";
 //   document.body.appendChild(img);
-
+// 
 //   var colorSum = 0;
-
+// 
 //   img.onload = function() {
 //       // create canvas
 //       var canvas = document.createElement("canvas");
 //       canvas.width = this.width;
 //       canvas.height = this.height;
-
+// 
 //       var ctx = canvas.getContext("2d");
 //       ctx.drawImage(this,0,0);
-
+// 
 //       var imageData = ctx.getImageData(0,0,canvas.width,canvas.height);
 //       var data = imageData.data;
 //       var r,g,b,avg;
-
+// 
 //       for(var x = 0, len = data.length; x < len; x+=4) {
 //           r = data[x];
 //           g = data[x+1];
 //           b = data[x+2];
-
+// 
 //           avg = Math.floor((r+g+b)/3);
 //           colorSum += avg;
 //       }
-
+// 
 //       var brightness = Math.floor(colorSum / (this.width*this.height));
 //       callback(brightness);
 //   }
 // }
-
+// 
 // getImageLightness(imageBanner,function(brightness){
 //   console.log(brightness);
 // });
