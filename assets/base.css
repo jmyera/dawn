@@ -2123,7 +2123,7 @@ input[type='checkbox'] {
 /* Main Header Layout */
 .header-wrapper {
   display: block;
-  /* position: relative; */
+  position: relative;
   /* background-color: rgb(var(--color-background)); */
 }
 
@@ -2588,8 +2588,8 @@ details-disclosure > details {
 }
 
 .gradient {
-  background: var(--color-background);
-  background: var(--gradient-background);
+  /* background: var(--color-background);
+  background: var(--gradient-background); */
   background-attachment: fixed;
 }
 
