@@ -516,18 +516,18 @@
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
 
 {% javascript %}
+  getBrightness(imageBanner, function (brightness) {
+    if (brightness < mediumBrightnessValue) {
+      console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
+    } else {
+      console.log(brightness + ' es más grande que ' + mediumBrightnessValue);
+    }
+  });
+
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
     }
-
-    getBrightness(imageBanner, function (brightness) {
-      if (brightness < mediumBrightnessValue) {
-        console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
-      } else {
-        console.log(brightness + ' es más grande que ' + mediumBrightnessValue);
-      }
-    });
 
     connectedCallback() {
       this.header = document.getElementById('shopify-section-header-transparent');
