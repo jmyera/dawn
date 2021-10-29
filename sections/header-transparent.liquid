@@ -526,11 +526,6 @@
       this.currentScrollTop = 0;
       this.preventReveal = false;
 
-      const mediumBrightnessValue = 127.5;
-      this.urlBannerImage = document.getElementById('banner-media').src;
-      this.brightness = function(brightness);
-      this.valueBrightness = getBrightness(this.urlBannerImage, this.brightness);
-
       this.onScrollHandler = this.onScroll.bind(this);
       this.hideHeaderOnScrollUp = () => this.preventReveal = true;
 
@@ -631,15 +626,6 @@
 
     reset() {
       this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-      getBrightness(this.urlBannerImage, function (brightness) {
-        if (this.brightness < mediumBrightnessValue) {
-          this.header.classList.remove('header-transparent-dark');
-          console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
-        } else {
-          this.header.classList.remove('header-transparent-light');
-          console.log(brightness + ' es más grande que ' + mediumBrightnessValue);
-        }
-      });
     }
 
     closeMenuDisclosure() {
