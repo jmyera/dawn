@@ -72,6 +72,7 @@
   left: 0;
   top: 0;
   width: 100%;
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0.302) 0%,transparent);
 }
 
 .banner__media-half {
