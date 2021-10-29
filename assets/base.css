@@ -2108,8 +2108,8 @@ input[type='checkbox'] {
 }
 
 .shopify-section-header-sticky {
-  position: sticky;
-  top: 0;
+  /* position: sticky; */
+  /* top: 0; */
 }
 
 .shopify-section-header-hidden {
