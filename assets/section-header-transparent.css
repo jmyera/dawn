@@ -31,6 +31,7 @@
 }
 
 .header__menu-item {
+  font-weight: 600;
   color: rgba(var(--color-background), 0.75);
 }
 
