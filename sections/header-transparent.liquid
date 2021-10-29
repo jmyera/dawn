@@ -527,8 +527,9 @@
       this.currentScrollTop = 0;
       this.preventReveal = false;
 
-      this.imageBanner = document.getElementById('banner-media').src;
-      const mediumBrightnessValue = 127.5;    
+      const mediumBrightnessValue = 127.5;
+      this.urlBannerImage = document.getElementById('banner-media').src;
+      this.valueBrightness(this.urlBannerImage, function (brightness));
 
       this.onScrollHandler = this.onScroll.bind(this);
       this.hideHeaderOnScrollUp = () => this.preventReveal = true;
@@ -538,10 +539,8 @@
 
       this.createObserver();
     }
-    
-    
 
-    function getBrightness(imageSrc, callback) {        
+    getBrightness(imageSrc, callback) {        
       const img = document.createElement('img');
       img.src = imageSrc;
       img.crossOrigin = 'anonymous';
@@ -572,6 +571,14 @@
       };
     }
 
+    getBrightness(imageBanner, function (brightness) {
+      if (brightness < mediumBrightnessValue) {
+        console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
+      } else {
+        console.log(brightness + ' es más grande que ' + mediumBrightnessValue);
+      }
+    });
+
     disconnectedCallback() {
       this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
       window.removeEventListener('scroll', this.onScrollHandler);
@@ -583,7 +590,7 @@
         observer.disconnect();
       });
 
-      observer.observe(this.header, this.imageBanner, this.brightness);
+      observer.observe(this.header, this.urlBannerImage, this.brightness);
     }
 
     onScroll() {
@@ -621,7 +628,7 @@
     reveal() {
       this.header.classList.add('shopify-section-header-sticky', 'animate');
       this.header.classList.remove('shopify-section-header-hidden');
-      getBrightness(this.imageBanner, function (brightness) {
+      getBrightness(this.urlBannerImage, function (brightness) {
         if (this.brightness < mediumBrightnessValue) {
           this.header.classList.add('header-transparent-dark');
           console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
@@ -634,7 +641,7 @@
 
     reset() {
       this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-      getBrightness(this.imageBanner, function (brightness) {
+      getBrightness(this.urlBannerImage, function (brightness) {
         if (this.brightness < mediumBrightnessValue) {
           this.header.classList.remove('header-transparent-dark');
           console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
