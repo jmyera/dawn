@@ -593,7 +593,7 @@
 
     reset() {
       this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-      if (brightness < mediumBrightnessValue)
+      if (brightness < mediumBrightnessValue) {
         this.header.classList.remove('header-transparent-dark');
       } else {
         this.header.classList.remove('header-transparent-light');
