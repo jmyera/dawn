@@ -521,15 +521,14 @@
       super();
     }
 
-    const mediumBrightnessValue = 127.5;
-
     connectedCallback() {
       this.header = document.getElementById('shopify-section-header-transparent');
       this.headerBounds = {};
       this.currentScrollTop = 0;
       this.preventReveal = false;
-      
-      this.imageBanner = document.getElementById('banner-media').src;      
+
+      this.imageBanner = document.getElementById('banner-media').src;
+      const mediumBrightnessValue = 127.5;    
 
       this.onScrollHandler = this.onScroll.bind(this);
       this.hideHeaderOnScrollUp = () => this.preventReveal = true;
