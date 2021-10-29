@@ -8,19 +8,16 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
 }
   /* top: 0; */
 }
 
 .shopify-section-header-transparent-hidden {
   transform: translateY(-100%);
-  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
 }
 
 #shopify-section-header-transparent.animate {
   transition: transform 0.15s ease-out;
-  background-color: rgb(var(--color-background));
 }
 
 /* Main Header Layout */
