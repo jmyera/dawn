@@ -35,7 +35,7 @@
 }
 
 .header__menu-item:hover {
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
 }
 
 .header-transparent__menu-item {
@@ -51,15 +51,15 @@
 }
 
 .header-transparent__active-menu-item {
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
 }
 
 .header__icon {
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
 }
 
 .header-transparent__icon {
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
 }
 
 
