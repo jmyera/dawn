@@ -1,4 +1,4 @@
-var imageBanner = document.getElementById('banner-media').src;
+const imageBanner = document.getElementById('banner-media').src;
 const mediumBrightnessValue = 127.5;
 
 function getBrightness(imageSrc, callback) {
