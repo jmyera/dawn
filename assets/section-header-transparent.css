@@ -10,7 +10,8 @@
 }
 
 .shopify-section-header-transparent-hidden {
-  transform: translateY(-100%);
+  /* transform: translateY(-100%); */
+  transform: background rgb(255, 255, 255);
 }
 
 #shopify-section-header-transparent.animate {
