@@ -517,6 +517,7 @@
 
 {% javascript %}
   var imageBanner = document.getElementById('banner-media').src;
+  console.log(imageBanner);
   const mediumBrightnessValue = 127.5;
 
   function getBrightness(imageSrc, callback) {
@@ -549,7 +550,7 @@
       callback(brightness);
     };
   }
-  
+
   getBrightness(imageBanner, function (brightness) {
     if (brightness < mediumBrightnessValue) {
       console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
