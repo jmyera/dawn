@@ -11,11 +11,12 @@
 
 .shopify-section-header-transparent-hidden {
   /* transform: translateY(-100%); */
-  background: rgb(255, 255, 255);
+  background: rgba(var(--color-background), 1);
   transition: all 0.35s ease-out;
 }
 
 #shopify-section-header-transparent.animate {
+  background: rgba(var(--color-background), 1);
   transition: transform 0.15s ease-out;
 }
 
