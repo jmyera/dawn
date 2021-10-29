@@ -4,24 +4,22 @@
 }
 
 .shopify-section-header-transparent-sticky {
-  /* position: sticky; */
+  position: fixed;
   /* top: 0; */
 }
 
 .shopify-section-header-transparent-hidden {
   transform: translateY(-100%);
+  background-color: rgb(var(--color-background));
 }
 
 #shopify-section-header-transparent.animate {
   transition: transform 0.15s ease-out;
+  background-color: rgb(var(--color-background));
 }
 
 /* Main Header Layout */
 .header-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   background-color: transparent;
 }
 
