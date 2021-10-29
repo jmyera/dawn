@@ -12,7 +12,7 @@
 .shopify-section-header-transparent-hidden {
   /* transform: translateY(-100%); */
   background: rgb(255, 255, 255);
-  transition: transform 0.35s ease-out;
+  transition: all 0.35s ease-out;
 }
 
 #shopify-section-header-transparent.animate {
