@@ -67,7 +67,6 @@
   }
 </style>
 
-{% comment %} <script src="{{ 'determine-brightness-image.js' | asset_url }}" defer="defer"></script> {% endcomment %}
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
@@ -623,21 +622,11 @@
       this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
       this.closeMenuDisclosure();
       this.closeSearchModal();
-      console.log('hide: ' + this.brightness);
     }
 
     reveal() {
       this.header.classList.add('shopify-section-header-sticky', 'animate');
       this.header.classList.remove('shopify-section-header-hidden');
-      getBrightness(this.urlBannerImage, function (brightness) {
-        if (this.brightness < mediumBrightnessValue) {
-          this.header.classList.add('header-transparent-dark');
-          console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
-        } else {
-          this.header.classList.add('header-transparent-light');
-          console.log(brightness + ' es más grande que ' + mediumBrightnessValue);
-        }
-      });
     }
 
     reset() {
