@@ -20,6 +20,12 @@
   transition: transform 0.15s ease-out;
 }
 
+.shopify-section-header-transparent-hidden .header__menu-item ,
+#shopify-section-header-transparent.animate .header__menu-item  {
+  /* transform: translateY(-100%); */
+  color: rgba(var(--color-foreground), 1);
+}
+
 /* Main Header Layout */
 .header-wrapper {
   background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
