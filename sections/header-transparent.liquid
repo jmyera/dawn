@@ -526,6 +526,8 @@
       this.headerBounds = {};
       this.currentScrollTop = 0;
       this.preventReveal = false;
+      this.imageBanner = document.getElementById('banner-media').src;
+      const mediumBrightnessValue = 127.5;
 
       this.onScrollHandler = this.onScroll.bind(this);
       this.hideHeaderOnScrollUp = () => this.preventReveal = true;
@@ -536,8 +538,7 @@
       this.createObserver();
     }
     
-    this.imageBanner = document.getElementById('banner-media').src;
-    const mediumBrightnessValue = 127.5;
+    
 
     function getBrightness(imageSrc, callback) {        
       const img = document.createElement('img');
