@@ -1,13 +1,13 @@
 /* section-header */
 #shopify-section-header-transparent {
   z-index: 3;
-}
-
-.shopify-section-header-transparent-sticky {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.shopify-section-header-transparent-sticky {
 }
 
 .shopify-section-header-transparent-hidden {
