@@ -549,7 +549,7 @@
       callback(brightness);
     };
   }
-  
+
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
@@ -618,24 +618,28 @@
     reveal() {
       this.header.classList.add('shopify-section-header-sticky', 'animate');
       this.header.classList.remove('shopify-section-header-hidden');
-      if (brightness < mediumBrightnessValue) {
-        this.header.classList.add('header-transparent-dark');
-        console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
-      } else {
-        this.header.classList.add('header-transparent-light');
-        console.log(brightness + ' es más grande que ' + mediumBrightnessValue);
-      }
+      getBrightness(imageBanner, function (brightness) {
+        if (brightness < mediumBrightnessValue) {
+          this.header.classList.add('header-transparent-dark');
+          console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
+        } else {
+          this.header.classList.add('header-transparent-light');
+          console.log(brightness + ' es más grande que ' + mediumBrightnessValue);
+        }
+      });
     }
 
     reset() {
       this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-      if (brightness < mediumBrightnessValue) {
-        this.header.classList.remove('header-transparent-dark');
-        console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
-      } else {
-        this.header.classList.remove('header-transparent-light');
-        console.log(brightness + ' es más grande que ' + mediumBrightnessValue);
-      }
+      getBrightness(imageBanner, function (brightness) {
+        if (brightness < mediumBrightnessValue) {
+          this.header.classList.remove('header-transparent-dark');
+          console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
+        } else {
+          this.header.classList.remove('header-transparent-light');
+          console.log(brightness + ' es más grande que ' + mediumBrightnessValue);
+        }
+      });
     }
 
     closeMenuDisclosure() {
