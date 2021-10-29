@@ -22,11 +22,11 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 }
 
 .header-wrapper.gradient {
-  background-image: linear-gradient(rgba(0,0,0,0.302) 0%,transparent);
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
 }
 
 .header-wrapper--border-bottom {
