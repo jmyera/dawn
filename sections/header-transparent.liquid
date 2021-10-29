@@ -67,7 +67,7 @@
   }
 </style>
 
-<script src="{{ 'determine-brightness-image.js' | asset_url }}" defer="defer"></script>
+{% comment %} <script src="{{ 'determine-brightness-image.js' | asset_url }}" defer="defer"></script> {% endcomment %}
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
@@ -526,6 +526,8 @@
       this.headerBounds = {};
       this.currentScrollTop = 0;
       this.preventReveal = false;
+      this.imageBanner = document.getElementById('banner-media').src;
+      const mediumBrightnessValue = 127.5;
 
       this.onScrollHandler = this.onScroll.bind(this);
       this.hideHeaderOnScrollUp = () => this.preventReveal = true;
@@ -534,6 +536,38 @@
       window.addEventListener('scroll', this.onScrollHandler, false);
 
       this.createObserver();
+
+      getBrightness(imageSrc, callback) {        
+        const img = document.createElement("img");
+        img.src = imageSrc;
+        img.crossOrigin = "anonymous";
+        img.style.display = "none";
+        document.body.appendChild(img);
+        let colorSum = 0;
+  
+        img.onload = function () {
+          const canvas = document.createElement("canvas");
+          canvas.width = this.width;
+          canvas.height = this.height;
+          const ctx = canvas.getContext("2d");
+          ctx.drawImage(this, 0, 0);
+  
+          const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+          const data = imageData.data;
+          let r, g, b, avg;
+  
+          for (let x = 0, len = data.length; x < len; x += 4) {
+            r = data[x];
+            g = data[x + 1];
+            b = data[x + 2];
+            avg = Math.floor((r + g + b) / 3);
+            colorSum += avg;
+          }
+          const brightness = Math.floor(colorSum / (this.width * this.height));
+          callback(brightness);
+          this.brightness = brightness;
+        };
+      }
     }
 
     disconnectedCallback() {
@@ -547,7 +581,7 @@
         observer.disconnect();
       });
 
-      observer.observe(this.header);
+      observer.observe(this.header, this.imageBanner, this.brightness);
     }
 
     onScroll() {
@@ -584,9 +618,8 @@
     reveal() {
       this.header.classList.add('shopify-section-header-sticky', 'animate');
       this.header.classList.remove('shopify-section-header-hidden');
-      getBrightness(imageBanner, function (brightness) {
-        this.header = document.getElementById('shopify-section-header-transparent');
-        if (brightness < mediumBrightnessValue) {
+      getBrightness(this.imageBanner, function (brightness) {
+        if (this.brightness < mediumBrightnessValue) {
           this.header.classList.add('header-transparent-dark');
           console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
         } else {
@@ -598,9 +631,8 @@
 
     reset() {
       this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-      getBrightness(imageBanner, function (brightness) {
-        this.header = document.getElementById('shopify-section-header-transparent');
-        if (brightness < mediumBrightnessValue) {
+      getBrightness(this.imageBanner, function (brightness) {
+        if (this.brightness < mediumBrightnessValue) {
           this.header.classList.remove('header-transparent-dark');
           console.log(brightness + ' es más pequeño que ' + mediumBrightnessValue);
         } else {
