@@ -529,7 +529,7 @@
 
       const mediumBrightnessValue = 127.5;
       this.urlBannerImage = document.getElementById('banner-media').src;
-      this.valueBrightness(this.urlBannerImage, function (brightness));
+      this.valueBrightness = this.brightness;
 
       this.onScrollHandler = this.onScroll.bind(this);
       this.hideHeaderOnScrollUp = () => this.preventReveal = true;
@@ -568,6 +568,7 @@
         }
         const brightness = Math.floor(colorSum / (this.width * this.height));
         callback(brightness);
+        brightness = this.brightness;
       };
     }
 
