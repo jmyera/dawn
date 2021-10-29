@@ -1,11 +1,15 @@
 /* section-header */
 #shopify-section-header-transparent {
   z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .shopify-section-header-sticky {
-  position: sticky;
-  top: 0;
+  /* position: sticky; */
+  /* top: 0; */
 }
 
 .shopify-section-header-hidden {
@@ -18,10 +22,6 @@
 
 /* Main Header Layout */
 .header-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   background-color: transparent;
 }
 
