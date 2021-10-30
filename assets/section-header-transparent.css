@@ -39,7 +39,7 @@
   color: rgba(var(--color-background), 1);
 }
 #header-transparent.animate .header__menu-item {
-  color: rgba(var(--color-foreground), 1);
+  color: rgba(var(--color-foreground), 0.75);
 }
 
 
