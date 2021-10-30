@@ -36,17 +36,30 @@
 }
 
 .header__menu-item {
+  color: rgba(var(--color-background), 0.75);
+}
+.header__menu-item.animate {
   color: rgba(var(--color-foreground), 0.75);
 }
 
+
 .header__menu-item:hover {
+  color: rgb(var(--color-background));
+}
+.header__menu-item.animate:hover {
   color: rgb(var(--color-foreground));
 }
 
 .header__active-menu-item {
+  color: rgb(var(--color-background));
+}
+.header__active-menu-item.animate {
   color: rgb(var(--color-foreground));
 }
 
 .header__icon {
+  color: rgb(var(--color-background));
+}
+.header__icon.animate {
   color: rgb(var(--color-foreground));
 }
