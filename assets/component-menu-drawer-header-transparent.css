@@ -18,7 +18,7 @@
 
 .js .menu-drawer {
   height: calc(
-    var(--viewport-height, 100vh) - (var(,--header-bottom-position-manual 100%))
+    var(--viewport-height, 100vh) - (var(--header-bottom-position-manual, 100%))
   );
 }
 
