@@ -8,12 +8,13 @@
   top: 0;
 }
 
-.shopify-section-header-hidden {
-  /* transform: translateY(-100%); */
-}
+/* .shopify-section-header-hidden {
+  transform: translateY(-100%);
+} */
 
 #shopify-section-header-transparent.animate {
-  transition: transform 0.15s ease-out;
+  /* transition: transform 0.15s ease-out; */
+  transition: background-color 0.5s ease-out;
 }
 
 /* Main Header Layout */
