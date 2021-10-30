@@ -4,6 +4,10 @@
   left: 0;
 }
 
+.menu-drawer__navigation-container .header__icon {
+  color: rgb(var(--color-foreground));
+}
+
 .header__icon--menu {
   position: initial;
 }
