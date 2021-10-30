@@ -334,7 +334,7 @@
           {%- if section.settings.logo != blank -%}
             {%- assign image_size = section.settings.logo_width | append: 'x' -%}
             <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-              {% render 'brand-santa-planta' %}
+              {% render 'icon-cart' %}
               {{ childlink.title | escape }}
             </button>
             {% comment %} <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
