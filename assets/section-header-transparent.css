@@ -1,5 +1,5 @@
 /* section-header */
-#shopify-section-header {
+#shopify-section-header-transparent {
   z-index: 3;
 }
 
@@ -12,7 +12,7 @@
   transform: translateY(-100%);
 }
 
-#shopify-section-header.animate {
+#shopify-section-header-transparent.animate {
   transition: transform 0.15s ease-out;
 }
 
