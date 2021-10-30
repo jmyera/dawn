@@ -18,7 +18,8 @@
 
 /* Main Header Layout */
 .header-wrapper {
-  position: relative;
+  position: absolute;
+  width: 100%;
   background-color: rgb(var(--color-background));
 }
 
