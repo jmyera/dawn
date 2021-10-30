@@ -1,8 +1,9 @@
 #menu-drawer {
   position: absolute;
-  top: 66;
+  top: 71;
   left: 0;
   z-index: 2;
+  height: calc(100% - 71px);
 }
 
 .menu-drawer__icon-close {
