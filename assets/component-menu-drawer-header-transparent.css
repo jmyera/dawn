@@ -2,8 +2,6 @@
   position: absolute;
   top: 71;
   left: 0;
-  z-index: 2;
-  height: 100%;
 }
 
 .menu-drawer__icon-close {
