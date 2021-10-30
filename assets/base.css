@@ -363,6 +363,15 @@
     var(--box-shadow-c-color);
 }
 
+.box-shadow-menu {
+  box-shadow: 
+    var(--box-shadow-menu-offset-x)
+    var(--box-shadow-menu-offset-y)
+    var(--box-shadow-menu-blur)
+    var(--box-shadow-menu-spread)
+    var(--box-shadow-menu-color);
+}
+
 
 /* Box Shadow custom properties */
 
