@@ -88,17 +88,14 @@
           <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header-transparent.menu' | t }}">
             <span>
               {% render 'icon-hamburger' %}
+            </span>
+            <span class="menu-drawer__icon-close">
               {% render 'icon-close' %}
             </span>
           </summary>
           <div id="menu-drawer" class="menu-drawer motion-reduce" tabindex="-1">
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
-                <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header-transparent.menu' | t }}">
-                  <span>
-                    {% render 'icon-close' %}
-                  </span>
-                </summary>
                 <nav class="menu-drawer__navigation">
                   <ul class="menu-drawer__menu list-menu" role="list">
                     {%- for link in section.settings.menu.links -%}
