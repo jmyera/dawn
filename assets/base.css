@@ -2147,6 +2147,7 @@ input[type='checkbox'] {
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 990px) {
