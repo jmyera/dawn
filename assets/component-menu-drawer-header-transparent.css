@@ -2,7 +2,7 @@
   position: absolute;
   top: 71;
   left: 0;
-  border-radius: 0 2.4rem 0 0;
+  border-top-right-radius: var(--border-radius-menu-drawer);
 }
 
 .menu-drawer__icon-close {
