@@ -574,15 +574,8 @@
       this.currentScrollTop = scrollTop;
     }
 
-    hide() {
-      this.header.classList.add('shopify-section-header-transparent-no');
-      this.closeMenuDisclosure();
-      this.closeSearchModal();
-    }
-
     reveal() {
-      this.header.classList.add('animate');
-      this.header.classList.remove('shopify-section-header-transparent-no');
+      this.header.classList.add('shopify-section-header-transparent-no', 'animate');
     }
 
     reset() {
