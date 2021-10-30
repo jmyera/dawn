@@ -1,7 +1,6 @@
 #menu-drawer {
   position: absolute;
   top: var(--header-bottom-position-manual);
-  left: 0;
   border-top-right-radius: var(--border-radius-menu-drawer);
 }
 
