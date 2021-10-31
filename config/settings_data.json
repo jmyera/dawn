@@ -37,6 +37,16 @@
           "enable_sticky_header": true
         }
       },
+      "header-transparent": {
+        "type": "header-transparent",
+        "settings": {
+          "color_scheme": "background-1",
+          "logo_width": 50,
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "enable_sticky_header": true
+        }
+      },
       "footer": {
         "type": "footer",
         "blocks": {
@@ -67,16 +77,6 @@
           "enable_country_selector": true,
           "enable_language_selector": true,
           "payment_enable": true
-        }
-      },
-      "header-transparent": {
-        "type": "header-transparent",
-        "settings": {
-          "color_scheme": "background-1",
-          "logo_width": 50,
-          "logo_position": "middle-left",
-          "menu": "main-menu",
-          "enable_sticky_header": true
         }
       }
     },
