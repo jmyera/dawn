@@ -2046,11 +2046,16 @@ input[type='checkbox'] {
   vertical-align: middle;
 }
 
-.header__icon,
+.header__icon {
+  height: 4.4rem;
+  width: 4.4rem;
+}
+
 .header__icon--cart .icon {
   height: 2.4rem;
   width: 2.4rem;
 }
+
 
 .header__icon--cart {
   position: relative;
