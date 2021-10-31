@@ -69,3 +69,8 @@
 #header-transparent.animate .header__icon {
   color: rgb(var(--color-foreground));
 }
+
+/* Header Submenu */
+#header-transparent ul li a.header__menu-item {
+  color: rgba(var(--color-foreground), 0.75);
+}
