@@ -2039,7 +2039,7 @@ input[type='checkbox'] {
   transform: scale(1.07);
 }
 #shopify-section-header > sticky-header > header > header-drawer > details > summary > span > svg.icon.icon-hamburger {
-  color: var(--color-foreground);
+  color: var(--color-foreground) !important;
 }
 .header__icon .icon {
   height: 2.4rem;
