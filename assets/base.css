@@ -1966,10 +1966,28 @@ input[type='checkbox'] {
   width: 100%;
 }
 
+@media screen and (min-width: 750px) {
+  .brand {
+    display: none;
+  }
+
+  .brand-mark {
+    display: inline-block;
+  }
+}
+
 @media screen and (max-width: 989px) {
   .header__heading,
   .header__heading-link {
     text-align: center;
+  }
+
+  .brand {
+    display: inline-block;
+  }
+
+  .brand-mark {
+    display: none;
   }
 }
 
@@ -1987,6 +2005,14 @@ input[type='checkbox'] {
   .header--top-center .header__heading {
     justify-self: center;
     text-align: center;
+  }
+
+  .brand {
+    display: inline-block;
+  }
+
+  .brand-mark {
+    display: none;
   }
 }
 
