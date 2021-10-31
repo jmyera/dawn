@@ -2046,7 +2046,8 @@ input[type='checkbox'] {
   vertical-align: middle;
 }
 
-.header__icon {
+.header__icon,
+.header__icon--cart .icon {
   height: 4.4rem;
   width: 4.4rem;
 }
