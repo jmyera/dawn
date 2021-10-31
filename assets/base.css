@@ -373,7 +373,7 @@
 }
 
 
-/* Box Shadow custom properties */
+/* Border Radiuscustom properties */
 
 .border-radius-leaf-md-left {
   border-top-left-radius: var(--border-radius-leaf-md-small);
@@ -382,35 +382,35 @@
   border-bottom-right-radius: var(--border-radius-leaf-md-small);
 }
 
-.border-radius-leaf-right {
+.border-radius-leaf-md-right {
   border-top-left-radius: var(--border-radius-leaf-md-big);
   border-top-right-radius: var(--border-radius-leaf-md-small);
   border-bottom-left-radius: var(--border-radius-leaf-md-small);
   border-bottom-right-radius: var(--border-radius-leaf-md-big);
 }
 
-.border-radius-leaf-md-left {
+.border-radius-leaf-lg-left {
   border-top-left-radius: var(--border-radius-leaf-lg-small);
   border-top-right-radius: var(--border-radius-leaf-lg-big);
   border-bottom-left-radius: var(--border-radius-leaf-lg-big);
   border-bottom-right-radius: var(--border-radius-leaf-lg-small);
 }
 
-.border-radius-leaf-md-right {
+.border-radius-leaf-lg-right {
   border-top-left-radius: var(--border-radius-leaf-lg-big);
   border-top-right-radius: var(--border-radius-leaf-lg-small);
   border-bottom-left-radius: var(--border-radius-leaf-lg-small);
   border-bottom-right-radius: var(--border-radius-leaf-lg-big);
 }
 
-.border-radius-leaf-lg-right {
+.border-radius-leaf-sm-right {
   border-top-left-radius: var(--border-radius-leaf-sm-big);
   border-top-right-radius: var(--border-radius-leaf-sm-small);
   border-bottom-left-radius: var(--border-radius-leaf-sm-small);
   border-bottom-right-radius: var(--border-radius-leaf-sm-big);
 }
 
-.border-radius-leaf-lg-left {
+.border-radius-leaf-sm-left {
   border-top-left-radius: var(--border-radius-leaf-sm-small);
   border-top-right-radius: var(--border-radius-leaf-sm-big);
   border-bottom-left-radius: var(--border-radius-leaf-sm-big);
