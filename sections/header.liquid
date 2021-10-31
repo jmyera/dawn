@@ -329,7 +329,11 @@
     {%- if request.page_type == 'index' -%}
       <h1 class="header__heading">
     {%- endif -%}
-        <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+      <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+        {%- render 'santaplanta-brand' -%}
+        {%- render 'santaplanta-brand-mark' -%}
+      </a>
+        {% comment %} <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
           {%- if section.settings.logo != blank -%}
             {%- assign image_size = section.settings.logo_width | append: 'x' -%}
             <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
@@ -343,7 +347,7 @@
           {%- else -%}
             <span class="h2">{{ shop.name }}</span>
           {%- endif -%}
-        </a>
+        </a> {% endcomment %}
     {%- if request.page_type == 'index' -%}
       </h1>
     {%- endif -%}
