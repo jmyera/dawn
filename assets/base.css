@@ -375,6 +375,20 @@
 
 /* Border Radiuscustom properties */
 
+.border-radius-leaf-sm-right {
+  border-top-left-radius: var(--border-radius-leaf-sm-big);
+  border-top-right-radius: var(--border-radius-leaf-sm-small);
+  border-bottom-left-radius: var(--border-radius-leaf-sm-small);
+  border-bottom-right-radius: var(--border-radius-leaf-sm-big);
+}
+
+.border-radius-leaf-sm-left {
+  border-top-left-radius: var(--border-radius-leaf-sm-small);
+  border-top-right-radius: var(--border-radius-leaf-sm-big);
+  border-bottom-left-radius: var(--border-radius-leaf-sm-big);
+  border-bottom-right-radius: var(--border-radius-leaf-sm-small);
+}
+
 .border-radius-leaf-md-left {
   border-top-left-radius: var(--border-radius-leaf-md-small);
   border-top-right-radius: var(--border-radius-leaf-md-big);
@@ -401,20 +415,6 @@
   border-top-right-radius: var(--border-radius-leaf-lg-small);
   border-bottom-left-radius: var(--border-radius-leaf-lg-small);
   border-bottom-right-radius: var(--border-radius-leaf-lg-big);
-}
-
-.border-radius-leaf-sm-right {
-  border-top-left-radius: var(--border-radius-leaf-sm-big);
-  border-top-right-radius: var(--border-radius-leaf-sm-small);
-  border-bottom-left-radius: var(--border-radius-leaf-sm-small);
-  border-bottom-right-radius: var(--border-radius-leaf-sm-big);
-}
-
-.border-radius-leaf-sm-left {
-  border-top-left-radius: var(--border-radius-leaf-sm-small);
-  border-top-right-radius: var(--border-radius-leaf-sm-big);
-  border-bottom-left-radius: var(--border-radius-leaf-sm-big);
-  border-bottom-right-radius: var(--border-radius-leaf-sm-small);
 }
 
 /* base */
@@ -2517,6 +2517,10 @@ details[open] > .header__icon--menu .icon-hamburger {
 .header__submenu {
   transition: opacity var(--duration-default) ease,
     transform var(--duration-default) ease;
+  border-top-left-radius: var(--border-radius-leaf-lg-small);
+  border-top-right-radius: var(--border-radius-leaf-lg-big);
+  border-bottom-left-radius: var(--border-radius-leaf-lg-big);
+  border-bottom-right-radius: var(--border-radius-leaf-lg-small);
 }
 
 .header__submenu.list-menu {
