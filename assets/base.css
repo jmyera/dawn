@@ -1966,15 +1966,6 @@ input[type='checkbox'] {
   width: 100%;
 }
 
-@media screen and (min-width: 750px) {
-  .brand {
-    display: none;
-  }
-
-  .brand-mark {
-    display: inline-block;
-  }
-}
 
 @media screen and (max-width: 989px) {
   .header__heading,
@@ -1983,11 +1974,11 @@ input[type='checkbox'] {
   }
 
   .brand {
-    display: inline-block;
+    display: none;
   }
 
   .brand-mark {
-    display: none;
+    display: inline-block;
   }
 }
 
