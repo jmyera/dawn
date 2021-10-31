@@ -2038,7 +2038,9 @@ input[type='checkbox'] {
 .modal__close-button:hover .icon {
   transform: scale(1.07);
 }
-
+#shopify-section-header > sticky-header > header > header-drawer > details > summary > span > svg.icon.icon-hamburger {
+  color: var(--color-foreground);
+}
 .header__icon .icon {
   height: 2.4rem;
   width: 2.4rem;
