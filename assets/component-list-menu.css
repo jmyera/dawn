@@ -25,3 +25,15 @@
   width: 10rem;
   padding: 0.5rem;
 }
+
+
+/* Header Submenu */
+.list-menu--disclosure .list-menu__item {
+  color: rgba(var(--color-foreground), 0.75);
+  text-decoration: none;
+}
+
+.list-menu--disclosure .list-menu__item:hover {
+  color: rgba(var(--color-foreground), 1);
+  text-decoration: underline;
+}
